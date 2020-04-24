@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 17:24:49 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/21 17:30:54 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/24 12:34:36 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 
-class contact
+class Contact
 {
 private:
-	/* data */
+   static int	count;
 public:
+	Contact()
+	{
+		count++;
+	}
 	std::string	firstname;
 	std::string	lastname;
 	std::string	nickname;
 	std::string	login;
-	int			postaladdress;
+	std::string	postaladdress;
 	std::string	emailaddress;
-	int			phonenumber;
+	std::string	phonenumber;
 	std::string	birthdaydate;
 	std::string	favoritemeal;
 	std::string	underwearcolor;
 	std::string	darkestsecret;
 };
+
+//initialise static member function
+int Contact::count = 0;
