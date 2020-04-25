@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:27:56 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/24 14:19:36 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/25 14:45:18 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ private:
 public:
 	Pony(std::string name="", std::string color="", int age=0);
 	void		SetPony(std::string name, std::string color, int age);
-	std::string	getName(){return (this->name);}
-	std::string	getColor(){return (this->color);}
-	int			getAge(){return (this->age);}
+	std::string	getName(void);
+	std::string	getColor(void);
+	int			getAge(void);
+	void		jump(void);
 };
 
 #endif

@@ -6,17 +6,35 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/24 14:22:22 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/25 15:38:41 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Pony.cpp"
 
+void	ponyOnTheStack()
+{
+	Pony myLittlePony = Pony("Marie", "Blonde", 23);
+	int	obstacle = 5;
+	std::cout << myLittlePony.getName() << std::endl;
+	while (obstacle--)
+		myLittlePony.jump();
+}
+
+void	ponyOnTheHeap()
+{
+	Pony *hmyLittlePony = new Pony;
+	*hmyLittlePony = Pony("Marie", "Blonde", 23);
+	int	obstacle = 5;
+	std::cout << hmyLittlePony->getName() << std::endl;
+	while (obstacle--)
+		hmyLittlePony->jump();
+	delete hmyLittlePony;
+}
+
 int main(int argc, char const *argv[])
 {
-	Pony myLittlePony;
-
-	myLittlePony = Pony();
-	std::cout << myLittlePony.getAge();
+	ponyOnTheStack();
+	ponyOnTheHeap();
 	return 0;
 }
