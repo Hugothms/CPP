@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:25 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/26 13:58:32 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/26 14:17:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ private:
 	std::string	type;
 public:
 	ZombieEvent(void);
-	Zombie* Zombie::newZombie(std::string name, std::string type);
 	void	setZombieType(std::string type);
 };
