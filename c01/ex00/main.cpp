@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/25 15:50:48 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/26 14:45:21 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.cpp"
+#include "Pony.hpp"
 
 void	ponyOnTheStack()
 {

@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:33:44 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/26 13:56:38 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/26 14:46:06 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.cpp"
+#include "Human.hpp"
 
 int main()
 {
