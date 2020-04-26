@@ -6,35 +6,20 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/25 15:50:48 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/25 15:53:50 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.cpp"
+#include <iostream>
 
-void	ponyOnTheStack()
+void	memoryLeak()
 {
-	Pony myLittlePony = Pony("Marie", "Blonde", 23);
-	int	obstacle = 5;
-	std::cout << myLittlePony.getName() << std::endl;
-	while (obstacle--)
-		myLittlePony.jump();
+	std::string panther = std::string("String panther");
+	std::cout << panther << std::endl;
 }
 
-void	ponyOnTheHeap()
+int		main(int argc, char const *argv[])
 {
-	Pony *hmyLittlePony = new Pony;
-	*hmyLittlePony = Pony("Marie", "Blonde", 23);
-	int	obstacle = 5;
-	std::cout << hmyLittlePony->getName() << std::endl;
-	while (obstacle--)
-		hmyLittlePony->jump();
-	delete hmyLittlePony;
-}
-
-int main(int argc, char const *argv[])
-{
-	ponyOnTheStack();
-	ponyOnTheHeap();
+	memoryLeak();
 	return 0;
 }

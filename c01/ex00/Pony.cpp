@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:39:07 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/25 15:30:51 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/26 12:14:58 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Pony::Pony(std::string name, std::string color, int age)
 {
 	SetPony(name, color, age);
 }
-
 
 std::string	Pony::getName(void)
 {
