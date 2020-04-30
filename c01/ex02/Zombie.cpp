@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:01:36 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/26 14:19:37 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/30 14:21:06 by hugothms         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,3 @@ std::string Zombie::getType()
 {
 	return (this->type);
 }
-
-// int main(int argc, char const *argv[])
-// {
-// 	Zombie hugo = Zombie("hug");
-// 	hugo.announce();
-// 	return 0;
-// }

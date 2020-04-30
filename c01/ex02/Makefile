@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
+#    By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2020/04/25 16:05:05 by hthomas          ###   ########.fr        #
+#    Updated: 2020/04/30 14:23:31 by hugothms         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,7 @@ CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra
 
 SRCS =		Zombie.cpp	\
-			Zombie.hpp	\
 			ZombieEvent.cpp	\
-			ZombieEvent.hpp	\
 			main.cpp
 
 all: $(NAME)

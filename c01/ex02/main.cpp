@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/25 16:14:25 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/30 14:25:55 by hugothms         ###   ########.fr       */
+/*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
+/*   Updated: 2020/04/30 14:24:12 by hugothms         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-
 #include <iostream>
-#include <string>
 #include "Zombie.hpp"
+#include "ZombieEvent.hpp"
 
-class ZombieEvent
+int		main(int argc, char const *argv[])
 {
-private:
-	std::string	type;
-public:
-	ZombieEvent(void);
-	void	setZombieType(std::string type);
-};
-
-#endif
+	Zombie hugo = Zombie("hug", "nice");
+	hugo.announce();
+	return 0;
+}

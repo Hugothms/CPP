@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 15:56:02 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/26 14:20:18 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/04/30 14:25:27 by hugothms         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
@@ -25,3 +28,5 @@ public:
 	std::string getName();
 	std::string getType();
 };
+
+#endif
