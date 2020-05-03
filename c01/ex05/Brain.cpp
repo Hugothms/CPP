@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:31:08 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/26 14:08:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/05/03 15:54:29 by hugothms         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <memory>
+#include <sstream>	//for std::stringstream
 #include "Brain.hpp"
 
 Brain::Brain()
@@ -19,5 +19,7 @@ Brain::Brain()
 
 std::string Brain::identify()
 {
-	return (std::addressof(this));
+	std::ostringstream address;
+	address << (void const *)this;
+	return (address.str());
 }

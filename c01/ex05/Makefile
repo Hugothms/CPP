@@ -5,17 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/04/21 16:36:28 by hthomas           #+#    #+#              #
-#    Updated: 2020/05/03 15:29:11 by hugothms         ###   ########.fr        #
+#    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
+#    Updated: 2020/05/03 15:49:40 by hugothms         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		ex01
+NAME =		a.out
 
 CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra
 
-SRCS =		ex01.cpp
+SRCS =		Brain.cpp	\
+			Human.cpp	\
+			main.cpp
 
 all: $(NAME)
 

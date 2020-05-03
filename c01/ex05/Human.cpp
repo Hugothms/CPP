@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:46:55 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/26 14:07:29 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/05/03 15:49:00 by hugothms         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Human.hpp"
+
+Human::Human(){}
 
 Brain Human::getBrain()
 {

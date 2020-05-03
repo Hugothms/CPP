@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:26:29 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/26 14:04:31 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/05/03 15:44:39 by hugothms         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 #include <iostream>
 #include <string>
@@ -23,3 +26,5 @@ public:
 	Brain();
 	std::string identify(void);
 };
+
+#endif
