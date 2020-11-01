@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:01:36 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/30 14:21:06 by hugothms         ###   ########.fr       */
+/*   Updated: 2020/11/01 19:25:58 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,24 @@ Zombie::Zombie(std::string name, std::string type)
 	this->type = type;
 }
 
-Zombie* Zombie::newZombie(std::string name)
+Zombie*				Zombie::newZombie(std::string name)
 {
 	Zombie *zombie = new Zombie(name, this->type);
 	return (zombie);
 }
 
-void	Zombie::announce()
+void const			Zombie::announce()
 {
 	std::cout << '<' << getName() << '(' << getType() << ")> Braiiiiiiinnnssss..." << std::endl;
 }
 
 
-std::string Zombie::getName()
+std::string const	Zombie::getName()
 {
 	return (this->name);
 }
 
-std::string Zombie::getType()
+std::string const	Zombie::getType()
 {
 	return (this->type);
 }
