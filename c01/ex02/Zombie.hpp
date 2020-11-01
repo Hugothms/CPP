@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 15:56:02 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/30 14:25:27 by hugothms         ###   ########.fr       */
+/*   Updated: 2020/11/01 19:22:55 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 
 class Zombie
 {
-private:
-	std::string	name;
-	std::string	type;
-public:
-	Zombie(std::string name, std::string type);
-	Zombie *newZombie(std::string name);
-	void	announce(void);
-	std::string getName();
-	std::string getType();
+	private:
+		std::string	name;
+		std::string	type;
+	public:
+		Zombie(std::string name, std::string type);
+		Zombie				*newZombie(std::string name);
+		void const			announce(void);
+		std::string const	getName();
+		std::string const	getType();
 };
 
 #endif

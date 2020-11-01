@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:37 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 15:12:32 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/01 19:26:26 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ZombieEvent::ZombieEvent(void)
 {
 }
 
-std::string ZombieEvent::getType()
+std::string const	ZombieEvent::getType()
 {
 	return (this->type);
 }
@@ -34,5 +34,10 @@ Zombie* ZombieEvent::newZombie(std::string name)
 
 Zombie* ZombieEvent::randomChump()
 {
-	const char *colour[4] = { "Blue", "Red", "Orange", "Yellow" };
+	srand(time(NULL));
+	std::string	names[8] = {"Isabelle", "Benjamin", "Valentin", "Jessee", "Delger", "Hugo", "Anais", "Amina"};
+	std::string	types[5] = { "Nice", "Mean", "Clumsy", "Beautiful" , "Sad"};
+
+	Zombie *zz = new Zombie(names[rand() % 8], types[rand() % 5]);
+	return (zz);
 }

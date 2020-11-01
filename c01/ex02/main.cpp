@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/30 14:24:12 by hugothms         ###   ########.fr       */
+/*   Updated: 2020/11/01 18:33:33 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@
 
 int		main(int argc, char const *argv[])
 {
-	Zombie hugo = Zombie("hug", "nice");
-	hugo.announce();
-	return 0;
+	Zombie fred = Zombie("Fred", "Funny");
+	fred.announce();
+
+	ZombieEvent zombie_Event;
+	Zombie *random_Zombie = zombie_Event.randomChump();
+	(*random_Zombie).announce();
+	delete(random_Zombie);
+	return (0);
 }

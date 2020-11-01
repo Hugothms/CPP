@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:25 by hthomas           #+#    #+#             */
-/*   Updated: 2020/05/03 17:25:48 by hugothms         ###   ########.fr       */
+/*   Updated: 2020/11/01 19:21:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@
 
 class ZombieEvent
 {
-private:
-	std::string	type;
-public:
-	ZombieEvent(void);
-	std::string getType();
-	void	setZombieType(std::string type);
-	Zombie *newZombie(std::string name);
+	private:
+		std::string	type;
+	public:
+		ZombieEvent(void);
+		std::string	const	getType();
+		void				setZombieType(std::string type);
+		Zombie				*newZombie(std::string name);
+		Zombie				*randomChump();
 };
 
 #endif

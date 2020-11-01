@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 15:32:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/01 18:33:50 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ int main(int argc, char const *argv[])
 	std::cout << "Pony after deletion:" << pony.getName() << std::endl << std::endl;
 	ponyOnTheHeap(&pony);
 	std::cout << "Pony after deletion:" << pony.getName() << std::endl << std::endl;
-	return 0;
+	return (0);
 }

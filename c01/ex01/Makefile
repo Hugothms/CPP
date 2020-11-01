@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+         #
+#    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 16:36:28 by hthomas           #+#    #+#              #
-#    Updated: 2020/05/03 15:29:11 by hugothms         ###   ########.fr        #
+#    Updated: 2020/11/01 15:33:11 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,3 +21,6 @@ all: $(NAME)
 
 $(NAME): $(SRCS)
 	$(CC) $(SRCS) -o $(NAME)
+
+test: $(NAME)
+	./$^

@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2020/11/01 15:33:19 by hthomas          ###   ########.fr        #
+#    Updated: 2020/11/01 16:28:24 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra
 
 SRCS =		Zombie.cpp	\
-			ZombieEvent.cpp	\
+			ZombieHorde.cpp	\
 			main.cpp
 
 all: $(NAME)
