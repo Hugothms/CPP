@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:46:55 by hthomas           #+#    #+#             */
-/*   Updated: 2020/05/03 15:49:00 by hugothms         ###   ########.fr       */
+/*   Updated: 2020/11/02 11:02:42 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Human::Human(){}
 
-Brain Human::getBrain()
+Brain const			&Human::getBrain() const
 {
 	return (this->brain);
 }
 
-std::string Human::identify(void)
+std::string			Human::identify(void) const
 {
-	return (this->brain.identify());
+	return (this->getBrain().identify());
 }

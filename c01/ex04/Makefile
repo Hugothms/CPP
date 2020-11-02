@@ -6,18 +6,16 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2020/11/02 09:31:13 by hthomas          ###   ########.fr        #
+#    Updated: 2020/11/02 09:30:49 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		a.out
+NAME =		ex04
 
 CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra
 
-SRCS =		Brain.cpp	\
-			Human.cpp	\
-			main.cpp
+SRCS =		ex04.cpp
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:25 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 19:21:02 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/02 11:05:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ZombieHorde
 	public:
 		ZombieHorde(int n);
 		~ZombieHorde();
-		void const	announce(void);
+		void	announce(void) const;
 };
 
 #endif

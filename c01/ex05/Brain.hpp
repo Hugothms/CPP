@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:26:29 by hthomas           #+#    #+#             */
-/*   Updated: 2020/05/03 15:44:39 by hugothms         ###   ########.fr       */
+/*   Updated: 2020/11/02 11:03:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 
 class Brain
 {
-private:
-	int		IQ;
-	bool	playInstrument;
-	bool	code;
-public:
-	Brain();
-	std::string identify(void);
+	private:
+		int		IQ;
+		bool	playInstrument;
+		bool	code;
+	public:
+		Brain();
+		std::string	identify(void) const;
 };
 
 #endif

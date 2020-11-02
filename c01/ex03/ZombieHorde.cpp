@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:37 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 19:21:12 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/02 11:05:26 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 std::string rand_name()
 {
 	srand(time(NULL));
-	std::string	names[8] = {"Isabelle", "Benjamin", "Valentin", "Jessee", "Delger", "Hugo", "Anais", "Amina"};
+	std::string	names[8] = {"Benjamin", "Isabelle", "Valentin", "Jessee", "Delger", "Hugo", "Anais", "Amina"};
 	return(names[rand() % 8]);
 }
 
@@ -44,7 +44,7 @@ ZombieHorde::~ZombieHorde()
 	return ;
 }
 
-void const	ZombieHorde::announce(void)
+void	ZombieHorde::announce(void) const
 {
 	int	i = 0;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugothms <hugothms@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2020/05/03 15:48:55 by hugothms         ###   ########.fr       */
+/*   Updated: 2020/11/02 11:02:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 class Human
 {
-private:
-	Brain brain;
-public:
-	Human();
-	Brain getBrain();
-	std::string identify(void);
+	private:
+		Brain const	brain;
+	public:
+		Human();
+		Brain const			&getBrain() const;
+		std::string			identify(void) const;
 };
 
 #endif
