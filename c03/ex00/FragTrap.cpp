@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 09:27:02 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/03 09:56:20 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ FragTrap::FragTrap()
 
 FragTrap::FragTrap(std::string name)
 {
-	std::cout << "Just created" << name << std::endl;
+	std::cout << "Just created " << name << std::endl;
 	this->Name = name;
 	this->Hit_points = 100;
 	this->Max_hit_points = 100;
@@ -42,7 +42,7 @@ FragTrap::FragTrap(std::string name)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Time to destruct" << this->Name << std::endl;
+	std::cout << "Time to destruct " << this->Name << std::endl;
 }
 
 void	FragTrap::rangedAttack(std::string const & target)
@@ -57,12 +57,29 @@ void	FragTrap::meleeAttack(std::string const & target)
 
 void	FragTrap::takeDamage(unsigned int amount)
 {
+	amount -= this->Armor_damage_reduction;
+	if (amount < 0)
+		amount = 0;
+	else if (amount > this->Max_hit_points)
+		amount = this->Max_hit_points;
+	if (amount > this->Energy_points)
+		amount = this->Energy_points;
+	this->Energy_points -= amount;
 	std::cout << "FR4G-TP " << this->Name << " takes " << amount << " points of damage!" << std::endl;
 }
 
 void	FragTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "FR4G-TP " << this->Name << " gain " << amount << " health points from repairation" << std::endl;
+	if (amount > this->Max_energy_points - this->Energy_points)
+		amount = this->Max_energy_points - this->Energy_points;
+	this->Energy_points += amount;
+	std::cout << "FR4G-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
 }
 
-
+void	vaulthunter_dot_exe(std::string const & target)
+{
+	std::string attacks[] = {"Rainbow Laser", "Love Grenade", "Exploding Samsung", "Big Gun", "Lazy Punch"};
+	std::string attack = attacks[rand() % 5];
+	int amount = 5;
+	std::cout << "VaultHunter attacks " << target << " with special attack " << attack << " causing " << amount << " points of damage !" << std::endl;
+}
