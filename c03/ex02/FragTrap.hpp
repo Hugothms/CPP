@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:53 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 11:20:48 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/03 11:44:03 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,6 @@
 
 class FragTrap: ClapTrap
 {
-	private:
-		int 		Energy_points;
-		int 		Max_energy_points;
-		int 		Melee_attack_damage;
-		int 		Ranged_attack_damage;
-		int 		Armor_damage_reduction;
 	public:
 		FragTrap();
 		FragTrap(std::string name);
