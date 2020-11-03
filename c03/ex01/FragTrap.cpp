@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 10:02:59 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/03 10:07:53 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap()
 {
-	std::cout << "Just created an unamed fragtrap" << std::endl;
+	std::cout << "Just created an unamed FragTrap" << std::endl;
 	this->Name = "";
 	this->Hit_points = 100;
 	this->Max_hit_points = 100;
@@ -28,7 +28,7 @@ FragTrap::FragTrap()
 
 FragTrap::FragTrap(std::string name)
 {
-	std::cout << "Just created " << name << std::endl;
+	std::cout << "Just created FragTrap: " << name << std::endl;
 	this->Name = name;
 	this->Hit_points = 100;
 	this->Max_hit_points = 100;
@@ -42,7 +42,7 @@ FragTrap::FragTrap(std::string name)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Time to destruct " << this->Name << std::endl;
+	std::cout << "Time to destruct FragTrap: " << this->Name << std::endl;
 }
 
 void	FragTrap::rangedAttack(std::string const & target)
