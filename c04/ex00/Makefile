@@ -6,18 +6,19 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2020/11/03 15:11:20 by hthomas          ###   ########.fr        #
+#    Updated: 2020/11/03 15:29:30 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		FragTrap
+NAME =		Magic
 
 CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra
 
 SRCS =		main.cpp		\
-			FragTrap.cpp	\
-			ScavTrap.cpp
+			Peon.cpp		\
+			Sorcerer.cpp	\
+			Victim.cpp
 
 all: $(NAME)
 
