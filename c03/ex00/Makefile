@@ -6,11 +6,11 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2020/11/02 19:03:04 by hthomas          ###   ########.fr        #
+#    Updated: 2020/11/03 09:56:32 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		fixed
+NAME =		FragTrap
 
 CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra
