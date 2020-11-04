@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:13:43 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 15:32:21 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/04 11:46:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,20 @@
 # define PEON_HPP
 
 #include<iostream>
-#include<string>
 
-class Peon
+#include"Victim.hpp"
+
+class Peon: public Victim
 {
-private:
-	/* data */
-public:
-	Peon(/* args */);
-	~Peon();
+	private:
+		Peon(void);
+	public:
+		Peon(std::string name);
+		~Peon();
+		std::string	getName(void) const;
+		void getPolymorphed();
 };
+
+std::ostream	&operator<<(std::ostream &o, Peon const &i);
 
 #endif
