@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:13:29 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/04 10:55:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/11/04 12:12:06 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ std::ostream	&operator<<(std::ostream &o, Peon const &i)
 	return o;
 }
 
-void	Peon::getPolymorphed()
+void	Peon::getPolymorphed() const
 {
 	std::cout << this->getName() << " has been turned into a pink pony!" << std::endl;
 }
