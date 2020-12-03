@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:29 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:31:33 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/12/03 16:34:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,17 @@
 
 #include"ISpaceMarine.hpp"
 
-class AssaultTerminator
+class AssaultTerminator: public ISpaceMarine
 {
-private:
-	/* data */
-public:
-	AssaultTerminator(/* args */);
-	~AssaultTerminator();
+	private:
+		/* data */
+	public:
+		AssaultTerminator(/* args */);
+		~AssaultTerminator();
+		virtual ISpaceMarine* clone() const;
+		virtual void battleCry() const;
+		virtual void rangedAttack() const;
+		virtual void meleeAttack() const;
 };
-
-AssaultTerminator::AssaultTerminator(/* args */)
-{
-}
-
-AssaultTerminator::~AssaultTerminator()
-{
-}
 
 #endif
