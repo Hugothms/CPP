@@ -6,23 +6,19 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2020/12/03 16:18:23 by hthomas          ###   ########.fr        #
+#    Updated: 2020/12/03 16:21:07 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		Weapons
+NAME =		executable
 
 CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra
 
-SRCS =		main.cpp		\
-			AWeapon.cpp		\
-			PowerFist.cpp	\
-			PlasmaRifle.cpp	\
-			Enemy.cpp		\
-			RadScorpion.cpp	\
-			SuperMutant.cpp	\
-			Character.cpp
+SRCS =		main.cpp				\
+			AssaultTerminator.cpp	\
+			Squad.cpp				\
+			TacticalMarine.cpp
 
 
 all: $(NAME)

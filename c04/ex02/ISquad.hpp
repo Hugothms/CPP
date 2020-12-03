@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ISquad.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 12:08:05 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:31:55 by hthomas          ###   ########.fr       */
+/*   Created: 2020/12/03 16:09:06 by hthomas           #+#    #+#             */
+/*   Updated: 2020/12/03 16:25:19 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
+#ifndef ISQUAD_HPP
+# define ISQUAD_HPP
 
-int main()
+#include<iostream>
+#include"ISpaceMarine.hpp"
+
+class ISquad
 {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
-}
+	public:
+		virtual ~ISquad() {}
+		virtual int getCount() const = 0;
+		virtual ISpaceMarine* getUnit(int) const = 0;
+		virtual int push(ISpaceMarine*) = 0;
+};
+
+#endif

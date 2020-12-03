@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ISpaceMarine.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 12:08:05 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:31:55 by hthomas          ###   ########.fr       */
+/*   Created: 2020/12/03 16:21:26 by hthomas           #+#    #+#             */
+/*   Updated: 2020/12/03 16:25:01 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
+#ifndef ICPACEMARINE_HPP
+# define ICPACEMARINE_HPP
 
-int main()
+#include<iostream>
+
+class ISpaceMarine
 {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
-}
+	public:
+		virtual ~ISpaceMarine() {}
+		virtual ISpaceMarine* clone() const = 0;
+		virtual void battleCry() const = 0;
+		virtual void rangedAttack() const = 0;
+		virtual void meleeAttack() const = 0;
+};
+
+#endif
