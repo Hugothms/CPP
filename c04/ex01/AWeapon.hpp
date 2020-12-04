@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 12:02:22 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:15:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/12/04 14:50:29 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AWEAPON_HPP
 # define AWEAPON_HPP
 
-#include<iostreama>
+#include<iostream>
 
 class AWeapon
 {
