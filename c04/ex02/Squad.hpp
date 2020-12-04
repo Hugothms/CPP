@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/04 14:49:11 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/12/04 15:07:06 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Squad: public ISquad
 {
 	private:
-		static int		count;
+		int		count;
 		int				size;
 		ISpaceMarine**	marines;
 	public:
@@ -32,8 +32,5 @@ class Squad: public ISquad
 		ISpaceMarine* getUnit(int) const;
 		int push(ISpaceMarine*);
 };
-
-//initialise static member function
-int	Squad::count = 0;
 
 #endif

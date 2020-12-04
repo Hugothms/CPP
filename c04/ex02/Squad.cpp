@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/04 14:48:24 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/12/04 15:13:28 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 
 Squad::Squad()
 {
-	// this->count++;
+	this->count = 0;
 	this->size = 5;
 	this->marines = new ISpaceMarine*[this->size];
 }
 
 Squad::Squad(int size)
 {
+	this->count = 0;
 	this->size = size;
 	this->marines = new ISpaceMarine*[this->size];
 }
 
 Squad::Squad( const Squad &old)
 {
-	// this->count = old.getCount();
+	this->count = old.getCount();
 	this->size = old.size;
 	this->marines = new ISpaceMarine*[this->size];
 	for (size_t i = 0; i < this->count; i++)
@@ -38,7 +39,7 @@ Squad&	Squad::operator=(const Squad &other)
 {
 	for (int i = 0; i < this->count; i++)
 		delete this->marines[i];
-	// this->count = other.getCount();
+	this->count = other.getCount();
 	this->size = other.size;
 	this->marines = new ISpaceMarine*[this->size];
 	for (size_t i = 0; i < this->count; i++)
@@ -48,7 +49,8 @@ Squad&	Squad::operator=(const Squad &other)
 
 Squad::~Squad()
 {
-	for (size_t i = 0; i < this->size; i++)
+	std::cout << getCount() << std::endl;
+	for (size_t i = 0; i < this->getCount(); i++)
 		delete(this->marines[i]);
 	delete[](this->marines);	
 }
@@ -65,12 +67,12 @@ ISpaceMarine* Squad::getUnit(int N) const
 	return(this->marines[N]);
 }
 
-int Squad::push(ISpaceMarine*marine)
+int Squad::push(ISpaceMarine *marine)
 {
 	if (!marine || this->getCount() >= this->size)
 		return (-1);
 	this->marines[this->getCount()] = marine;
-	// this->count++;
+	this->count++;
 	return (this->getCount());
 }
 
