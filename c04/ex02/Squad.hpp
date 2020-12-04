@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:29:53 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/12/04 14:49:11 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,26 @@
 # define SQUAD_HPP
 
 #include"ISquad.hpp"
+#include"ISpaceMarine.hpp"
 
 class Squad: public ISquad
 {
 	private:
-		static int	count;
+		static int		count;
+		int				size;
+		ISpaceMarine**	marines;
 	public:
 		Squad();
+		Squad(int size);
+		Squad( const Squad &old);
+		Squad	&operator=(const Squad &other);
 		~Squad();
-		virtual int getCount() const;
-		virtual ISpaceMarine* getUnit(int) const;
-		virtual int push(ISpaceMarine*);
+		int getCount() const;
+		ISpaceMarine* getUnit(int) const;
+		int push(ISpaceMarine*);
 };
 
 //initialise static member function
-int Squad::count = 0;
+int	Squad::count = 0;
 
 #endif

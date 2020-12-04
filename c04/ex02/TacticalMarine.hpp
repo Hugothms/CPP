@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:45 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:33:32 by hthomas          ###   ########.fr       */
+/*   Updated: 2020/12/04 14:44:01 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,14 @@ class TacticalMarine: public ISpaceMarine
 	private:
 		/* data */
 	public:
-		TacticalMarine(/* args */);
+		TacticalMarine();
+		TacticalMarine(const TacticalMarine &old);
+		TacticalMarine &operator=(const TacticalMarine &other);
 		~TacticalMarine();
-		virtual ISpaceMarine* clone() const;
-		virtual void battleCry() const;
-		virtual void rangedAttack() const;
-		virtual void meleeAttack() const;
+		ISpaceMarine* clone() const;
+		void battleCry() const;
+		void rangedAttack() const;
+		void meleeAttack() const;
 };
 
 #endif
