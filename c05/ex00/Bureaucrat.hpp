@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/06 11:40:11 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/21 20:04:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,33 @@ public:
 	~Bureaucrat();
 	std::string	getName();
 	int 		getGrade();
+	void 		incrementGrade();
+	void 		decrementGrade();
+	int 		checkGrade(int);
 	
-	class GradeTooHighException
+	class GradeTooHighException: public std::exception
 	{
 	public:
 		GradeTooHighException(/* args */);
 		~GradeTooHighException();
+		const char* what()
+		{
+			return ("Grade too high");
+		}
 	};
 
-	class GradeTooLowException
+	class GradeTooLowException: public std::exception
 	{
 	public:
 		GradeTooLowException(/* args */);
 		~GradeTooLowException();
+		const char* what()
+		{
+			return ("Grade too low");
+		}
 	};
 };
+
+std::ostream	&operator<<(std::ostream &o, Sorcerer const &i);
 
 #endif
