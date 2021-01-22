@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 10:13:35 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/22 11:26:53 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,11 @@
 
 int main(int argc, char const *argv[])
 {
-	Bureaucrat hugo = Bureaucrat("hugo", 42);
-	std::cout << hugo << std::endl;
-	Bureaucrat boss = Bureaucrat("boss", 3);
-	std::cout << boss << std::endl;
-	boss.incrementGrade();
-	std::cout << boss << std::endl;
-	boss.incrementGrade();
-	std::cout << boss << std::endl;
-	boss.incrementGrade();
-	std::cout << boss << std::endl;
+	Bureaucrat bob = Bureaucrat("bob", 42);
+	std::cout << bob << std::endl;
+	Form formidable = Form("formidable", 42, 24);
+	std::cout << formidable << std::endl;
+	formidable.beSigned(bob);
+	std::cout << formidable << std::endl;
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 10:02:32 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/22 11:19:24 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,23 @@ int			Bureaucrat::checkGrade(int grade)
 	    std::cerr << e.what() << std::endl;
 	}
 	return (grade);
+}
+
+void		Bureaucrat::signForm(Form form)
+{
+	if (form.beSigned(this))
+		std::cout << this->getName() << " signs " << form.getName() << std::endl;
+	else
+	{
+		std::cout << this->getName() << " cannot sign " << form.getName() << " because ";
+		if (form.getStatus())
+			std::cout << "form is already signed";
+		if (form.getStatus() && form.beSigned(this))
+			std::cout << "and";
+		if (form.beSigned(this))
+			std::cout << "grade is too low";
+		std::cout << std::endl;		
+	}
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()

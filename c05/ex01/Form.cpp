@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 10:12:23 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/22 10:56:30 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@ const int	Form::LOWESTGRADE = 150;
 
 Form::Form()
 {
+	this->status = false;
 	this->name = "";
-	this->grade = LOWESTGRADE;
+	this->gradeSign = 150;
+	this->gradeExecute = 150;
 }
 
-Form::Form(std::string name, int grade)
+Form::Form(const std::string name, int gradeSign, int gradeExecute)
 {
-	this->grade = checkGrade(grade);
+	this->status = false;
 	this->name = name;
+	this->gradeSign = checkGrade(gradeSign);
+	this->gradeExecute = checkGrade(gradeExecute);
 }
 
 Form::~Form()
@@ -36,23 +40,19 @@ std::string	Form::getName() const
 	return this->name;
 }
 
-int 		Form::getGrade() const
+bool 		Form::getStatus() const
 {
-	return this->grade;
+	return this->status;
 }
 
-void		Form::incrementGrade()
+int 		Form::getGradeSign() const
 {
-	// if (this->grade == HIGHESTGRADE)
-	// 	throw GradeTooHighException();
-	this->grade = checkGrade(grade - 1);
+	return this->gradeSign;
 }
 
-void		Form::decrementGrade()
+int 		Form::getGradeExecute() const
 {
-	// if (this->grade == LOWESTGRADE)
-	// 	throw GradeTooLowException();
-	this->grade = checkGrade(grade + 1);
+	return this->gradeExecute;
 }
 
 int			Form::checkGrade(int grade)
@@ -77,6 +77,13 @@ int			Form::checkGrade(int grade)
 	return (grade);
 }
 
+bool		Form::beSigned(Bureaucrat bureaucrat)
+{
+	if (bureaucrat.getGrade() < this->getGradeSign())
+		return false;
+	return true;
+}
+
 const char* Form::GradeTooHighException::what() const throw()
 {
 	return "Form: GradeTooHighExeption";
@@ -89,6 +96,6 @@ const char* Form::GradeTooLowException::what() const throw()
 
 std::ostream	&operator<<(std::ostream &o, Form const &self)
 {
-	o << self.getName() << ", Form grade " << self.getGrade();
+	o << self.getName() << ", form status:" << self.getStatus() << "needed grade to be signed:" << self.getGradeSign() << "needed grade to be executed:" << self.getGradeExecute();
 	return o;
 }
