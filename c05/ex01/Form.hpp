@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 11:28:29 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/22 12:22:55 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	static const int HIGHESTGRADE;
 	static const int LOWESTGRADE;
 	Form();
-	Form(const std::string name, int gradeSign, int GradeExecute);
+	Form(const std::string name, const int gradeSign, const int GradeExecute);
 	~Form();
 	std::string	getName() const;
 	bool 		getStatus() const;
