@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 20:55:50 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/22 21:23:27 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 RobotomyRequestForm::RobotomyRequestForm(): 
 Form("RobotomyRequestForm", 72, 45){}
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string &target): 
+RobotomyRequestForm::RobotomyRequestForm(const std::string& target): 
 Form("RobotomyRequestForm", 72, 45, target){}
 
 RobotomyRequestForm::~RobotomyRequestForm(){}

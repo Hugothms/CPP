@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 20:55:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/22 21:23:27 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ShrubberyCreationForm::ShrubberyCreationForm(): 
 Form("ShrubberyCreationForm", 145, 137){}
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): 
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target): 
 Form("ShrubberyCreationForm", 145, 137, target){}
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){}

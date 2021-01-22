@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 20:56:00 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/22 21:23:27 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ShrubberyCreationForm: public Form
 {
 public:
 	ShrubberyCreationForm();
-	ShrubberyCreationForm(const std::string &target);
+	ShrubberyCreationForm(const std::string& target);
 	~ShrubberyCreationForm();
 	bool execute(Bureaucrat const & executor) const;
 };
