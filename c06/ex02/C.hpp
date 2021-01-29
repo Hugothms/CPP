@@ -6,10 +6,20 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/23 14:12:02 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/29 19:20:19 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Base.hpp"
+#ifndef C_HPP
+# define C_HPP
 
-class C: public Base{};
+# include "Base.hpp"
+
+class C : public Base
+{
+public:
+    C(void);
+    ~C(void);
+};
+
+#endif

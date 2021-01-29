@@ -6,10 +6,20 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/23 14:11:42 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/29 19:19:46 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Base.hpp"
+#ifndef A_HPP
+# define A_HPP
 
-class A: public Base{};
+# include "Base.hpp"
+
+class A : public Base
+{
+public:
+    A(void);
+    ~A(void);
+};
+
+#endif
