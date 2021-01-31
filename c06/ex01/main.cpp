@@ -6,56 +6,59 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/29 19:09:13 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/01/30 09:38:45 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream> //cout
+#include <ctime>
 #include <string>
-#include <ctime> //srand rand
+#include <cstdlib>
+#include <iostream>
+
 struct Data
 {
-	int n;
-	std::string s1;
-	std::string s2;
+    int            n;
+    std::string    s1;
+    std::string    s2;
 };
 
-void*	serialize(void)
+void
+*serialize(void)
 {
-	Data* ser = new Data;
-	static char	set[] = "abcdefghijklmnopqrstuvwxyz"
-                       	"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        "1234567890";
-	for (size_t i = 0; i < 8; i++)
-	{
-		std::cout << set[rand() % sizeof(set)] << std::endl;
-		ser->s1[i] = set[rand() % sizeof(set)];
-		ser->s2[i] = set[rand() % sizeof(set)];
-		std::cout << set.s1 << std::endl;
-	}
-	ser->n = rand();
-	return ser;
+    Data           *ret = new Data;
+    static char    set[] = "abcdefghijklmnopqrstuvwxyz"
+                           "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                           "1234567890";
+
+    for (int i = 0; i < 8; i += 1)
+    {
+        ret->s1 += set[rand() % sizeof(set)];
+    }
+    ret->n = rand() * (rand() & 1 ? 1 : -1);
+    for (int i = 0; i < 8; i += 1)
+    {
+        ret->s2 += set[rand() % sizeof(set)];
+    }
+    return (ret);
 }
 
-Data*	deserialize(void* raw)
+Data
+*deserialize(void *raw)
 {
-	Data* data;
-	data = reinterpret_cast<Data*>(raw);
-	return data;
+    Data           *ret = reinterpret_cast<Data*>(raw);
+    return (ret);
 }
 
-int main(int argc, char const *argv[])
+int
+main(void)
 {
-	void* ser;
-	Data* data;
-
     srand(time(0));
-	ser = serialize();
-	data = deserialize(ser);
+    void           *ser = serialize();
+    Data           *des = deserialize(ser);
 
-	std::cout 	<< data->s1 << std::endl 
-				<< data->n << std::endl
-				<< data->s2 << std::endl;
-	std::cout << data << std::endl;
-	return 0;
+    std::cout << des->s1 << std::endl \
+              << des->n << std::endl \
+              << des->s2 << std::endl;
+    delete des;
+    return (0);
 }
