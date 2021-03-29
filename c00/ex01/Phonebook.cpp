@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 16:36:31 by hthomas           #+#    #+#             */
-/*   Updated: 2020/04/24 12:34:32 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 00:25:45 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 
 #define MAX_CONTACTS 8
 
+
 std::string	format(std::string str)
 {
 	int			i;
 	std::string	res;
 
-	
+
 	if (str.length() > 10)
 	{
 		res = str;
@@ -46,44 +47,57 @@ std::string	format(std::string str)
 
 void		add(Contact contact[], int index)
 {
+	std::string	value;
+
 	std::cout << "What is the firstname ?" << std::endl;
-	std::getline (std::cin, contact[index].firstname);
+	std::getline (std::cin, value);
+	contact[index].set_firstname(value);
 	std::cout << "What is the lastname ?" << std::endl;
-	std::getline (std::cin, contact[index].lastname);
+	std::getline (std::cin, value);
+	contact[index].set_lastname(value);
 	std::cout << "What is the nickname ?" << std::endl;
-	std::getline (std::cin, contact[index].nickname);
+	std::getline (std::cin, value);
+	contact[index].set_nickname(value);
 	std::cout << "What is the login ?" << std::endl;
-	std::getline (std::cin, contact[index].login);
+	std::getline (std::cin, value);
+	contact[index].set_login(value);
 	std::cout << "What is the postaladdress ?" << std::endl;
-	std::getline (std::cin, contact[index].postaladdress);
+	std::getline (std::cin, value);
+	contact[index].set_postaladdress(value);
 	std::cout << "What is the emailaddress ?" << std::endl;
-	std::getline (std::cin, contact[index].emailaddress);
+	std::getline (std::cin, value);
+	contact[index].set_emailaddress(value);
 	std::cout << "What is the phonenumber ?" << std::endl;
-	std::getline (std::cin, contact[index].phonenumber);
+	std::getline (std::cin, value);
+	contact[index].set_phonenumber(value);
 	std::cout << "What is the birthdaydate ?" << std::endl;
-	std::getline (std::cin, contact[index].birthdaydate);
+	std::getline (std::cin, value);
+	contact[index].set_birthdaydate(value);
 	std::cout << "What is the favoritemeal ?" << std::endl;
-	std::getline (std::cin, contact[index].favoritemeal);
+	std::getline (std::cin, value);
+	contact[index].set_favoritemeal(value);
 	std::cout << "What is the underwearcolor ?" << std::endl;
-	std::getline (std::cin, contact[index].underwearcolor);
+	std::getline (std::cin, value);
+	contact[index].set_underwearcolor(value);
 	std::cout << "What is the darkestsecret ?" << std::endl;
-	std::getline (std::cin, contact[index].darkestsecret);
-	std::cout << "Contact " << contact[index].firstname << contact[index].lastname << " created" << std::endl;
+	std::getline (std::cin, value);
+	contact[index].set_darkestsecret(value);
+	std::cout << "Contact " << contact[index].get_firstname() << contact[index].get_lastname() << " created" << std::endl;
 }
 
 void		print_one(Contact contact)
 {
-	std::cout << "firstname:\t" + contact.firstname << std::endl;
-	std::cout << "lastname:\t" + contact.lastname << std::endl;
-	std::cout << "nickname:\t" + contact.nickname << std::endl;
-	std::cout << "login:  \t" + contact.login << std::endl;
-	std::cout << "postaladdress:\t" + contact.postaladdress << std::endl;
-	std::cout << "emailaddress:\t" + contact.emailaddress << std::endl;
-	std::cout << "phonenumber:\t" + contact.phonenumber << std::endl;
-	std::cout << "birthdaydate:\t" + contact.birthdaydate << std::endl;
-	std::cout << "favoritemeal:\t" + contact.favoritemeal << std::endl;
-	std::cout << "underwearcolor:\t" + contact.underwearcolor << std::endl;
-	std::cout << "darkestsecret:\t" + contact.darkestsecret << std::endl;
+	std::cout << "firstname:\t" + contact.get_firstname() << std::endl;
+	std::cout << "lastname:\t" + contact.get_lastname() << std::endl;
+	std::cout << "nickname:\t" + contact.get_nickname() << std::endl;
+	std::cout << "login:  \t" + contact.get_login() << std::endl;
+	std::cout << "postaladdress:\t" + contact.get_postaladdress() << std::endl;
+	std::cout << "emailaddress:\t" + contact.get_emailaddress() << std::endl;
+	std::cout << "phonenumber:\t" + contact.get_phonenumber() << std::endl;
+	std::cout << "birthdaydate:\t" + contact.get_birthdaydate() << std::endl;
+	std::cout << "favoritemeal:\t" + contact.get_favoritemeal() << std::endl;
+	std::cout << "underwearcolor:\t" + contact.get_underwearcolor() << std::endl;
+	std::cout << "darkestsecret:\t" + contact.get_darkestsecret() << std::endl;
 }
 
 void		print_all(Contact list[], int cpt)
@@ -96,9 +110,9 @@ void		print_all(Contact list[], int cpt)
 	while (i < cpt)
 	{
 		std::cout << std::right << std::setw(10) << i + 1 << '|';
-		std::cout << format(list[i].firstname) << '|';
-		std::cout << format(list[i].lastname) << '|';
-		std::cout << format(list[i].nickname) << '|';
+		std::cout << format(list[i].get_firstname()) << '|';
+		std::cout << format(list[i].get_lastname()) << '|';
+		std::cout << format(list[i].get_nickname()) << '|';
 		std::cout  << std::endl;
 		i++;
 	}
@@ -158,4 +172,118 @@ int main()
 		}
 	}
 	return (0);
+}
+
+std::string	Contact::get_firstname(void)
+{
+	return (this->firstname);
+}
+
+std::string	Contact::get_lastname(void)
+{
+	return (this->lastname);
+}
+
+std::string	Contact::get_nickname(void)
+{
+	return (this->nickname);
+}
+
+std::string	Contact::get_login(void)
+{
+	return (this->login);
+}
+
+std::string	Contact::get_postaladdress(void)
+{
+	return (this->postaladdress);
+}
+
+std::string	Contact::get_emailaddress(void)
+{
+	return (this->emailaddress);
+}
+
+std::string	Contact::get_phonenumber(void)
+{
+	return (this->phonenumber);
+}
+
+std::string	Contact::get_birthdaydate(void)
+{
+	return (this->birthdaydate);
+}
+
+std::string	Contact::get_favoritemeal(void)
+{
+	return (this->favoritemeal);
+}
+
+std::string	Contact::get_underwearcolor(void)
+{
+	return (this->underwearcolor);
+}
+
+std::string	Contact::get_darkestsecret(void)
+{
+	return (this->darkestsecret);
+}
+
+
+
+
+
+void	Contact::set_firstname(std::string value)
+{
+	this->firstname = value;
+}
+
+void	Contact::set_lastname(std::string value)
+{
+	this->lastname = value;
+}
+
+void	Contact::set_nickname(std::string value)
+{
+	this->nickname = value;
+}
+
+void	Contact::set_login(std::string value)
+{
+	this->login = value;
+}
+
+void	Contact::set_postaladdress(std::string value)
+{
+	this->postaladdress = value;
+}
+
+void	Contact::set_emailaddress(std::string value)
+{
+	this->emailaddress = value;
+}
+
+void	Contact::set_phonenumber(std::string value)
+{
+	this->phonenumber = value;
+}
+
+void	Contact::set_birthdaydate(std::string value)
+{
+	this->birthdaydate = value;
+}
+
+void	Contact::set_favoritemeal(std::string value)
+{
+	this->favoritemeal = value;
+}
+
+void	Contact::set_underwearcolor(std::string value)
+{
+	this->underwearcolor = value;
+}
+
+void	Contact::set_darkestsecret(std::string value)
+{
+	this->darkestsecret = value;
 }
