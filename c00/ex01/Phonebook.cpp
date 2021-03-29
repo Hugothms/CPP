@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 16:36:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 00:25:45 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 00:53:01 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,21 @@ void		print_all(Contact list[], int cpt)
 	}
 }
 
+int checkint(std::string input)
+{
+	int	output;
+	unsigned long	i;
+
+	output = 0;
+	for (i = 0; i < input.length(); i++)
+	{
+		if (!isdigit(input[i]))
+			return (-1);
+	}
+	return (atoi(input.c_str()));
+}
+
+
 int main()
 {
 	Contact 	list[MAX_CONTACTS];
@@ -158,13 +173,16 @@ int main()
 				std::cout << "Your contact list is empty, you must add contacts first" << std::endl;
 			else
 			{
-				index = 9;
+				index = -1;
 				while (index <= 0 || index > std::min(cpt, MAX_CONTACTS))
 				{
 					print_all(list, cpt);
 					std::cout << "What is the contact's index ?" << std::endl;
-					std::cin >> index;
-					if (index <= 0 || index > cpt)
+					std::getline (std::cin, input);
+					index = checkint(input);
+					if (index == -1)
+						std::cout << "Sorry this index is not valid" << std::endl;
+					else if (index <= 0 || index > cpt)
 						std::cout << "Sorry this index is out of range" << std::endl;
 				}
 				print_one(list[index - 1]);

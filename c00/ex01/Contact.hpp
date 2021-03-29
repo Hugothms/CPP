@@ -6,11 +6,12 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 17:24:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 00:25:34 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 00:43:17 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
+#include <stdlib.h>     /* atoi */
 
 class Contact
 {
