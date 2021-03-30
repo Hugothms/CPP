@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:01:36 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/28 16:41:47 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 19:29:22 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	Zombie::announce() const
 {
 	std::cout << '<' << getName() << '(' << getType() << ")> Braiiiiiiinnnssss..." << std::endl;
 }
-
 
 std::string Zombie::getName() const
 {

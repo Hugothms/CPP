@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:37 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 19:26:26 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 19:28:33 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Zombie* ZombieEvent::randomChump()
 {
 	srand(time(NULL));
 	std::string	names[8] = {"Isabelle", "Benjamin", "Valentin", "Jessee", "Delger", "Hugo", "Anais", "Amina"};
-	std::string	types[5] = { "Nice", "Mean", "Clumsy", "Beautiful" , "Sad"};
+	std::string	types[5] = { "Nice", "Clumsy", "Beautiful", "Mean", "Sad"};
 
 	Zombie *zz = new Zombie(names[rand() % 8], types[rand() % 5]);
 	return (zz);
