@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 17:24:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 00:43:17 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 13:25:06 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,7 @@ private:
 	std::string	underwearcolor;
 	std::string	darkestsecret;
 public:
-	Contact()
-	{
-		count++;
-	}
+	Contact(void);
 	std::string	get_firstname(void);
 	std::string	get_lastname(void);
 	std::string	get_nickname(void);
@@ -58,4 +55,4 @@ public:
 };
 
 //initialise static member function
-int Contact::count = 0;
+int	Contact::count = 0;

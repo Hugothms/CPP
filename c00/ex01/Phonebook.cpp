@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 16:36:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 00:53:01 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 13:24:38 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include "Contact.hpp"
 
 #define MAX_CONTACTS 8
-
 
 std::string	format(std::string str)
 {
@@ -45,7 +44,7 @@ std::string	format(std::string str)
 	return (res);
 }
 
-void		add(Contact contact[], int index)
+void		add_new_contact(Contact contact[], int index)
 {
 	std::string	value;
 
@@ -164,7 +163,7 @@ int main()
 				if (index-- == 0)
 					continue;
 			}
-			add(list, index);
+			add_new_contact(list, index);
 			cpt++;
 		}
 		else if (input == "SEARCH")
@@ -190,6 +189,11 @@ int main()
 		}
 	}
 	return (0);
+}
+
+Contact::Contact(void)
+{
+	count++;
 }
 
 std::string	Contact::get_firstname(void)

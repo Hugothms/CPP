@@ -6,22 +6,17 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:39:07 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 19:25:08 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/30 13:23:03 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Pony.hpp"
 
-void				Pony::SetPony(std::string name, std::string color, int age)
+Pony::Pony(std::string name, std::string color, int age)
 {
 	this->name = name;
 	this->color = color;
 	this->age = age;
-}
-
-Pony::Pony(std::string name, std::string color, int age)
-{
-	SetPony(name, color, age);
 }
 
 std::string const	Pony::getName(void)
