@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/03/30 00:15:28 by hthomas          ###   ########.fr        #
+#    Updated: 2021/03/31 20:01:19 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ re:				fclean $(NAME)
 .PHONY:			all clean fclean re
 
 $(NAME): $(SRCS)
-	$(CC) $(SRCS) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
 test: $(NAME)
 	./$^
