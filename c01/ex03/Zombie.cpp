@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:01:36 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 19:29:22 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 20:54:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ Zombie* Zombie::newZombie(std::string name)
 	return (zombie);
 }
 
-void	Zombie::announce() const
+void	Zombie::announce()
 {
 	std::cout << '<' << getName() << '(' << getType() << ")> Braiiiiiiinnnssss..." << std::endl;
 }
 
-std::string Zombie::getName() const
+std::string Zombie::getName()
 {
 	return (this->name);
 }
 
-std::string Zombie::getType() const
+std::string Zombie::getType()
 {
 	return (this->type);
 }

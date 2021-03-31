@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 12:56:09 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 21:32:33 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 20:53:01 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-int main(int argc, char const *argv[])
+int main()
 {
 	std::string str = "HI THIS IS BRAIN";
 	std::string* ptr = &str;

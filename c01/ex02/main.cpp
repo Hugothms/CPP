@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 18:33:33 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 20:52:43 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Zombie.hpp"
 #include "ZombieEvent.hpp"
 
-int		main(int argc, char const *argv[])
+int		main()
 {
 	Zombie fred = Zombie("Fred", "Funny");
 	fred.announce();

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:26:29 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/02 11:03:13 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 21:03:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Brain
 		bool	code;
 	public:
 		Brain();
-		std::string	identify(void) const;
+		std::string	identify(void);
 };
 
 #endif

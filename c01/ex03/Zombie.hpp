@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 15:56:02 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 19:29:18 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 20:55:04 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ class Zombie
 	public:
 		Zombie(void);
 		Zombie(std::string name, std::string type);
-		Zombie *newZombie(std::string name);
-		void	announce(void) const;
-		std::string getName() const;
-		std::string getType() const;
+		Zombie		*newZombie(std::string name);
+		void		announce(void);
+		std::string getName();
+		std::string getType();
 };
 
 #endif

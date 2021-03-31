@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/01 18:33:50 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 20:49:55 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ponyOnTheHeap(Pony *myLittlePony)
 	delete myLittlePony;
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
 	Pony pony;
 	ponyOnTheStack(pony);

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:39:07 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 13:23:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 20:49:43 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,22 @@ Pony::Pony(std::string name, std::string color, int age)
 	this->age = age;
 }
 
-std::string const	Pony::getName(void)
+std::string Pony::getName(void)
 {
 	return (this->name);
 }
 
-std::string const	Pony::getColor(void)
+std::string Pony::getColor(void)
 {
 	return (this->color);
 }
 
-int const			Pony::getAge(void)
+int 		Pony::getAge(void)
 {
 	return (this->age);
 }
 
-void const			Pony::jump(void)
+void		Pony::jump(void)
 {
 	std::cout << this->getName() << " just jumped !" << std::endl;
 }

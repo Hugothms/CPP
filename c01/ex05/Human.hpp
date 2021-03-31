@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/02 11:02:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 21:06:23 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class Human
 {
 	private:
-		Brain const	brain;
+		Brain	brain;
 	public:
 		Human();
-		Brain const			&getBrain() const;
-		std::string			identify(void) const;
+		Brain		&getBrain();
+		std::string	identify(void);
 };
 
 #endif
