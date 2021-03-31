@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:46:55 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/31 21:30:23 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/03/31 22:15:29 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ HumanA::HumanA(std::string name, class Weapon weapon)
 
 void	HumanA::attack(void)
 {
-	std::cout << "NAME attacks with his WEAPON_TYPE" << std::endl;
+	std::cout << this->name << " attacks with his " << this->weapon->getType() << std::endl;
 }
