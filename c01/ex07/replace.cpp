@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/01 14:23:27 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/01 15:20:05 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,13 @@ int	main(int argc, char const *argv[])
 	if (filefrom.is_open())
 	{
 		while (getline(filefrom, line))
-			content.append(line + '\n');
+			content.append(line+'\n');
 		filefrom.close();
+		if (line != "")
+		{
+	        content.pop_back();
+			std::cout << "qsdfgh" << std::endl;
+		}
 	}
 	else
 	{
