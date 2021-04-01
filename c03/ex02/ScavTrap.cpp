@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 11:44:13 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/01 20:29:26 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,5 @@ void	challengeNewcomer(void)
 {
 	std::string challenges[] = {"Jump at 15 feets", "Get graduated", "Create an new weapon", "Find love", "Run a marathon"};
 	std::string challenge = challenges[rand() % 5];
-	int amount = 5;
 	std::cout << "ScavTrap choose " << challenge << " challenge !" << std::endl;
 }

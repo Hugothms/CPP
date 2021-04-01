@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 11:37:51 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/01 20:29:99 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,20 @@ ClapTrap::~ClapTrap()
 
 void	ClapTrap::rangedAttack(std::string const & target)
 {
+
 }
 
 void	ClapTrap::meleeAttack(std::string const & target)
 {
+
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
+
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
+
 }
