@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:46:55 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/31 22:15:29 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/01 11:33:10 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 HumanA::HumanA(){}
 
-HumanA::HumanA(std::string name, class Weapon weapon)
+HumanA::HumanA(std::string name, class Weapon& weapon): name(name), weapon(&weapon)
 {
-	this->name = name;
-	this->weapon = &weapon;
+	return ;
 }
 
 void	HumanA::attack(void)

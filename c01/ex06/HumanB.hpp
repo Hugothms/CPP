@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/31 21:28:09 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/01 11:32:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class HumanB
 		HumanB();
 		HumanB(std::string name);
 		class Weapon	getWeapon();
-		void			setWeapon(class Weapon weapon);
+		void			setWeapon(class Weapon& weapon);
 		void			attack(void);
 };
 
