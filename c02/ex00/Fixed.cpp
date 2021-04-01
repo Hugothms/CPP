@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:08:02 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/02 18:39:00 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/01 17:44:55 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ Fixed &Fixed::operator=(const Fixed &fixed)
     if(this == &fixed)
        return (*this);
     this->raw = fixed.getRawBits();
-	// std::cout << "After this line" << std::endl;
 	return (*this);
 }
 
