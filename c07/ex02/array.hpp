@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/31 15:49:34 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:37:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <exception>
 # include <cctype>
 
-template <typename T> 
+template <typename T>
 class Array
 {
 private:
@@ -42,7 +42,7 @@ public:
 		if (this->length > 0)
 			delete[] this->elmts;
 	};
-	
+
 	class OutOfBoundsException: public std::exception
 	{
 		const char* what() const throw()
@@ -50,7 +50,7 @@ public:
 				return "ArrayException: index out of bounds";
 			}
 	};
-	
+
 	T &operator[](size_t index)
 	{
 		if (index >= this->length)
