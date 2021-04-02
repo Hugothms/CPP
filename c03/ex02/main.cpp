@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:48:20 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int main()
 	bob.beRepaired(8000);
 	bob.takeDamage(12345);
 
-	vaulthunter_dot_exe("bob");
-	vaulthunter_dot_exe("bob");
-	vaulthunter_dot_exe("bob");
-	vaulthunter_dot_exe("bob");
+	bob.vaulthunter_dot_exe("fred");
+	bob.vaulthunter_dot_exe("fred");
+	bob.vaulthunter_dot_exe("fred");
+	bob.vaulthunter_dot_exe("fred");
 
 	std::cout << std::endl;
 	ScavTrap alice = ScavTrap("alice");
@@ -43,9 +43,9 @@ int main()
 	alice.beRepaired(8000);
 	alice.takeDamage(12345);
 
-	vaulthunter_dot_exe("alice");
-	vaulthunter_dot_exe("alice");
-	vaulthunter_dot_exe("alice");
-	vaulthunter_dot_exe("alice");
+	alice.challengeNewcomer();
+	alice.challengeNewcomer();
+	alice.challengeNewcomer();
+	alice.challengeNewcomer();
 	return 0;
 }

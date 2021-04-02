@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:43:03 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,7 @@ void	ScavTrap::beRepaired(unsigned int amount)
 
 void	ScavTrap::challengeNewcomer(void)
 {
-	if (this->Energy_points < 25)
-	{
-		std::cout << "Out of energy" << std::endl;
-		return ;
-	}
-	this->Energy_points -= 25;
 	std::string challenges[] = {"Jump at 15 feets", "Get graduated", "Create an new weapon", "Find love", "Run a marathon"};
 	std::string challenge = challenges[rand() % 5];
-	std::cout << "ScavTrap choose " << challenge << " challenge !" << std::endl;
+	std::cout << "ScavTrap choose a new challenge: " << challenge << std::endl;
 }
