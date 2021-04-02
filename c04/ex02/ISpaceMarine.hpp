@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:26 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/04 15:03:12 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ISPACEMARINE_HPP
 # define ISPACEMARINE_HPP
 
-#include<iostream>
+# include<iostream>
 
 class ISpaceMarine
 {

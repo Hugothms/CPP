@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:27:35 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/04 12:05:54 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Victim.hpp"
+# include"Victim.hpp"
 
 Victim::Victim(std::string name): name(name)
 {

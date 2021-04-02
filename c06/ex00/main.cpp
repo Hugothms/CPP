@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/23 13:25:39 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream> //cout
-#include<string> //
-#include<stdlib.h> //atoi
-#include<iomanip> //fixed & setprecision
+# include<iostream> //cout
+# include<string> //
+# include<stdlib.h> //atoi
+# include<iomanip> //fixed & setprecision
 
 int main(int argc, char const *argv[])
 {
@@ -41,10 +41,10 @@ int main(int argc, char const *argv[])
 		std::cout << "impossible" << std::endl;
 	else
 		std::cout << i << std::endl;
-	
+
 	std::cout << "float: " << std::fixed << std::setprecision(1) << f << "f" << std::endl;
-	
+
 	std::cout << "double: " << d << std::endl;
-	
+
 	return 0;
 }

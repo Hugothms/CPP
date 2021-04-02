@@ -6,15 +6,15 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 16:36:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/03/30 13:24:38 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <cstring>
-#include "Contact.hpp"
+# include <iostream>
+# include <iomanip>
+# include <string>
+# include <cstring>
+# include "Contact.hpp"
 
 #define MAX_CONTACTS 8
 

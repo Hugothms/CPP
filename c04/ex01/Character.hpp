@@ -6,16 +6,16 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:46:37 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 14:35:51 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-#include<iostream>
-#include"AWeapon.hpp"
-#include"Enemy.hpp"
+# include<iostream>
+# include"AWeapon.hpp"
+# include"Enemy.hpp"
 
 class Character
 {

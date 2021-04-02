@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:42:36 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:01:51 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"SuperMutant.hpp"
+# include"SuperMutant.hpp"
 
 SuperMutant::SuperMutant():
 Enemy(170, "Super Mutant")

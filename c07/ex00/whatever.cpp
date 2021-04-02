@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 09:48:01 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/30 10:00:32 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream> //cout
+# include<iostream> //cout
 
 template<typename T>
 void swap(T &p1, T &p2)
@@ -29,7 +29,7 @@ T const min(T const &p1, T const &p2)
 template<typename T>
 T const max(T const &p1, T const &p2)
 {
-	return (p1 > p2 ? p1 : p2);	
+	return (p1 > p2 ? p1 : p2);
 }
 
 int main(int argc, char const *argv[])

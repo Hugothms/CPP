@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:26:37 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/04 12:11:59 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Sorcerer.hpp"
+# include"Sorcerer.hpp"
 
 Sorcerer::Sorcerer(void)
 {

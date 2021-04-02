@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:38 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/04 15:05:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Squad.hpp"
-#include"TacticalMarine.hpp"
-#include"AssaultTerminator.hpp"
+# include"Squad.hpp"
+# include"TacticalMarine.hpp"
+# include"AssaultTerminator.hpp"
 
 int main()
 {

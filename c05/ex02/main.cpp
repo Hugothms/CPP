@@ -6,19 +6,19 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 19:31:10 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ShrubberyCreationForm.hpp"
-#include"RobotomyRequestForm.hpp"
-#include"PresidentialPardonForm.hpp"
-#include"Bureaucrat.hpp"
+# include"ShrubberyCreationForm.hpp"
+# include"RobotomyRequestForm.hpp"
+# include"PresidentialPardonForm.hpp"
+# include"Bureaucrat.hpp"
 
 int main(int argc, char const *argv[])
 {
 	srand(time(NULL));
-	
+
 	Bureaucrat charlie = Bureaucrat("Charlie", 1);
 	std::cout << charlie << std::endl;
 

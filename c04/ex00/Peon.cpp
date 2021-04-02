@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:13:29 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/04 12:12:06 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Peon.hpp"
+# include"Peon.hpp"
 
 Peon::Peon(std::string name): Victim(name)
 {

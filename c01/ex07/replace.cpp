@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:58:50 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/01 15:20:05 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
-#include <ios>
-#include <fstream>
+# include <string>
+# include <iostream>
+# include <ios>
+# include <fstream>
 
 int	main(int argc, char const *argv[])
 {

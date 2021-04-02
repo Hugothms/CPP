@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:15:49 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 15:59:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Enemy.hpp"
+# include"Enemy.hpp"
 
 Enemy::Enemy():
 hp(0), type("")

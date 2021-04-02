@@ -6,15 +6,15 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:09:06 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:25:19 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ISQUAD_HPP
 # define ISQUAD_HPP
 
-#include<iostream>
-#include"ISpaceMarine.hpp"
+# include<iostream>
+# include"ISpaceMarine.hpp"
 
 class ISquad
 {

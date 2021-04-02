@@ -6,15 +6,15 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:25:59 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/04 11:16:17 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SORCERER_HPP
 # define SORCERER_HPP
 
-#include<iostream>
-#include"Victim.hpp"
+# include<iostream>
+# include"Victim.hpp"
 
 class Sorcerer
 {

@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 14:56:10 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/31 15:47:12 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <iostream>
-#include <string>
-#include "array.hpp"
+# include <iostream>
+# include <string>
+# include "array.hpp"
 
 int main(void)
 {

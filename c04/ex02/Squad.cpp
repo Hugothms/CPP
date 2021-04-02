@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/04 15:13:28 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Squad.hpp"
+# include"Squad.hpp"
 
 Squad::Squad()
 {
@@ -52,7 +52,7 @@ Squad::~Squad()
 	std::cout << getCount() << std::endl;
 	for (size_t i = 0; i < this->getCount(); i++)
 		delete(this->marines[i]);
-	delete[](this->marines);	
+	delete[](this->marines);
 }
 
 int Squad::getCount() const

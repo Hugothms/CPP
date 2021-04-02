@@ -6,12 +6,12 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:08:05 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:31:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
+# include <iostream>
+# include "Fixed.hpp"
 
 int main()
 {

@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:29 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/04 15:58:37 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ASSAULTTERMINATOR_HPP
 # define ASSAULTTERMINATOR_HPP
 
-#include"ISpaceMarine.hpp"
+# include"ISpaceMarine.hpp"
 
 class AssaultTerminator: public ISpaceMarine
 {

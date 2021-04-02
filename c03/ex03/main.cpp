@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:49 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 14:56:41 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream>
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
-#include "NinjaTrap.hpp"
+# include<iostream>
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
+# include "NinjaTrap.hpp"
 
 int main()
 {

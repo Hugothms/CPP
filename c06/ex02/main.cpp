@@ -6,23 +6,23 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/29 19:12:17 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream> //cout
-#include"A.hpp"
-#include"B.hpp"
-#include"C.hpp"
+# include<iostream> //cout
+# include"A.hpp"
+# include"B.hpp"
+# include"C.hpp"
 
 Base*	generate(void)
 {
 	int		r = rand() % 3;
-	
+
 	if (r == 0)
 		return (new A());
 	else if (r == 1)
-		return (new B());	
+		return (new B());
 	return (new C());
 }
 

@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 12:07:54 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 15:41:46 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"AWeapon.hpp"
+# include"AWeapon.hpp"
 
 AWeapon::AWeapon():
 name(""), damage(0), apcost(0)
@@ -49,4 +49,3 @@ int			AWeapon::getDamage() const
 {
 	return (this->damage);
 }
-	

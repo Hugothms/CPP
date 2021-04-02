@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "NinjaTrap.hpp"
+# include "NinjaTrap.hpp"
 
 NinjaTrap::NinjaTrap(): ClapTrap()
 {

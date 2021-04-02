@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 19:12:45 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Bureaucrat.hpp"
+# include"Bureaucrat.hpp"
 
 const int	Bureaucrat::HIGHESTGRADE = 1;
 const int	Bureaucrat::LOWESTGRADE = 150;
@@ -90,7 +90,7 @@ void		Bureaucrat::signForm(Form &form)
 			std::cout << " AND ";
 		if (!form.beSigned(*this))
 			std::cout << "grade is too low";
-		std::cout << std::endl;		
+		std::cout << std::endl;
 	}
 }
 
@@ -107,7 +107,7 @@ void		Bureaucrat::executeForm(Form const & form)
 			std::cout << " AND ";
 		if (!form.execute(*this))
 			std::cout << "grade is too low";
-		std::cout << std::endl;		
+		std::cout << std::endl;
 	}
 }
 

@@ -6,15 +6,15 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/04 15:07:06 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SQUAD_HPP
 # define SQUAD_HPP
 
-#include"ISquad.hpp"
-#include"ISpaceMarine.hpp"
+# include"ISquad.hpp"
+# include"ISpaceMarine.hpp"
 
 class Squad: public ISquad
 {

@@ -6,15 +6,15 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:20:21 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 16:04:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"PlasmaRifle.hpp"
-#include"PowerFist.hpp"
-#include"SuperMutant.hpp"
-#include"RadScorpion.hpp"
-#include"Character.hpp"
+# include"PlasmaRifle.hpp"
+# include"PowerFist.hpp"
+# include"SuperMutant.hpp"
+# include"RadScorpion.hpp"
+# include"Character.hpp"
 
 int	main()
 {
@@ -36,7 +36,7 @@ int	main()
 	std::cout << *me;
 	me->attack(b);
 	std::cout << *me;
-	
+
 	std::cout << std::endl;
 	std::cout << std::endl;
 

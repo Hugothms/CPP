@@ -6,19 +6,19 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/01/22 21:26:19 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INTERN_HPP
 # define INTERN_HPP
 
-#include<iostream>
-#include<string>
-#include"Form.hpp"
-#include"PresidentialPardonForm.hpp"
-#include"RobotomyRequestForm.hpp"
-#include"ShrubberyCreationForm.hpp"
+# include<iostream>
+# include<string>
+# include"Form.hpp"
+# include"PresidentialPardonForm.hpp"
+# include"RobotomyRequestForm.hpp"
+# include"ShrubberyCreationForm.hpp"
 
 class Intern: public Form
 {

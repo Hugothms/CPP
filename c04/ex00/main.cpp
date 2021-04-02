@@ -6,15 +6,15 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:12:15 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/04 10:53:14 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream>
+# include<iostream>
 
-#include "Peon.hpp"
-#include "Sorcerer.hpp"
-#include "Victim.hpp"
+# include "Peon.hpp"
+# include "Sorcerer.hpp"
+# include "Victim.hpp"
 
 int main(int argc, char const *argv[])
 {
@@ -22,11 +22,11 @@ int main(int argc, char const *argv[])
 
 	Victim jim("Jimmy");
 	Peon joe("Joe");
-	
+
 	std::cout << robert << jim << joe;
-	
+
 	robert.polymorph(jim);
 	robert.polymorph(joe);
-	
+
 	return 0;
 }

@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:44:50 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 15:59:30 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"RadScorpion.hpp"
+# include"RadScorpion.hpp"
 
 RadScorpion::RadScorpion():
 Enemy(80, "RadScorpion")

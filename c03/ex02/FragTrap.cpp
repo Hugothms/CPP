@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 11:43:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+# include "FragTrap.hpp"
 
 FragTrap::FragTrap(): ClapTrap()
 {
@@ -73,6 +73,12 @@ void	FragTrap::beRepaired(unsigned int amount)
 
 void	vaulthunter_dot_exe(std::string const & target)
 {
+	if (this->Energy_points < 25)
+	{
+		std::cout << "Out of energy" << std::endl;
+		return ;
+	}
+	this->Energy_points -= 25;
 	std::string attacks[] = {"Rainbow Laser", "Love Grenade", "Exploding Samsung", "Big Gun", "Lazy Punch"};
 	std::string attack = attacks[rand() % 5];
 	int amount = 5;

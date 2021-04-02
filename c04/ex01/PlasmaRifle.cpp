@@ -6,11 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:03:17 by hthomas           #+#    #+#             */
-/*   Updated: 2020/12/03 15:39:40 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"PlasmaRifle.hpp"
+# include"PlasmaRifle.hpp"
 
 PlasmaRifle::PlasmaRifle():
 AWeapon("Plasma Rifle", 5, 21)

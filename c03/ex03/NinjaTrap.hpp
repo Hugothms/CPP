@@ -13,12 +13,12 @@
 #ifndef NINJATRAP_HPP
 # define NINJATRAP_HPP
 
-#include<iostream>
-#include<string>
+# include<iostream>
+# include<string>
 
-#include"ClapTrap.hpp"
-#include"FragTrap.hpp"
-#include"ScavTrap.hpp"
+# include"ClapTrap.hpp"
+# include"FragTrap.hpp"
+# include"ScavTrap.hpp"
 
 class NinjaTrap: public ClapTrap
 {

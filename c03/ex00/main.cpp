@@ -6,12 +6,12 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:49 by hthomas           #+#    #+#             */
-/*   Updated: 2020/11/03 10:04:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream>
-#include "FragTrap.hpp"
+# include<iostream>
+# include "FragTrap.hpp"
 
 int main()
 {
@@ -27,9 +27,9 @@ int main()
 	bob.beRepaired(8000);
 	bob.takeDamage(12345);
 
-	vaulthunter_dot_exe("bob");
-	vaulthunter_dot_exe("bob");
-	vaulthunter_dot_exe("bob");
-	vaulthunter_dot_exe("bob");
+	bob.vaulthunter_dot_exe("fred");
+	bob.vaulthunter_dot_exe("fred");
+	bob.vaulthunter_dot_exe("fred");
+	bob.vaulthunter_dot_exe("fred");
 	return 0;
 }
