@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:37 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 12:25:47 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 15:18:16 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ ZombieHorde::ZombieHorde(int n)
 {
 	this->size = n;
 	this->horde = new Zombie[n];
+	n--;
 	while(n >= 0)
 		this->horde[n--] = Zombie(rand_name(), rand_type());
 }
