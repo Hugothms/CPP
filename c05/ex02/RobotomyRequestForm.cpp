@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 12:25:47 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ bool	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	if (this->Form::execute(executor))
 	{
 		srand(time(NULL));
-		if(rand() % 2)
+		if(std::rand() % 2)
 		{
 			std::cout << "Crrrrrsh pshhhhhh cric-crac-croc pif-paf-pouf" << std::endl;
 			std::cout << this->getTarget() << " has been robotomized successfully !" << std::endl;

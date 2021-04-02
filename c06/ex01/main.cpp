@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 12:25:47 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ void
 
     for (int i = 0; i < 8; i += 1)
     {
-        ret->s1 += set[rand() % sizeof(set)];
+        ret->s1 += set[std::rand() % sizeof(set)];
     }
-    ret->n = rand() * (rand() & 1 ? 1 : -1);
+    ret->n = std::rand() * (std::rand() & 1 ? 1 : -1);
     for (int i = 0; i < 8; i += 1)
     {
-        ret->s2 += set[rand() % sizeof(set)];
+        ret->s2 += set[std::rand() % sizeof(set)];
     }
     return (ret);
 }

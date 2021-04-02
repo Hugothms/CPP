@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:26:19 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 12:25:47 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 	}
 	this->Energy_points -= 25;
 	std::string attacks[] = {"Rainbow Laser", "Love Grenade", "Exploding Samsung", "Big Gun", "Lazy Punch"};
-	std::string attack = attacks[rand() % 5];
+	std::string attack = attacks[std::rand() % 5];
 	int amount = 5;
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " with special attack " << attack << " causing " << amount << " points of damage !" << std::endl;
 }
