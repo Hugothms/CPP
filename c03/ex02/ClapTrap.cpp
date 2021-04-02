@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:57:39 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 10:05:09 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,37 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Time to destruct ClapTrap: " << this->Name << std::endl;
+}
+
+void	ClapTrap::rangedAttack(std::string const &target)
+{
+	// this->ClapTrap::rangedAttack(target);
+	std::cout << "ClapTrap " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
+}
+
+void	ClapTrap::meleeAttack(std::string const &target)
+{
+	// this->ClapTrap::meleeAttack(target);
+	std::cout << "ClapTrap " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
+}
+
+void	ClapTrap::takeDamage(unsigned int amount)
+{
+	amount -= this->Armor_damage_reduction;
+	if (amount < 0)
+		amount = 0;
+	else if (amount > this->Max_hit_points)
+		amount = this->Max_hit_points;
+	if (amount > this->Energy_points)
+		amount = this->Energy_points;
+	this->Energy_points -= amount;
+	std::cout << "ClapTrap " << this->Name << " takes " << amount << " points of damage!" << std::endl;
+}
+
+void	ClapTrap::beRepaired(unsigned int amount)
+{
+	if (amount > this->Max_energy_points - this->Energy_points)
+		amount = this->Max_energy_points - this->Energy_points;
+	this->Energy_points += amount;
+	std::cout << "ClapTrap " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
 }

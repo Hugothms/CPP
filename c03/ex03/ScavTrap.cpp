@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 10:04:55 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::rangedAttack(std::string const &target)
 {
-	this->ClapTrap::rangedAttack(target);
+	// this->ClapTrap::rangedAttack(target);
 	std::cout << "SC4V-TP " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
 }
 
 void	ScavTrap::meleeAttack(std::string const &target)
 {
-	this->ClapTrap::meleeAttack(target);
+	// this->ClapTrap::meleeAttack(target);
 	std::cout << "SC4V-TP " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
 }
 
@@ -54,6 +54,8 @@ void	ScavTrap::takeDamage(unsigned int amount)
 	amount -= this->Armor_damage_reduction;
 	if (amount < 0)
 		amount = 0;
+	else if (amount > this->Max_hit_points)
+		amount = this->Max_hit_points;
 	if (amount > this->Energy_points)
 		amount = this->Energy_points;
 	this->Energy_points -= amount;
@@ -68,10 +70,15 @@ void	ScavTrap::beRepaired(unsigned int amount)
 	std::cout << "SC4V-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
 }
 
-void	challengeNewcomer(void)
+void	ScavTrap::challengeNewcomer(void)
 {
+	if (this->Energy_points < 25)
+	{
+		std::cout << "Out of energy" << std::endl;
+		return ;
+	}
+	this->Energy_points -= 25;
 	std::string challenges[] = {"Jump at 15 feets", "Get graduated", "Create an new weapon", "Find love", "Run a marathon"};
 	std::string challenge = challenges[rand() % 5];
-	int amount = 5;
 	std::cout << "ScavTrap choose " << challenge << " challenge !" << std::endl;
 }

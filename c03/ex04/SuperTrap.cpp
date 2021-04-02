@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   SuperTrap.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 10:04:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 10:19:22 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ScavTrap.hpp"
+# include "SuperTrap.hpp"
 
-ScavTrap::ScavTrap(): ClapTrap()
+SuperTrap::SuperTrap(): ClapTrap()
 {
-	std::cout << "Just created an unamed ScavTrap" << std::endl;
+	std::cout << "Just created an unamed SuperTrap" << std::endl;
 	this->Energy_points = 50;
 	this->Max_energy_points = 50;
 	this->Melee_attack_damage = 20;
@@ -22,9 +22,9 @@ ScavTrap::ScavTrap(): ClapTrap()
 	this->Armor_damage_reduction = 3;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name)
+SuperTrap::SuperTrap(std::string name): ClapTrap(name)
 {
-	std::cout << "Just created ScavTrap: " << name << std::endl;
+	std::cout << "Just created SuperTrap: " << name << std::endl;
 	this->Energy_points = 50;
 	this->Max_energy_points = 50;
 	this->Melee_attack_damage = 20;
@@ -32,24 +32,24 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	this->Armor_damage_reduction = 3;
 }
 
-ScavTrap::~ScavTrap()
+SuperTrap::~SuperTrap()
 {
-	std::cout << "Time to destruct ScavTrap: " << this->Name << std::endl;
+	std::cout << "Time to destruct SuperTrap: " << this->Name << std::endl;
 }
 
-void	ScavTrap::rangedAttack(std::string const &target)
+void	SuperTrap::rangedAttack(std::string const &target)
 {
 	// this->ClapTrap::rangedAttack(target);
-	std::cout << "SC4V-TP " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
+	std::cout << "SVPR-TP " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
 }
 
-void	ScavTrap::meleeAttack(std::string const &target)
+void	SuperTrap::meleeAttack(std::string const &target)
 {
 	// this->ClapTrap::meleeAttack(target);
-	std::cout << "SC4V-TP " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
+	std::cout << "SVPR-TP " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
 }
 
-void	ScavTrap::takeDamage(unsigned int amount)
+void	SuperTrap::takeDamage(unsigned int amount)
 {
 	amount -= this->Armor_damage_reduction;
 	if (amount < 0)
@@ -59,18 +59,18 @@ void	ScavTrap::takeDamage(unsigned int amount)
 	if (amount > this->Energy_points)
 		amount = this->Energy_points;
 	this->Energy_points -= amount;
-	std::cout << "SC4V-TP " << this->Name << " takes " << amount << " points of damage!" << std::endl;
+	std::cout << "SVPR-TP " << this->Name << " takes " << amount << " points of damage!" << std::endl;
 }
 
-void	ScavTrap::beRepaired(unsigned int amount)
+void	SuperTrap::beRepaired(unsigned int amount)
 {
 	if (amount > this->Max_energy_points - this->Energy_points)
 		amount = this->Max_energy_points - this->Energy_points;
 	this->Energy_points += amount;
-	std::cout << "SC4V-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
+	std::cout << "SVPR-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
 }
 
-void	ScavTrap::challengeNewcomer(void)
+void	SuperTrap::challengeNewcomer(void)
 {
 	if (this->Energy_points < 25)
 	{
@@ -80,5 +80,5 @@ void	ScavTrap::challengeNewcomer(void)
 	this->Energy_points -= 25;
 	std::string challenges[] = {"Jump at 15 feets", "Get graduated", "Create an new weapon", "Find love", "Run a marathon"};
 	std::string challenge = challenges[rand() % 5];
-	std::cout << "ScavTrap choose " << challenge << " challenge !" << std::endl;
+	std::cout << "SuperTrap choose " << challenge << " challenge !" << std::endl;
 }
