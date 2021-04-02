@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:53 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 10:14:28 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 12:45:30 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include<iostream>
 # include<string>
+# include<cstdlib>
 
 class ClapTrap
 {

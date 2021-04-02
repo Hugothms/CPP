@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/02 12:29:06 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include<iostream> //cout
 # include<string> //
-# include<stdlib.h> //atoi
+# include<cstdlib> //atoi
 # include<iomanip> //fixed & setprecision
 
 int main(int argc, char const *argv[])
