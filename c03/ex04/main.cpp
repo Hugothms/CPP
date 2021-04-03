@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 10:21:22 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/03 14:52:51 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
 {
 	srand(time(NULL));
 
-	ScavTrap alice = ScavTrap("alice");
+	FragTrap alice = FragTrap("alice");
 
 	alice.takeDamage(50);
 	alice.beRepaired(15);
@@ -30,7 +30,7 @@ int main()
 	alice.beRepaired(8000);
 	alice.takeDamage(12345);
 
-	alice.challengeNewcomer();
+	alice.vaulthunter_dot_exe("fred");
 
 	/////////////////NINJATRAP
 	std::cout << std::endl;
@@ -45,8 +45,6 @@ int main()
 	derek.takeDamage(12345);
 
 	derek.ninjaShoebox(&alice);
-	derek.ninjaShoebox(&derek);
-	ClapTrap charly = ClapTrap("charly");
-	derek.ninjaShoebox(&charly);
+	derek.vaulthunter_dot_exe("fred");
 	return 0;
 }

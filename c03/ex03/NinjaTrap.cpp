@@ -44,13 +44,13 @@ NinjaTrap::~NinjaTrap()
 void	NinjaTrap::rangedAttack(std::string const &target)
 {
 	// this->ClapTrap::rangedAttack(target);
-	std::cout << "NJ4-TP " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
+	std::cout << "N1NJ4-TP " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
 }
 
 void	NinjaTrap::meleeAttack(std::string const &target)
 {
 	// this->ClapTrap::meleeAttack(target);
-	std::cout << "NJ4-TP " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
+	std::cout << "N1NJ4-TP " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
 }
 
 void	NinjaTrap::takeDamage(unsigned int amount)
@@ -61,7 +61,7 @@ void	NinjaTrap::takeDamage(unsigned int amount)
 	if (amount > this->Energy_points)
 		amount = this->Energy_points;
 	this->Energy_points -= amount;
-	std::cout << "NJ4-TP " << this->Name << " takes " << amount << " points of damage!" << std::endl;
+	std::cout << "N1NJ4-TP " << this->Name << " takes " << amount << " points of damage!" << std::endl;
 }
 
 void	NinjaTrap::beRepaired(unsigned int amount)
@@ -69,25 +69,25 @@ void	NinjaTrap::beRepaired(unsigned int amount)
 	if (amount > this->Max_energy_points - this->Energy_points)
 		amount = this->Max_energy_points - this->Energy_points;
 	this->Energy_points += amount;
-	std::cout << "NJ4-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
+	std::cout << "N1NJ4-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
 }
 
 void	NinjaTrap::ninjaShoebox(ClapTrap *target)
 {
-	std::cout << "NJ4-TP just used special technique against ClapTrap " << target->ClapTrap::getName() << std::endl;;
+	std::cout << "N1NJ4-TP " << this->getName() << " just used special technique against ClapTrap " << target->ClapTrap::getName() << std::endl;;
 }
 
 void	NinjaTrap::ninjaShoebox(NinjaTrap *target)
 {
-	std::cout << "NJ4-TP just used special technique against NinjaTrap " << target->ClapTrap::getName() << std::endl;;
+	std::cout << "N1NJ4-TP " << this->getName() << " just used special technique against NinjaTrap " << target->ClapTrap::getName() << std::endl;;
 }
 
 void	NinjaTrap::ninjaShoebox(FragTrap *target)
 {
-	std::cout << "NJ4-TP just used special technique against FragTrap " << target->ClapTrap::getName() << std::endl;;
+	std::cout << "N1NJ4-TP " << this->getName() << " just used special technique against FragTrap " << target->ClapTrap::getName() << std::endl;;
 }
 
 void	NinjaTrap::ninjaShoebox(ScavTrap *target)
 {
-	std::cout << "NJ4-TP just used special technique against ScavTrap " << target->ClapTrap::getName() << std::endl;;
+	std::cout << "N1NJ4-TP " << this->getName() << " just used special technique against ScavTrap " << target->ClapTrap::getName() << std::endl;;
 }

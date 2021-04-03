@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:53 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 10:31:35 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/03 14:50:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,27 @@
 
 class SuperTrap: public FragTrap, public NinjaTrap
 {
+	protected:
+		// using		ClapTrap::Name;
+		// unsigned int	Hit_points;
+		// unsigned int	Max_hit_points;
+		// unsigned int	Energy_points;
+		// unsigned int	Max_energy_points;
+		// unsigned int	Level;
+		// unsigned int	Melee_attack_damage;
+		// unsigned int	Ranged_attack_damage;
+		// unsigned int	Armor_damage_reduction;
 	public:
 		SuperTrap();
 		SuperTrap(std::string name);
 		~SuperTrap();
-		void	rangedAttack(std::string const & target);
-		void	meleeAttack(std::string const & target);
-		// void	takeDamage(unsigned int amount);
-		// void	beRepaired(unsigned int amount);
-		// void	challengeNewcomer(void);
+		using	ClapTrap::getName;
+		void	rangedAttack(std::string const &target);
+		void	meleeAttack(std::string const &target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+		using	FragTrap::vaulthunter_dot_exe;
+		using	NinjaTrap::ninjaShoebox;
 };
 
 #endif

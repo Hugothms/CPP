@@ -19,8 +19,9 @@
 # include"ClapTrap.hpp"
 # include"FragTrap.hpp"
 # include"ScavTrap.hpp"
+// # include"SuperTrap.hpp"
 
-class NinjaTrap: public ClapTrap
+class NinjaTrap: virtual public ClapTrap
 {
 	public:
 		NinjaTrap();
@@ -34,6 +35,7 @@ class NinjaTrap: public ClapTrap
 		void	ninjaShoebox(NinjaTrap *target);
 		void	ninjaShoebox(FragTrap *target);
 		void	ninjaShoebox(ScavTrap *target);
+		// void	ninjaShoebox(SuperTrap *target);
 };
 
 #endif
