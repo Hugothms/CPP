@@ -6,11 +6,11 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/03/31 20:01:19 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/03 15:04:55 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		a.out
+NAME =		ex05
 
 CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra -std=c++98
