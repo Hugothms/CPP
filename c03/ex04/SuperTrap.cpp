@@ -6,15 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/03 15:02:06 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/03 16:17:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap()
-{
-}
+SuperTrap::SuperTrap(){}
 
 SuperTrap::SuperTrap(std::string name): ClapTrap(name), FragTrap(name), NinjaTrap(name)
 {
