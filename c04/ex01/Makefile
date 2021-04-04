@@ -6,19 +6,23 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/04 09:47:59 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/04 09:48:32 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		Magic
+NAME =		exec
 
 CC =		clang++
 CFLAGS =	-Wall -Werror -Wextra -std=c++98
 
 SRCS =		main.cpp		\
-			Peon.cpp		\
-			Sorcerer.cpp	\
-			Victim.cpp
+			AWeapon.cpp		\
+			Character.cpp	\
+			Enemy.cpp		\
+			PlasmaRifle.cpp	\
+			PowerFist.cpp	\
+			RadScorpion.cpp	\
+			SuperMutant.cpp
 
 all: $(NAME)
 

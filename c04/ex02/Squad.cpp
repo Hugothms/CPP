@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/04 10:01:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Squad::Squad( const Squad &old)
 	this->count = old.getCount();
 	this->size = old.size;
 	this->marines = new ISpaceMarine*[this->size];
-	for (size_t i = 0; i < this->count; i++)
+	for (int i = 0; i < this->count; i++)
 		this->marines[i] = old.marines[i]->clone();
 }
 
@@ -42,15 +42,15 @@ Squad&	Squad::operator=(const Squad &other)
 	this->count = other.getCount();
 	this->size = other.size;
 	this->marines = new ISpaceMarine*[this->size];
-	for (size_t i = 0; i < this->count; i++)
+	for (int i = 0; i < this->count; i++)
 		this->marines[i] = other.marines[i]->clone();
 	return (*this);
 }
 
 Squad::~Squad()
 {
-	std::cout << getCount() << std::endl;
-	for (size_t i = 0; i < this->getCount(); i++)
+	std::cout << "Destructing squad of size " << getCount() << std::endl;
+	for (int i = 0; i < this->getCount(); i++)
 		delete(this->marines[i]);
 	delete[](this->marines);
 }

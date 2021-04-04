@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:20:21 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/04 09:52:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,44 +18,45 @@
 
 int	main()
 {
-	Character *me = new Character("me");
-	std::cout << *me;
+	Character *Hero = new Character("Hero");
+	std::cout << *Hero;
 	Enemy *b = new RadScorpion();
 	AWeapon *pr = new PlasmaRifle();
 	AWeapon *pf = new PowerFist();
 
-	me->equip(pr);
-	std::cout << *me;
-	me->equip(pf);
+	Hero->equip(pr);
+	std::cout << *Hero;
+	Hero->equip(pf);
+	std::cout << *Hero;
 
-	me->attack(b);
-	std::cout << *me;
-	me->equip(pr);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
+	Hero->attack(b);
+	std::cout << *Hero;
+	Hero->equip(pr);
+	std::cout << *Hero;
+	Hero->attack(b);
+	std::cout << *Hero;
+	Hero->attack(b);
+	std::cout << *Hero;
 
 	std::cout << std::endl;
 	std::cout << std::endl;
 
 	Enemy *a = new SuperMutant();
-	me->attack(a);
-	std::cout << *me;
-	me->attack(a);
-	std::cout << *me;
-	me->attack(a);
-	std::cout << *me;
-	me->attack(a);
-	std::cout << *me;
-	me->attack(a);
-	std::cout << *me;
+	Hero->attack(a);
+	std::cout << *Hero;
+	Hero->attack(a);
+	std::cout << *Hero;
+	Hero->attack(a);
+	std::cout << *Hero;
+	Hero->attack(a);
+	std::cout << *Hero;
+	Hero->attack(a);
+	std::cout << *Hero;
 
-	me->recoverAP();
-	std::cout << *me;
-	me->attack(a);
-	std::cout << *me;
+	Hero->recoverAP();
+	std::cout << *Hero;
+	Hero->attack(a);
+	std::cout << *Hero;
 
 	return (0);
 }

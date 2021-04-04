@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/04 09:58:05 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ TacticalMarine::TacticalMarine()
 TacticalMarine::TacticalMarine(const TacticalMarine &old)
 {
 	// new TacticalMarine();
+	(void) old;
 	std::cout << "Tactical Marine (copied) ready for battle!" << std::endl;
 }
 
 TacticalMarine& TacticalMarine::operator=(const TacticalMarine &other)
 {
+	(void) other;
 	std::cout << "Tactical Marine (assigned) ready for battle!" << std::endl;
 	return (*this);
 }
