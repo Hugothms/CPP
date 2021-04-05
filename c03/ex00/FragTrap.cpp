@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 12:25:47 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/04 17:57:48 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,7 @@ void	FragTrap::meleeAttack(std::string const & target)
 void	FragTrap::takeDamage(unsigned int amount)
 {
 	amount -= this->Armor_damage_reduction;
-	if (amount < 0)
-		amount = 0;
-	else if (amount > this->Max_hit_points)
+	if (amount > this->Max_hit_points)
 		amount = this->Max_hit_points;
 	if (amount > this->Energy_points)
 		amount = this->Energy_points;

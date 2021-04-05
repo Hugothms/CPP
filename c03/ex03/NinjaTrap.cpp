@@ -56,8 +56,6 @@ void	NinjaTrap::meleeAttack(std::string const &target)
 void	NinjaTrap::takeDamage(unsigned int amount)
 {
 	amount -= this->Armor_damage_reduction;
-	if (amount < 0)
-		amount = 0;
 	if (amount > this->Energy_points)
 		amount = this->Energy_points;
 	this->Energy_points -= amount;

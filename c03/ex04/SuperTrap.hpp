@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:53 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/03 16:16:05 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/04 18:21:12 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include"FragTrap.hpp"
 # include"NinjaTrap.hpp"
 
-class SuperTrap: public FragTrap, public NinjaTrap
+class SuperTrap: public virtual FragTrap, public virtual NinjaTrap
 {
 	public:
 		SuperTrap();
