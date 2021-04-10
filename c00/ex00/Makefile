@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 16:36:28 by hthomas           #+#    #+#              #
-#    Updated: 2021/03/31 20:01:51 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/10 19:25:49 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,14 +20,14 @@ SRCS =		$(NAME).cpp
 all: $(NAME)
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+			$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean:			clean
-				$(RM) $(NAME)
+fclean:		clean
+			$(RM) $(NAME)
 
-re:				fclean $(NAME)
+re:			fclean $(NAME)
 
-.PHONY:			all clean fclean re
+.PHONY:		all clean fclean re
 
-$(NAME): $(SRCS)
+$(NAME):	$(SRCS)
 	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
