@@ -6,13 +6,13 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 16:36:28 by hthomas           #+#    #+#              #
-#    Updated: 2021/03/31 20:01:19 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/12 09:31:21 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =		ex01
 
-CC =		clang++
+CXX =		clang++
 CFLAGS =	-Wall -Werror -Wextra -std=c++98
 
 SRCS =		ex01.cpp
