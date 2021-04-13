@@ -1,59 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   TacticalMarine.cpp                                 :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/04 10:19:38 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 16:21:28 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include"TacticalMarine.hpp"
+# include"MateriaSource.hpp"
 
-TacticalMarine::TacticalMarine()
+/*
+** Constructors & Destructors
+*/
+MateriaSource::MateriaSource()
 {
-	// new TacticalMarine();
-	std::cout << "Tactical Marine ready for battle!" << std::endl;
 }
 
-TacticalMarine::TacticalMarine(const TacticalMarine &old)
+MateriaSource::MateriaSource(/* args */)
 {
-	// new TacticalMarine();
-    *this = old;
-	std::cout << "Tactical Marine (copied) ready for battle!" << std::endl;
 }
 
-TacticalMarine& TacticalMarine::operator=(const TacticalMarine &other)
+MateriaSource::~MateriaSource()
 {
-	(void) other;
-	std::cout << "Tactical Marine (assigned) ready for battle!" << std::endl;
+}
+
+/*
+** Copy constructor
+*/
+MateriaSource::MateriaSource(const MateriaSource& copy)
+{
+}
+
+/*
+** Operation overload =
+*/
+MateriaSource &MateriaSource::operator=(const MateriaSource& copy)
+{
 	return (*this);
 }
 
-TacticalMarine::~TacticalMarine()
+/*
+** Functions
+*/
+
+void		MateriaSource::learnMateria(AMateria*)
 {
-	// delete(this);
-	std::cout << "Aaargh..." << std::endl;
+
 }
 
-TacticalMarine* TacticalMarine::clone() const
+AMateria*	MateriaSource::createMateria(std::string const & type)
 {
-	return (new TacticalMarine(*this));
+
 }
 
-void TacticalMarine::battleCry() const
-{
-	std::cout << "For the holy PLOT!" << std::endl;
-}
-
-void TacticalMarine::rangedAttack() const
-{
-	std::cout << "* attacks with a bolter *" << std::endl;
-}
-
-void TacticalMarine::meleeAttack() const
-{
-	std::cout << "* attacks with a chainsword *" << std::endl;
-}

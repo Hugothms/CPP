@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/12 09:31:21 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/13 16:10:12 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,11 @@ CXX =		clang++
 CFLAGS =	-Wall -Werror -Wextra -std=c++98
 
 SRCS =		main.cpp				\
-			AssaultTerminator.cpp	\
-			Squad.cpp				\
-			TacticalMarine.cpp
+			AMateria.cpp			\
+			Character.cpp			\
+			Cure.cpp				\
+			Ice.cpp					\
+			MateriaSource.cpp
 
 
 all: $(NAME)

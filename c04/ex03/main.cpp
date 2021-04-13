@@ -6,13 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:38 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/04 10:32:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 16:12:30 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include"IMateriaSource.hpp"
-# include"ICharacter.hpp"
-# include"AMateria.hpp"
+# include"MateriaSource.hpp"
+# include"Character.hpp"
+# include"Ice.hpp"
+# include"Cure.hpp"
 
 int main()
 {

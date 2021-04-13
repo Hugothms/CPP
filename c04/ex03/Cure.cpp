@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 17:15:31 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 17:15:16 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include"Ice.hpp"
+# include"Cure.hpp"
 
 // Constructors & Destructors
-Ice::Ice(): AMateria("ice")
+Cure::Cure(): AMateria("cure")
 {
 }
 
-Ice::~Ice()
+Cure::~Cure()
 {
 }
 
 // Copy constructor
-Ice::Ice(const Ice& copy): AMateria("ice")
+Cure::Cure(const Cure& copy): AMateria("Cure")
 {
 }
 
 // Operation overload =
-Ice &Ice::operator=(const Ice& copy)
+Cure &Cure::operator=(const Cure& copy)
 {
 	return (*this);
 }
 
 // Functions
-Ice*	Ice::clone() const
+Cure*	Cure::clone() const
 {
-	return (&Ice(*this));
+	return (&Cure(*this));
 }
 
-void	Ice::use(ICharacter& target)
+void	Cure::use(ICharacter& target)
 {
 	AMateria::use(target);
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
 }

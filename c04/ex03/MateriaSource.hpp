@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   TacticalMarine.hpp                                 :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,22 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TACTICALMARINE_HPP
-# define TACTICALMARINE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-# include"ISpaceMarine.hpp"
+# include "IMateriaSource.hpp"
 
-class TacticalMarine: public ISpaceMarine
+class MateriaSource: public IMateriaSource
 {
-	public:
-		TacticalMarine();
-		TacticalMarine(const TacticalMarine &old);
-		TacticalMarine &operator=(const TacticalMarine &other);
-		~TacticalMarine();
-		TacticalMarine* clone() const;
-		void battleCry() const;
-		void rangedAttack() const;
-		void meleeAttack() const;
+private:
+	std::string			name;
+	static const int	maxMemorySize = 4;
+	AMateria			*memory[4];
+public:
+	// Constructors & Destructors
+	MateriaSource();
+	~MateriaSource();
+
+	// Copy constructor
+	MateriaSource(const MateriaSource& copy);
+
+	// Operation overload =
+	MateriaSource &operator=(const MateriaSource& copy);
+
+	// Functions
+	void		learnMateria(AMateria*);
+	AMateria*	createMateria(std::string const & type);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:45 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/04 10:39:33 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 15:21:08 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,20 @@
 
 class Character: public ICharacter
 {
+	private:
+		std::string			name;
+		static const int	maxInventorySize = 4;
+		AMateria			*inventory[4];
 	public:
 		Character();
+		Character(std::string name);
+		~Character();
 		Character(const Character &old);
 		Character &operator=(const Character &other);
-		~Character();
-		Character* clone() const;
-		void battleCry() const;
-		void rangedAttack() const;
-		void meleeAttack() const;
+		std::string const	&getName() const;
+		void				equip(AMateria *m);
+		void				unequip(int idx);
+		void				use(int idx, ICharacter &target);
 };
 
 #endif
