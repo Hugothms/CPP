@@ -1,6 +1,7 @@
 *.gch
 *.out
 *.DS_Store
+.vscode/
 c00/ex00/megaphone
 c00/ex01/Phonebook
 c01/ex00/Pony
@@ -21,6 +22,7 @@ c03/ex03/FragTrap
 c03/ex04/FragTrap
 c04/ex00/Magic
 c04/ex02/executable
+c04/ex03/executable
 c05/ex02/program
 c05/ex01/program
 c05/ex00/program
@@ -30,4 +32,3 @@ c06/ex01/program
 c07/ex00/program
 c07/ex01/program
 c07/ex02/program
-.vscode/
