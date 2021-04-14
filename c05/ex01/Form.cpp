@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/10 19:31:20 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:45:24 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,15 @@
 const int	Form::HIGHESTGRADE = 1;
 const int	Form::LOWESTGRADE = 150;
 
-Form::Form(): name(""), status(false), gradeSign(150), gradeExecute(150){}
+Form::Form(): name(""), status(false), gradeSign(150), gradeExecute(150)
+{
+}
 
 Form::Form(const std::string& name, const int gradeSign, const int gradeExe):
-status(false), name(name), gradeSign(checkGrade(gradeSign)),
-gradeExecute(checkGrade(gradeExe)){}
+name(name), status(false), gradeSign(checkGrade(gradeSign)),
+gradeExecute(checkGrade(gradeExe))
+{
+}
 
 Form::~Form(){}
 

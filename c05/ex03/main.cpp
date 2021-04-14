@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/10 19:28:30 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:50:30 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 int main()
 {
 	Intern sousFifre = Intern();
-	sousFifre.makeForm("Presidential Pardon", "Tamer");
-	sousFifre.makeForm("Shrubbery Creation", "Tamer");
+	sousFifre.makeForm("PresidentialPardon", "Tamer");
+	sousFifre.makeForm("ShrubberyCreation", "Tamer");
 	sousFifre.makeForm("Garbage", "Tamer");
 
 	return 0;

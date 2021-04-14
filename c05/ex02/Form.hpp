@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:47:29 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Form
 {
 private:
 	const std::string	name;
-	const std::string	target;
 	bool				status;
 	const int 			gradeSign;
 	const int 			gradeExecute;
+	const std::string	target;
 public:
 	static const int HIGHESTGRADE;
 	static const int LOWESTGRADE;

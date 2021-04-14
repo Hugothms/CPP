@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:50:40 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ Form*	new_robo(std::string const& target) {
 typedef Form *(*t_make_funct)(const std::string&);
 
 Form*	Intern::makeForm(const std::string& name, const std::string& formtarget) const {
-	const std::string types[3] = {	"Presidential Pardon",
-									"Robotomy Request",
-									"Shrubbery Creation"};
+	const std::string types[3] = {	"PresidentialPardon",
+									"RobotomyRequest",
+									"ShrubberyCreation"};
 	static t_make_funct makeFormFuncts[3] = { new_pardon, new_robo, new_shrub};
 
 	for (int i = 0; i < 3; i++) {
