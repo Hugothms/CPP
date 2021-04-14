@@ -45,7 +45,7 @@ Character::Character(const Character &copy)
 		// }
 		this->inventory[i] = copy.inventory[i]->clone();
 	}
-	this->name = name;
+	this->name = copy.name;
 }
 
 Character &Character::operator=(const Character &other)

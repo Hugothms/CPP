@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 15:12:20 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 18:23:39 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ unsigned int		AMateria::getXP() const //Returns the Materia's XP
 
 void				AMateria::use(ICharacter& target)
 {
+	(void) target;
 	xp += 10;
 }

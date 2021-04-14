@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 17:03:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 17:39:50 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 class Cure: public AMateria
 {
 private:
-	// Operation overload =
-	Cure &operator=(const Cure& copy);
 public:
 	// Constructors & Destructors
 	Cure();
@@ -27,6 +25,9 @@ public:
 
 	// Copy constructor
 	Cure(const Cure& copy);
+
+	// Operation overload =
+	Cure &operator=(const Cure& copy);
 
 	Cure*	clone() const;
 	void	use(ICharacter& target);

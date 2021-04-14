@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:29 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 16:07:20 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 18:24:05 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@
 
 class AMateria
 {
-	private:
+	protected:
 		std::string		type;
 		unsigned int	xp;
-		// Operation overload =
-		AMateria &operator=(const AMateria& other);
+
+		// Copy constructor
+		AMateria(const AMateria& copy);
 	public:
 		// Constructors & Destructors
 		AMateria();
 		AMateria(std::string const &type);
 		virtual ~AMateria();
 
-		// Copy constructor
-		AMateria(const AMateria& copy);
-
+		// Operation overload =
+		AMateria &operator=(const AMateria& other);
 
 		std::string const	&getType() const; //Returns the materia type
 		unsigned int		getXP() const; //Returns the Materia's XP

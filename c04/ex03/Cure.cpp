@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 17:15:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 18:50:18 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ Cure::~Cure()
 // Copy constructor
 Cure::Cure(const Cure& copy): AMateria("Cure")
 {
+	this->xp = copy.xp;
 }
 
 // Operation overload =
 Cure &Cure::operator=(const Cure& copy)
 {
+	xp = copy.getXP();
 	return (*this);
 }
 

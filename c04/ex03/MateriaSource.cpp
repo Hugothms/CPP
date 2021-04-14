@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 16:21:28 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 18:39:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,6 @@ MateriaSource::MateriaSource()
 {
 }
 
-MateriaSource::MateriaSource(/* args */)
-{
-}
-
 MateriaSource::~MateriaSource()
 {
 }
@@ -30,8 +26,10 @@ MateriaSource::~MateriaSource()
 /*
 ** Copy constructor
 */
-MateriaSource::MateriaSource(const MateriaSource& copy)
+MateriaSource::MateriaSource(const MateriaSource& copy): name(copy.name)
 {
+	for (int i = 0; i < this->maxMemorySize; i++)
+		this->memory[i] = copy.memory[i];
 }
 
 /*
@@ -46,13 +44,21 @@ MateriaSource &MateriaSource::operator=(const MateriaSource& copy)
 ** Functions
 */
 
-void		MateriaSource::learnMateria(AMateria*)
+void		MateriaSource::learnMateria(AMateria *mat)
 {
-
+	for (int i = 0; i < this->maxMemorySize; i++)
+	{
+		if (this->memory[i]->getType() != mat->getType())
+			this->memory[i] = mat;
+	}
 }
 
 AMateria*	MateriaSource::createMateria(std::string const & type)
 {
-
+	for (int i = 0; i < this->maxMemorySize; i++)
+	{
+		if (this->memory[i]->getType() != type)
+			return (this->memory[i]);
+	}
 }
 

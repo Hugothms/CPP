@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 17:15:31 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/13 18:49:23 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ Ice::~Ice()
 // Copy constructor
 Ice::Ice(const Ice& copy): AMateria("ice")
 {
+	this->xp = copy.xp;
 }
 
 // Operation overload =
 Ice &Ice::operator=(const Ice& copy)
 {
+	xp = copy.getXP();
 	return (*this);
 }
 
