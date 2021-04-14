@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:38 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 16:12:30 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:35:29 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int main()
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->use(2, *bob);
 
 	delete bob;
 	delete me;

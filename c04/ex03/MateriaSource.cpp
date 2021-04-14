@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 15:42:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:33:28 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 */
 MateriaSource::MateriaSource()
 {
+	for (int i = 0; i < this->maxMemorySize; i++)
+		this->memory[i] = NULL;
 }
 
 MateriaSource::~MateriaSource()
