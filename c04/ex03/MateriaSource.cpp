@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 10:02:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:10:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ AMateria*	MateriaSource::createMateria(std::string const & type)
 	for (int i = 0; i < this->maxMemorySize; i++)
 	{
 		if (this->memory[i]->getType() != type)
-			return (this->memory[i]);
+			return (this->memory[i]->clone());
 	}
 	return (0);
 }
