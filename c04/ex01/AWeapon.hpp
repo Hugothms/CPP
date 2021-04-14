@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 12:02:22 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:37:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:58:27 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class AWeapon
 		int			apcost;
 		AWeapon(); // Constructeur par défaut
 		AWeapon(const AWeapon&); // Constructeur de recopie
-		AWeapon &operator=(const AWeapon&); // Operator d'affectation
+		AWeapon& operator=(const AWeapon&); // Operator d'affectation
 	public:
-		AWeapon(std::string const & name, int apcost, int damage);
+		AWeapon(std::string const&  name, int apcost, int damage);
 		~AWeapon(); // Destructeur éventuellement virtuel
 		std::string getName() const;
 		int getAPCost() const;

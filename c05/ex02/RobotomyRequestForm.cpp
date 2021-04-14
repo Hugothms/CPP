@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 12:25:47 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 18:03:37 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Form("RobotomyRequestForm", 72, 45, target){}
 
 RobotomyRequestForm::~RobotomyRequestForm(){}
 
-bool	RobotomyRequestForm::execute(Bureaucrat const & executor) const
+bool	RobotomyRequestForm::execute(Bureaucrat const&  executor) const
 {
 	if (this->Form::execute(executor))
 	{

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:37:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:58:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Squad: public ISquad
 	public:
 		Squad();
 		Squad(int size);
-		Squad( const Squad &old);
-		Squad	&operator=(const Squad &other);
+		Squad( const Squad& old);
+		Squad	&operator=(const Squad& other);
 		~Squad();
 		int getCount() const;
 		ISpaceMarine* getUnit(int) const;

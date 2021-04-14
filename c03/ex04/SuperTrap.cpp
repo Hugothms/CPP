@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/03 16:17:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:57:47 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ SuperTrap::~SuperTrap()
 	std::cout << "Time to destruct SuperTrap: " << this->NinjaTrap::Name << std::endl;
 }
 
-void	SuperTrap::rangedAttack(std::string const &target)
+void	SuperTrap::rangedAttack(std::string const& target)
 {
 	this->FragTrap::rangedAttack(target);
 }
 
-void	SuperTrap::meleeAttack(std::string const &target)
+void	SuperTrap::meleeAttack(std::string const& target)
 {
 	this->NinjaTrap::meleeAttack(target);
 }

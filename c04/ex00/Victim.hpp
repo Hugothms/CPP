@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:27:59 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:58:11 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ class Victim
 		virtual void getPolymorphed() const;
 };
 
-std::ostream	&operator<<(std::ostream &o, Victim const &i);
+std::ostream	&operator<<(std::ostream& o, Victim const& i);
 
 #endif

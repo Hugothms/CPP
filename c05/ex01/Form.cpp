@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:45:24 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 18:06:49 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int			Form::checkGrade(int grade)
 	return (grade);
 }
 
-bool		Form::beSigned(Bureaucrat &bureaucrat)
+bool		Form::beSigned(Bureaucrat& bureaucrat)
 {
 	if (bureaucrat.getGrade() < this->getGradeSign())
 		return false;
@@ -87,7 +87,7 @@ const char* Form::GradeTooLowException::what() const throw()
 	return "Form: GradeTooLowExeption";
 }
 
-std::ostream	&operator<<(std::ostream &o, Form const &self)
+std::ostream	&operator<<(std::ostream& o, Form const& self)
 {
 	o << self.getName() << ", form status: " << self.getStatus() << ", needed grade to be signed: " << self.getGradeSign() << ", needed grade to be executed: " << self.getGradeExecute();
 	return o;

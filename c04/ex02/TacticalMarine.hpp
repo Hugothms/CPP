@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:45 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:37:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:58:45 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class TacticalMarine: public ISpaceMarine
 {
 	public:
 		TacticalMarine();
-		TacticalMarine(const TacticalMarine &old);
-		TacticalMarine &operator=(const TacticalMarine &other);
+		TacticalMarine(const TacticalMarine& old);
+		TacticalMarine& operator=(const TacticalMarine& other);
 		~TacticalMarine();
 		TacticalMarine* clone() const;
 		void battleCry() const;

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:29 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:37:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:58:41 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class AssaultTerminator: public ISpaceMarine
 {
 	public:
 		AssaultTerminator();
-		AssaultTerminator(const AssaultTerminator &old);
-		AssaultTerminator &operator=(const AssaultTerminator &other);
+		AssaultTerminator(const AssaultTerminator& old);
+		AssaultTerminator& operator=(const AssaultTerminator& other);
 		~AssaultTerminator();
 		AssaultTerminator* clone() const;
 		void battleCry() const;

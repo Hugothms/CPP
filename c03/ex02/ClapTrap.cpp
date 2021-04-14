@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/04 17:58:19 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:57:29 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ ClapTrap::~ClapTrap()
 	std::cout << "Time to destruct ClapTrap: " << this->Name << std::endl;
 }
 
-void	ClapTrap::rangedAttack(std::string const &target)
+void	ClapTrap::rangedAttack(std::string const& target)
 {
 	// this->ClapTrap::rangedAttack(target);
 	std::cout << "ClapTrap " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
 }
 
-void	ClapTrap::meleeAttack(std::string const &target)
+void	ClapTrap::meleeAttack(std::string const& target)
 {
 	// this->ClapTrap::meleeAttack(target);
 	std::cout << "ClapTrap " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;

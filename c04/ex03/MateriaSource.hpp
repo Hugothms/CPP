@@ -30,11 +30,11 @@ public:
 	MateriaSource(const MateriaSource& copy);
 
 	// Operation overload =
-	MateriaSource &operator=(const MateriaSource& copy);
+	MateriaSource& operator=(const MateriaSource& copy);
 
 	// Functions
 	void		learnMateria(AMateria*);
-	AMateria*	createMateria(std::string const & type);
+	AMateria*	createMateria(std::string const&  type);
 };
 
 #endif

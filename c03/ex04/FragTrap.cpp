@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/03 14:41:40 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:57:42 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ FragTrap::~FragTrap()
 	std::cout << "Time to destruct FragTrap: " << this->Name << std::endl;
 }
 
-void	FragTrap::rangedAttack(std::string const &target)
+void	FragTrap::rangedAttack(std::string const& target)
 {
 	// this->ClapTrap::rangedAttack(target);
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
 }
 
-void	FragTrap::meleeAttack(std::string const &target)
+void	FragTrap::meleeAttack(std::string const& target)
 {
 	// this->ClapTrap::meleeAttack(target);
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
@@ -68,7 +68,7 @@ void	FragTrap::beRepaired(unsigned int amount)
 	this->Energy_points += amount;
 	std::cout << "FR4G-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
 }
-void	FragTrap::vaulthunter_dot_exe(std::string const & target)
+void	FragTrap::vaulthunter_dot_exe(std::string const&  target)
 {
 	if (this->Energy_points < 25)
 	{

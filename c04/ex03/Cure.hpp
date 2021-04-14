@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 17:39:50 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:59:23 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	Cure(const Cure& copy);
 
 	// Operation overload =
-	Cure &operator=(const Cure& copy);
+	Cure& operator=(const Cure& copy);
 
 	Cure*	clone() const;
 	void	use(ICharacter& target);

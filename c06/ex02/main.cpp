@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 12:46:13 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 18:10:23 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	identify_from_reference(Base& p)
     }
 }
 
-int		main(int argc, char const *argv[])
+int		main()
 {
 	srand(time(NULL));
     Base    *p = generate();

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 17:39:41 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:59:40 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	Ice(const Ice& copy);
 
 	// Operation overload =
-	Ice &operator=(const Ice& copy);
+	Ice& operator=(const Ice& copy);
 
 	Ice*	clone() const;
 	void	use(ICharacter& target);

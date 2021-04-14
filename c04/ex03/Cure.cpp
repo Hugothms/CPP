@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 09:55:41 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:59:20 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Cure::Cure(const Cure& copy): AMateria("Cure")
 }
 
 // Operation overload =
-Cure &Cure::operator=(const Cure& copy)
+Cure& Cure::operator=(const Cure& copy)
 {
 	xp = copy.getXP();
 	return (*this);

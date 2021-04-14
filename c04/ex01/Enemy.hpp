@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:11:08 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:37:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:58:38 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class Enemy
 		std::string type;
 		Enemy(); // Constructeur par défaut
 		Enemy(const Enemy&); // Constructeur de recopie
-		Enemy &operator=(const Enemy&); // Operator d'affectation
+		Enemy& operator=(const Enemy&); // Operator d'affectation
 	public:
-		Enemy(int hp, std::string const &type);
+		Enemy(int hp, std::string const& type);
 		virtual ~Enemy(); // Destructeur éventuellement virtuel
 		std::string getType() const;
 		int getHP() const;

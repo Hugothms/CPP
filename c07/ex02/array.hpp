@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:37:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 18:05:20 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	{
 		this->elmts = new T[n]();
 	}
-	Array(Array<T> const &other): length(other.length), elmts(nullptr)
+	Array(Array<T> const& other): length(other.length), elmts(nullptr)
 	{
 		if (other.length > 0)
 			this->elmts = new T[other.length]();
@@ -51,7 +51,7 @@ public:
 			}
 	};
 
-	T &operator[](size_t index)
+	T& operator[](size_t index)
 	{
 		if (index >= this->length)
 			throw Array::OutOfBoundsException();

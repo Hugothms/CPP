@@ -34,7 +34,7 @@ Character::~Character()
 	}
 }
 
-Character::Character(const Character &copy)
+Character::Character(const Character& copy)
 {
 	for (int i = 0; i < this->maxInventorySize; i++)
 	{
@@ -48,7 +48,7 @@ Character::Character(const Character &copy)
 	this->name = copy.name;
 }
 
-Character	&Character::operator=(const Character &other)
+Character	&Character::operator=(const Character& other)
 {
 	for (int i = 0; i < this->maxInventorySize; i++)
 	{
@@ -90,7 +90,7 @@ void	Character::unequip(int i)
 	this->inventory[i] = NULL;
 }
 
-void	Character::use(int idx, ICharacter &target)
+void	Character::use(int idx, ICharacter& target)
 {
 	if (idx >= this->maxInventorySize || !this->inventory[idx])
 		return ;

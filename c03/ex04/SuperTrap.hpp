@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:53 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/04 18:21:12 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 17:57:47 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class SuperTrap: public virtual FragTrap, public virtual NinjaTrap
 		SuperTrap(std::string name);
 		~SuperTrap();
 		using	ClapTrap::getName;
-		void	rangedAttack(std::string const &target);
-		void	meleeAttack(std::string const &target);
+		void	rangedAttack(std::string const& target);
+		void	meleeAttack(std::string const& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 		using	FragTrap::vaulthunter_dot_exe;

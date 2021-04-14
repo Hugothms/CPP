@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/03 16:17:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 18:11:53 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int			Bureaucrat::checkGrade(int grade)
 	return (grade);
 }
 
-void		Bureaucrat::signForm(Form &form)
+void		Bureaucrat::signForm(Form& form)
 {
 	if (form.beSigned(*this))
 		std::cout << this->getName() << " signs " << form.getName() << std::endl;
@@ -92,7 +92,7 @@ void		Bureaucrat::signForm(Form &form)
 	}
 }
 
-void		Bureaucrat::executeForm(Form const & form)
+void		Bureaucrat::executeForm(Form const&  form)
 {
 	if (form.execute(*this))
 		std::cout << this->getName() << " executes " << form.getName() << std::endl;
@@ -101,7 +101,7 @@ void		Bureaucrat::executeForm(Form const & form)
 		std::cout << this->getName() << " cannot sign " << form.getName() << " because ";
 		if (form.getStatus())
 			std::cout << "form is already signed";
-		if (form.getStatus() && !form.execute(*this))
+		if (form.getStatus()& & !form.execute(*this))
 			std::cout << " AND ";
 		if (!form.execute(*this))
 			std::cout << "grade is too low";
@@ -119,7 +119,7 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return "Bureaucrat: GradeTooLowExeption";
 }
 
-std::ostream	&operator<<(std::ostream &o, Bureaucrat const &self)
+std::ostream	&operator<<(std::ostream& o, Bureaucrat const& self)
 {
 	o << self.getName() << ", bureaucrat grade " << self.getGrade();
 	return o;
