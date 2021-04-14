@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 18:50:18 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 09:55:41 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ Cure &Cure::operator=(const Cure& copy)
 // Functions
 Cure*	Cure::clone() const
 {
-	return (&Cure(*this));
+	Cure *clone = new Cure(*this);
+	return (clone);
 }
 
 void	Cure::use(ICharacter& target)

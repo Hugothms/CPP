@@ -48,7 +48,7 @@ Character::Character(const Character &copy)
 	this->name = copy.name;
 }
 
-Character &Character::operator=(const Character &other)
+Character	&Character::operator=(const Character &other)
 {
 	for (int i = 0; i < this->maxInventorySize; i++)
 	{
@@ -60,6 +60,7 @@ Character &Character::operator=(const Character &other)
 		this->inventory[i] = other.inventory[i]->clone();
 	}
 	this->name = other.name;
+	return (*this);
 }
 
 std::string const	&Character::getName() const

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 18:39:13 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:00:14 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ MateriaSource::MateriaSource(const MateriaSource& copy): name(copy.name)
 */
 MateriaSource &MateriaSource::operator=(const MateriaSource& copy)
 {
+	this->name = copy.name;
+	for (int i = 0; i < this->maxMemorySize; i++)
+		this->memory[i] = copy.memory[i];
 	return (*this);
 }
 
@@ -60,5 +63,6 @@ AMateria*	MateriaSource::createMateria(std::string const & type)
 		if (this->memory[i]->getType() != type)
 			return (this->memory[i]);
 	}
+	return (this);
 }
 

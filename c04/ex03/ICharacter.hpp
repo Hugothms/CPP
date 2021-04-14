@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:26 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/13 16:07:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/14 09:28:23 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include<iostream>
 # include"AMateria.hpp"
+
+class AMateria;
 
 class ICharacter {
 	public:
