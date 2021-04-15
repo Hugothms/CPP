@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 14:56:10 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/15 15:35:34 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/15 15:42:10 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 template<typename T>
 void	print(Array<T> &array)
 {
+	std::cout << "---" << std::endl;
 	for (size_t i = 0; i < array.size(); i++)
 	{
 		array[i] = i;
@@ -28,7 +29,7 @@ void	print(Array<T> &array)
 
 int main(void)
 {
-	std::cout << std::endl << "INT" << std::endl;
+	std::cout << "INT" << std::endl;
 	Array<int> intR;
 	print(intR);
 
@@ -38,9 +39,13 @@ int main(void)
 	intR = intRR;
 	print(intR);
 
+
+
 	std::cout << std::endl << "FLOAT" << std::endl;
 	Array<float> floatR(25);
 	print(floatR);
+
+
 
 	std::cout << std::endl << "STRING" << std::endl;
 	Array<std::string> stringR(5);
@@ -50,8 +55,9 @@ int main(void)
 	for (size_t i = 0; i < 5; i++)
 		stringRR[i] = "42";
 	print(stringRR);
+	print(stringR);
 
-	std::cout << std::endl << "---" << std::endl;
+
 
 	try
 	{

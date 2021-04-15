@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/15 15:34:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/15 15:38:10 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,14 @@ private:
 	unsigned int	length;
 	T*				elmts;
 public:
-	Array(void): length(0), elmts(nullptr)
+	Array(void): length(0), elmts(NULL)
+	{}
+	Array(unsigned int n): length(n), elmts(NULL)
 	{
-		std::cout << "new vide" << std::endl;
-	}
-	Array(unsigned int n): length(n), elmts(nullptr)
-	{
-		std::cout << "new normal" << std::endl;
 		this->elmts = new T[n]();
 	}
-	Array(Array<T> const& other): length(other.length), elmts(nullptr)
+	Array(Array<T> const& other): length(other.length), elmts(NULL)
 	{
-		std::cout << "new copy" << std::endl;
 		if (other.length > 0)
 			this->elmts = new T[other.length]();
 		for (size_t i = 0; i < other.length; i++)
@@ -42,7 +38,6 @@ public:
 	};
 	Array<T>& operator=(Array<T> const& other)
 	{
-		std::cout << "new =" << std::endl;
 		if (this->length > 0)
 			delete[] this->elmts;
 		this->length = other.length;
