@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 18:10:29 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/15 13:38:33 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,8 @@ template <typename T>
 void	iter(T* array, int length, void (*f)(T const& ))
 {
 	if (array)
-	{
 		for (int i = 0; i < length; i++)
-		{
 			f(array[i]);
-		}
-	}
 }
 
 template <typename T>
@@ -34,7 +30,7 @@ int		main()
 {
 	int			numbers[] = {42, 24, 12, 84, 0};
 	std::string	ppl[] = {"Claire", "Marie", "Victor", "Charles", "Charlie", "Enzo"};
-	std::string	stocks[] = {"AMC", "Tesla", "Apple", "Alphabet(Google)", "NIO", "Bank of america"};
+	std::string	stocks[] = {"AMC", "Tesla", "Apple", "Alphabet(Google)", "NIO", "Bank-of-america"};
 
 	iter(numbers, 5,& printElement);
 	std::cout << std::endl;
