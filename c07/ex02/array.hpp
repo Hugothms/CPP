@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/15 15:05:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/15 15:34:49 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,8 @@ public:
 	};
 	~Array()
 	{
-		std::cout << "azer" << std::endl;
 		if (this->length > 0)
 			delete[] this->elmts;
-		std::cout << "ok" << std::endl;
 	};
 
 	class OutOfBoundsException: public std::exception
