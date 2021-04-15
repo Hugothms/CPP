@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/14 15:47:50 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/15 11:27:27 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,12 @@ NAME =		program
 CXX =		clang++
 CFLAGS =	-Wall -Werror -Wextra -std=c++98
 
-SRCS =		main.cpp
+SRCS =		main.cpp	\
 
 all: $(NAME)
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+				$(RM) $(OBJS)
 
 fclean:			clean
 				$(RM) $(NAME)
