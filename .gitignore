@@ -21,11 +21,12 @@ c03/ex02/FragTrap
 c03/ex03/FragTrap
 c03/ex04/FragTrap
 c04/ex00/Magic
+c04/ex01/exec
 c04/ex02/executable
 c04/ex03/executable
-c05/ex02/program
-c05/ex01/program
 c05/ex00/program
+c05/ex01/program
+c05/ex02/program
 c05/ex03/program
 c06/ex00/convert
 c06/ex01/program
@@ -33,4 +34,6 @@ c06/ex02/program
 c07/ex00/program
 c07/ex01/program
 c07/ex02/program
-c04/ex01/exec
+c08/ex00/program
+c08/ex01/program
+c08/ex02/program
