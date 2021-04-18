@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/14 15:47:50 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/18 13:09:20 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS =	-Wall -Werror -Wextra -std=c++98
 SRCS =		main.cpp		\
 			Peon.cpp		\
 			Sorcerer.cpp	\
+			Supplement.cpp	\
 			Victim.cpp
 
 all: $(NAME)

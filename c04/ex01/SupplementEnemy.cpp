@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   SupplementEnemy.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 12:45:28 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 11:17:44 by hthomas          ###   ########.fr       */
+/*   Created: 2021/04/18 12:33:57 by hthomas           #+#    #+#             */
+/*   Updated: 2021/04/18 13:08:42 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#include "SupplementEnemy.hpp"
 
-# include"Enemy.hpp"
-
-class SuperMutant: public Enemy
+SupplementEnemy::SupplementEnemy():
+Enemy(170, "Supplement Enemy")
 {
-	public:
-		SuperMutant();
-		virtual ~SuperMutant();
-		void  takeDamage(int damage);
-};
+	std::cout << "I'm a SupplementEnemy!" << std::endl;
+}
 
-#endif
+SupplementEnemy::~SupplementEnemy()
+{
+	std::cout << "Noooooo..." << std::endl;
+}
+
+void  SupplementEnemy::takeDamage(int damage)
+{
+	this->Enemy::takeDamage(damage);
+}

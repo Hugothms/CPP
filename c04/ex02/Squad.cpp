@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:43 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 12:49:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ Squad::Squad(int size)
 	this->marines = new ISpaceMarine*[this->size];
 }
 
-Squad::Squad( const Squad& old)
+Squad::Squad( const Squad& other)
 {
-	this->count = old.getCount();
-	this->size = old.size;
+	this->count = other.getCount();
+	this->size = other.size;
 	this->marines = new ISpaceMarine*[this->size];
 	for (int i = 0; i < this->count; i++)
-		this->marines[i] = old.marines[i]->clone();
+		this->marines[i] = other.marines[i]->clone();
 }
 
 Squad&	Squad::operator=(const Squad& other)

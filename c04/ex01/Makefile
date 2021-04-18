@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/14 15:47:50 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/18 13:11:19 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,16 @@ NAME =		exec
 CXX =		clang++
 CFLAGS =	-Wall -Werror -Wextra -std=c++98
 
-SRCS =		main.cpp		\
-			AWeapon.cpp		\
-			Character.cpp	\
-			Enemy.cpp		\
-			PlasmaRifle.cpp	\
-			PowerFist.cpp	\
-			RadScorpion.cpp	\
-			SuperMutant.cpp
+SRCS =		main.cpp			\
+			AWeapon.cpp			\
+			Character.cpp		\
+			Enemy.cpp			\
+			PlasmaRifle.cpp		\
+			PowerFist.cpp		\
+			RadScorpion.cpp		\
+			SuperMutant.cpp		\
+			SupplementEnemy.cpp	\
+			SupplementWeapon.cpp
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:39 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 12:49:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 AssaultTerminator::AssaultTerminator()
 {
-	// new AssaultTerminator();
 	std::cout << "* teleports from space *" << std::endl;
 }
 
-AssaultTerminator::AssaultTerminator(const AssaultTerminator& old)
+AssaultTerminator::AssaultTerminator(const AssaultTerminator& other)
 {
-	// new AssaultTerminator();
-	*this = old;
+	*this = other;
 	std::cout << "* teleports from space * (copied)" << std::endl;
 }
 
@@ -34,7 +32,6 @@ AssaultTerminator& AssaultTerminator::operator=(const AssaultTerminator& other)
 
 AssaultTerminator::~AssaultTerminator()
 {
-	// delete(this);
 	std::cout << "I’ll be back..." << std::endl;
 }
 
@@ -57,4 +54,3 @@ void AssaultTerminator::meleeAttack() const
 {
 	std::cout << "* attacks with chainfists *" << std::endl;
 }
-

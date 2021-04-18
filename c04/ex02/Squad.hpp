@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 12:49:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Squad: public ISquad
 	public:
 		Squad();
 		Squad(int size);
-		Squad( const Squad& old);
+		Squad( const Squad& other);
 		Squad	&operator=(const Squad& other);
 		~Squad();
 		int getCount() const;

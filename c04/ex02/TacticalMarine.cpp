@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:45 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 12:49:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ TacticalMarine::TacticalMarine()
 	std::cout << "Tactical Marine ready for battle!" << std::endl;
 }
 
-TacticalMarine::TacticalMarine(const TacticalMarine& old)
+TacticalMarine::TacticalMarine(const TacticalMarine& other)
 {
 	// new TacticalMarine();
-	(void) old;
+	(void) other;
 	std::cout << "Tactical Marine (copied) ready for battle!" << std::endl;
 }
 

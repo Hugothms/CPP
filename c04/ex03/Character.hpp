@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:45 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:59:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 12:49:13 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Character: public ICharacter
 		Character();
 		Character(std::string name);
 		~Character();
-		Character(const Character& old);
+		Character(const Character& other);
 		Character& operator=(const Character& other);
 		std::string const	&getName() const;
 		void				equip(AMateria *m);

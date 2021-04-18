@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:27:35 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:09 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 13:02:19 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,16 @@ Victim::Victim(std::string name): name(name)
 Victim::~Victim()
 {
 	std::cout << "Victim " << this->name << " just died for no apparent reason!" << std::endl;
+}
+
+Victim::Victim(const Victim& other):
+name(other.getName())
+{}
+
+Victim& Victim::operator=(const Victim& other)
+{
+	this->name = other.getName();
+	return (*this);
 }
 
 std::string Victim::getName(void) const

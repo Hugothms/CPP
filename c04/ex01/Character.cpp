@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:49:12 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:30 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 12:48:38 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,21 @@ name(name), ap(40), weapon(NULL)
 
 Character::~Character()
 {}
+
+Character::Character(const Character& other)
+{
+	this->name = other.getName();
+	this->ap = other.getAP();
+	this->weapon = other.getWeapon();
+}
+
+Character& Character::operator=(const Character& other)
+{
+	this->name = other.getName();
+	this->ap = other.getAP();
+	this->weapon = other.getWeapon();
+	return (*this);
+}
 
 void Character::recoverAP()
 {

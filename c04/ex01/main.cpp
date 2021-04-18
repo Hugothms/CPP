@@ -6,21 +6,23 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:20:21 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/04 09:52:15 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 13:18:01 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# include"Character.hpp"
 # include"PlasmaRifle.hpp"
 # include"PowerFist.hpp"
-# include"SuperMutant.hpp"
 # include"RadScorpion.hpp"
-# include"Character.hpp"
+# include"SuperMutant.hpp"
+# include"SupplementEnemy.hpp"
+# include"SupplementWeapon.hpp"
 
 int	main()
 {
 	Character *Hero = new Character("Hero");
 	std::cout << *Hero;
-	Enemy *b = new RadScorpion();
+	Enemy *radscorpion = new RadScorpion();
 	AWeapon *pr = new PlasmaRifle();
 	AWeapon *pf = new PowerFist();
 
@@ -29,34 +31,49 @@ int	main()
 	Hero->equip(pf);
 	std::cout << *Hero;
 
-	Hero->attack(b);
-	std::cout << *Hero;
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+
+	while (Hero->getAP() > Hero->getWeapon()->getAPCost())
+	{
+		Hero->attack(radscorpion);
+		std::cout << *Hero;
+	}
 	Hero->equip(pr);
 	std::cout << *Hero;
-	Hero->attack(b);
-	std::cout << *Hero;
-	Hero->attack(b);
-	std::cout << *Hero;
+	while (Hero->getAP() > Hero->getWeapon()->getAPCost())
+	{
+		Hero->attack(radscorpion);
+		std::cout << *Hero;
+	}
+
 
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	Enemy *a = new SuperMutant();
-	Hero->attack(a);
-	std::cout << *Hero;
-	Hero->attack(a);
-	std::cout << *Hero;
-	Hero->attack(a);
-	std::cout << *Hero;
-	Hero->attack(a);
-	std::cout << *Hero;
-	Hero->attack(a);
+
+	Enemy *supermutant = new SuperMutant();
+	while (Hero->getAP() > Hero->getWeapon()->getAPCost())
+	{
+		Hero->attack(radscorpion);
+		std::cout << *Hero;
+	}
 	std::cout << *Hero;
 
 	Hero->recoverAP();
 	std::cout << *Hero;
-	Hero->attack(a);
+	Hero->attack(supermutant);
 	std::cout << *Hero;
 
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	Enemy *supplementenemy = new SupplementEnemy();
+	AWeapon *sw = new SupplementWeapon();
+	Hero->equip(sw);
+	Hero->attack(supplementenemy);
 	return (0);
 }

@@ -6,17 +6,17 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:26:37 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:06 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 13:01:16 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Sorcerer.hpp"
 
 Sorcerer::Sorcerer(void)
-{
-}
+{}
 
-Sorcerer::Sorcerer(std::string name, std::string title): name(name), title(title)
+Sorcerer::Sorcerer(std::string name, std::string title):
+name(name), title(title)
 {
 	std::cout << name << ", " << title << ", is born!" << std::endl;
 }
@@ -24,6 +24,17 @@ Sorcerer::Sorcerer(std::string name, std::string title): name(name), title(title
 Sorcerer::~Sorcerer()
 {
 	std::cout << name << ", " << title << ", is dead. Consequences will never be the same!" << std::endl;
+}
+
+Sorcerer::Sorcerer(const Sorcerer& other):
+name(other.getName()), title(other.getTitle())
+{}
+
+Sorcerer& Sorcerer::operator=(const Sorcerer& other)
+{
+	this->name = other.getName();
+	this->title = other.getTitle();
+	return (*this);
 }
 
 std::string	Sorcerer::getName(void) const

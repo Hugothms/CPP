@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   SupplementWeapon.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 12:45:28 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 11:17:44 by hthomas          ###   ########.fr       */
+/*   Created: 2021/04/18 12:33:57 by hthomas           #+#    #+#             */
+/*   Updated: 2021/04/18 13:06:41 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#include "SupplementWeapon.hpp"
 
-# include"Enemy.hpp"
+SupplementWeapon::SupplementWeapon():
+AWeapon("Supplement Weapon", 6, 31)
+{}
 
-class SuperMutant: public Enemy
+SupplementWeapon::~SupplementWeapon()
+{}
+
+void SupplementWeapon::attack() const
 {
-	public:
-		SuperMutant();
-		virtual ~SuperMutant();
-		void  takeDamage(int damage);
-};
-
-#endif
+	std::cout << "* kalash kalash *" << std::endl;
+}

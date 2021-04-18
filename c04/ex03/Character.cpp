@@ -38,11 +38,11 @@ Character::Character(const Character& copy)
 {
 	for (int i = 0; i < this->maxInventorySize; i++)
 	{
-		// if (this->inventory[i])
-		// {
-		// 	delete this->inventory[i];
-		// 	this->inventory[i] = NULL;
-		// }
+		if (this->inventory[i])
+		{
+			delete this->inventory[i];
+			this->inventory[i] = NULL;
+		}
 		this->inventory[i] = copy.inventory[i]->clone();
 	}
 	this->name = copy.name;

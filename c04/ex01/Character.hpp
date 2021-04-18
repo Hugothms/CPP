@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:46:37 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:31 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/18 12:50:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Character
 	public:
 		Character(std::string const&  name);
 		~Character();
+		Character(const Character& other);
+		Character& operator=(const Character& other);
 		void recoverAP();
 		void equip(AWeapon*);
 		void attack(Enemy*);
