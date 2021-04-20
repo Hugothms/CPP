@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 18:03:25 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 14:32:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ public:
 	void 		incrementGrade();
 	void 		decrementGrade();
 	int 		checkGrade(int);
-	void		signForm(Form& );
-	void		executeForm(Form const&  form);
+	void		signForm(Form& form);
+	void		executeForm(Form const& form);
 	class GradeTooHighException: public std::exception
 	{
 	public:
@@ -51,6 +51,6 @@ public:
 	};
 };
 
-std::ostream	&operator<<(std::ostream& o, Bureaucrat const& b);
+std::ostream	&operator<<(std::ostream& o, Bureaucrat const& self);
 
 #endif

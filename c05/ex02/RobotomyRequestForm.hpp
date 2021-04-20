@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 18:03:37 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 14:31:24 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	RobotomyRequestForm();
 	RobotomyRequestForm(const std::string& target);
 	~RobotomyRequestForm();
-	bool execute(Bureaucrat const&  executor) const;
+	bool execute(Bureaucrat const& executor) const;
 };
 
 #endif

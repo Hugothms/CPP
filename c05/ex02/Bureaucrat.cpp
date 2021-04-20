@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 18:12:18 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 14:32:15 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void		Bureaucrat::signForm(Form& form)
 	}
 }
 
-void		Bureaucrat::executeForm(Form const&  form)
+void		Bureaucrat::executeForm(Form const& form)
 {
 	if (form.execute(*this))
 		std::cout << this->getName() << " executes " << form.getName() << std::endl;
