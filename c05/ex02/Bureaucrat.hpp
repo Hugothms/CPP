@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 14:32:15 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:07:01 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Form;
 class Bureaucrat
 {
 private:
-	std::string	name;
-	int			grade;
+	const std::string	name;
+	int					grade;
 public:
 	static const int HIGHESTGRADE;
 	static const int LOWESTGRADE;
