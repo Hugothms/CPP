@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 13:31:08 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:52:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 
 Weapon::Weapon(){}
 
-Weapon::Weapon(std::string type)
-{
-	this->type = type;
-}
+Weapon::Weapon(std::string type):
+type(type)
+{}
 
 std::string const	Weapon::getType(void)
 {

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:08:04 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:55:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:53:20 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Fixed
 		int static const	number = 8;
 	public:
 		Fixed();
-		Fixed(Fixed const& f);
-		Fixed& operator=(const Fixed& f);
+		Fixed(Fixed const& other);
+		Fixed& operator=(const Fixed& other);
 		~Fixed();
 		int		getPoint() const;
 		int		getRawBits(void) const;

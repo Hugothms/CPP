@@ -6,23 +6,19 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:01:36 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:50:28 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Zombie.hpp"
 
-Zombie::Zombie(void)
-{
-	this->name = "null";
-	this->type = "nice";
-}
+Zombie::Zombie(void):
+name(""), type("")
+{}
 
-Zombie::Zombie(std::string name, std::string type)
-{
-	this->name = name;
-	this->type = type;
-}
+Zombie::Zombie(std::string name, std::string type):
+name(name), type(type)
+{}
 
 Zombie* Zombie::newZombie(std::string name)
 {
