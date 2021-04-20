@@ -6,19 +6,22 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 14:31:35 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 17:10:03 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm():
-Form("PresidentialPardonForm", 25, 5){}
+Form("PresidentialPardonForm", 25, 5)
+{}
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string& target):
-Form("PresidentialPardonForm", 25, 5, target){}
+Form("PresidentialPardonForm", 25, 5, target)
+{}
 
-PresidentialPardonForm::~PresidentialPardonForm(){}
+PresidentialPardonForm::~PresidentialPardonForm()
+{}
 
 bool	PresidentialPardonForm::execute(Bureaucrat const& executor) const
 {
