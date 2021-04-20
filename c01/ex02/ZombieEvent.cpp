@@ -6,15 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 16:14:37 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 11:47:32 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:46:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ZombieEvent.hpp"
 
 ZombieEvent::ZombieEvent(void)
-{
-}
+{}
 
 std::string const	ZombieEvent::getType()
 {

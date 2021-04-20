@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 14:10:40 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:46:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ MateriaSource::MateriaSource()
 }
 
 MateriaSource::~MateriaSource()
-{
-}
+{}
 
 /*
 ** Copy constructor

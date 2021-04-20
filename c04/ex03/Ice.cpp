@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:59:26 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:46:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 // Constructors & Destructors
 Ice::Ice(): AMateria("ice")
-{
-}
+{}
 
 Ice::~Ice()
-{
-}
+{}
 
 // Copy constructor
 Ice::Ice(const Ice& copy): AMateria("ice")

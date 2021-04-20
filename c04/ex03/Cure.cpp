@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:14:13 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:59:20 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:46:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 // Constructors & Destructors
 Cure::Cure(): AMateria("cure")
-{
-}
+{}
 
 Cure::~Cure()
-{
-}
+{}
 
 // Copy constructor
 Cure::Cure(const Cure& copy): AMateria("Cure")
