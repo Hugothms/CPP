@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 11:38:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 14:10:40 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,19 @@ MateriaSource::~MateriaSource()
 /*
 ** Copy constructor
 */
-MateriaSource::MateriaSource(const MateriaSource& copy): name(copy.name)
+MateriaSource::MateriaSource(const MateriaSource& other)
 {
-	for (int i = 0; i < this->maxMemorySize; i++)
-		this->memory[i] = copy.memory[i];
+	MateriaSource::operator=(other);
 }
 
 /*
 ** Operation overload =
 */
-MateriaSource& MateriaSource::operator=(const MateriaSource& copy)
+MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 {
-	this->name = copy.name;
+	this->name = other.name;
 	for (int i = 0; i < this->maxMemorySize; i++)
-		this->memory[i] = copy.memory[i];
+		this->memory[i] = other.memory[i];
 	return (*this);
 }
 

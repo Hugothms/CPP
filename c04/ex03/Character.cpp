@@ -34,18 +34,9 @@ Character::~Character()
 	}
 }
 
-Character::Character(const Character& copy)
+Character::Character(const Character& other)
 {
-	for (int i = 0; i < this->maxInventorySize; i++)
-	{
-		if (this->inventory[i])
-		{
-			delete this->inventory[i];
-			this->inventory[i] = NULL;
-		}
-		this->inventory[i] = copy.inventory[i]->clone();
-	}
-	this->name = copy.name;
+	Character::operator=(other);
 }
 
 Character	&Character::operator=(const Character& other)

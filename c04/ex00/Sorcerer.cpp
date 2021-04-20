@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:26:37 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 11:34:04 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 12:04:11 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ Sorcerer::~Sorcerer()
 	std::cout << name << ", " << title << ", is dead. Consequences will never be the same!" << std::endl;
 }
 
-Sorcerer::Sorcerer(const Sorcerer& other):
-name(other.getName()), title(other.getTitle())
-{}
+Sorcerer::Sorcerer(const Sorcerer& other)
+{
+	Sorcerer::operator=(other);
+}
 
 Sorcerer& Sorcerer::operator=(const Sorcerer& other)
 {

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 12:07:54 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:17 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 11:56:05 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ AWeapon::AWeapon():
 name(""), damage(0), apcost(0)
 {}
 
-AWeapon::AWeapon(const AWeapon& weapon):
-name(weapon.name), damage(weapon.damage), apcost(weapon.apcost)
-{}
+AWeapon::AWeapon(const AWeapon& other)
+{
+	AWeapon::operator=(other);
+}
 
 AWeapon::AWeapon(std::string const& name, int apcost, int damage):
 name(name), damage(damage), apcost(apcost)

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:15:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 13:05:36 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 11:56:39 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ hp(hp), type(type)
 Enemy::~Enemy()
 {}
 
-Enemy::Enemy(const Enemy& other):
-hp(other.getHP()), type(other.getType())
-{}
+Enemy::Enemy(const Enemy& other)
+{
+	Enemy::operator=(other);
+}
 
 Enemy& Enemy::operator=(const Enemy& other)
 {
