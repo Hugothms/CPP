@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 17:10:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 20:55:25 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void		Bureaucrat::executeForm(Form const& form)
 		std::cout << this->getName() << " cannot sign " << form.getName() << " because ";
 		if (form.getStatus())
 			std::cout << "form is already signed";
-		if (form.getStatus()& & !form.execute(*this))
+		if (form.getStatus() && !form.execute(*this))
 			std::cout << " AND ";
 		if (!form.execute(*this))
 			std::cout << "grade is too low";
