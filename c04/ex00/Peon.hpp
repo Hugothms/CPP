@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:13:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 12:52:10 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 10:55:09 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Peon: public Victim
 {
 public:
 	Peon(std::string name);
-	~Peon();
+	virtual ~Peon();
 	void getPolymorphed() const;
 };
 

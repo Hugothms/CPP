@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   supplement.hpp                                     :+:      :+:    :+:   */
+/*   Supplement.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 11:51:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 12:52:05 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 10:55:16 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Supplement: public Victim
 {
 public:
 	Supplement(std::string name);
-	~Supplement();
+	virtual ~Supplement();
 	void getPolymorphed() const;
 };
 
