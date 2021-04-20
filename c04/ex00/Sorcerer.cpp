@@ -6,14 +6,11 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:26:37 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 13:01:16 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 11:34:04 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Sorcerer.hpp"
-
-Sorcerer::Sorcerer(void)
-{}
 
 Sorcerer::Sorcerer(std::string name, std::string title):
 name(name), title(title)
