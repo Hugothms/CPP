@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 11:51:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 13:07:13 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 11:43:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class SupplementWeapon: public AWeapon
 {
 	public:
 		SupplementWeapon();
-		virtual ~SupplementWeapon();
 		void attack() const;
 };
 
