@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 16:46:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 22:55:23 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ AMateria::AMateria(std::string const& type)
 AMateria::~AMateria()
 {}
 
-AMateria::AMateria(const AMateria& copy)
+AMateria::AMateria(const AMateria& other)
 {
-	*this = copy;
+	AMateria::operator=(other);
 }
 
 AMateria& AMateria::operator=(const AMateria& other)
