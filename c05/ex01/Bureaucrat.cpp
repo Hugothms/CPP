@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 18:06:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:45:24 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,13 @@
 const int	Bureaucrat::HIGHESTGRADE = 1;
 const int	Bureaucrat::LOWESTGRADE = 150;
 
-Bureaucrat::Bureaucrat()
-{
-	this->name = "";
-	this->grade = LOWESTGRADE;
-}
+Bureaucrat::Bureaucrat():
+name(""), grade(LOWESTGRADE)
+{}
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
-{
-	this->grade = checkGrade(grade);
-	this->name = name;
-}
+Bureaucrat::Bureaucrat(std::string name, int grade):
+name(""), grade(checkGrade(grade))
+{}
 
 Bureaucrat::~Bureaucrat(){}
 
