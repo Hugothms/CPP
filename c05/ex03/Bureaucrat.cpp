@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 20:55:25 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/20 22:56:33 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ name(""), grade(LOWESTGRADE)
 {}
 
 Bureaucrat::Bureaucrat(std::string name, int grade):
-name(""), grade(checkGrade(grade))
+name(name), grade(checkGrade(grade))
 {}
 
 Bureaucrat::~Bureaucrat()
