@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 22:55:42 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/21 20:05:41 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ int			Bureaucrat::checkGrade(int grade)
 			throw GradeTooLowException();
 		}
 	}
-	catch(std::exception & e)
+	catch(std::exception& e)
 	{
-	    std::cerr << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	return (grade);
 }
