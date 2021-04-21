@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 14:30:34 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/21 23:03:35 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ private:
 	bool				status;
 	const int 			gradeSign;
 	const int 			gradeExecute;
+	Form(const Form& other);
+	Form& operator=(const Form& other);
 public:
 	static const int HIGHESTGRADE;
 	static const int LOWESTGRADE;
