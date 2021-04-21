@@ -2,6 +2,7 @@
 *.out
 *.DS_Store
 .vscode/
+*/*/objects/
 c00/ex00/megaphone
 c00/ex01/Phonebook
 c01/ex00/Pony
@@ -37,3 +38,4 @@ c07/ex02/program
 c08/ex00/program
 c08/ex01/program
 c08/ex02/program
+c08/ex00/executable
