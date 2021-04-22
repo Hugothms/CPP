@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 17:10:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/22 09:03:49 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,18 @@ gradeExecute(checkGrade(gradeExe)), target(target)
 
 Form::~Form()
 {}
+
+Form::Form(const Form& other): gradeSign(other.getGradeSign()), gradeExecute(other.getGradeExecute())
+{
+	this->operator=(other);
+}
+
+Form& Form::operator=(const Form& other)
+{
+	this->status = other.getStatus();
+	return (*this);
+}
+
 
 std::string	Form::getName() const
 {

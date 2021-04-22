@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/21 23:03:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/22 08:56:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ class Bureaucrat
 private:
 	const std::string	name;
 	int					grade;
-	Bureaucrat(const Bureaucrat& other);
-	Bureaucrat& operator=(const Bureaucrat& other);
 public:
 	static const int HIGHESTGRADE;
 	static const int LOWESTGRADE;
 	Bureaucrat();
 	Bureaucrat(std::string name, int grade);
 	~Bureaucrat();
+	Bureaucrat(const Bureaucrat& other);
+	Bureaucrat& operator=(const Bureaucrat& other);
 	std::string	getName() const;
 	int 		getGrade() const;
 	void 		incrementGrade();

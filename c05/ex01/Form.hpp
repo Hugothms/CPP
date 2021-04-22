@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/21 23:03:35 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/22 08:57:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ private:
 	bool				status;
 	const int 			gradeSign;
 	const int 			gradeExecute;
-	Form(const Form& other);
-	Form& operator=(const Form& other);
 public:
 	static const int HIGHESTGRADE;
 	static const int LOWESTGRADE;
 	Form();
 	Form(const std::string& name, const int gradeSign, const int GradeExecute);
 	~Form();
+	Form(const Form& other);
+	Form& operator=(const Form& other);
 	std::string	getName() const;
 	bool 		getStatus() const;
 	int 		getGradeSign() const;

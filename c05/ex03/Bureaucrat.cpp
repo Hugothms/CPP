@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 22:56:33 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/22 08:54:25 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ name(name), grade(checkGrade(grade))
 
 Bureaucrat::~Bureaucrat()
 {}
+
+Bureaucrat::Bureaucrat(const Bureaucrat& other)
+{
+	this->operator=(other);
+}
+
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
+{
+	this->grade = other.getGrade();
+	return (*this);
+}
 
 std::string	Bureaucrat::getName() const
 {
