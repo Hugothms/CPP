@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/22 08:54:25 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/22 09:26:23 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,13 @@ void		Bureaucrat::signForm(Form& form)
 
 void		Bureaucrat::executeForm(Form const& form)
 {
+	if (&form == nullptr)
+	{
+		std::cout << "Form doesn't exist" << std::endl;
+		return ;
+	}
 	if (form.execute(*this))
-		std::cout << this->getName() << " executes " << form.getName() << std::endl;
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
 	else
 	{
 		std::cout << this->getName() << " cannot sign " << form.getName() << " because ";
