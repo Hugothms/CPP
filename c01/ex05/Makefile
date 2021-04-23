@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/14 15:47:50 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/23 17:43:55 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ CFLAGS =	-Wall -Werror -Wextra -std=c++98
 SRCS =		Brain.cpp	\
 			Human.cpp	\
 			main.cpp
+
+OBJS =		$(SRCS:.cpp=.o)
 
 all: $(NAME)
 
@@ -31,8 +33,8 @@ re:				fclean $(NAME)
 
 .PHONY:			all clean fclean re
 
-$(NAME): $(SRCS)
-	$(CXX) $(CFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(CFLAGS) $? -o $(NAME)
 
 test: $(NAME)
 	./$^

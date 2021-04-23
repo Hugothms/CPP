@@ -13,6 +13,8 @@ REMOVE				=	rm -rf
 
 COMPILATION_FLAGS	=	-Wall -Wextra -Werror -std=c++98 -pedantic-errors
 
+OBJS =		$(SRCS:.cpp=.o)
+
 all: $(NAME)
 
 $(DIRECTORY_OBJECTS):

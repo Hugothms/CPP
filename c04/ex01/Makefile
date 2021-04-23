@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/18 13:11:19 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/23 17:43:55 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ SRCS =		main.cpp			\
 			SupplementEnemy.cpp	\
 			SupplementWeapon.cpp
 
+OBJS =		$(SRCS:.cpp=.o)
+
 all: $(NAME)
 
 clean:
@@ -38,8 +40,8 @@ re:				fclean $(NAME)
 
 .PHONY:			all clean fclean re
 
-$(NAME): $(SRCS)
-	$(CXX) $(CFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(CFLAGS) $? -o $(NAME)
 
 test: $(NAME)
 	./$^
