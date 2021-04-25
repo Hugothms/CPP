@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:52:38 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:32:14 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,24 @@ int main()
 		std::cout << ppf << std::endl;
 		charly.signForm(ppf);
 		charly.executeForm(ppf);
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	try
+	{
+		PresidentialPardonForm ppf = PresidentialPardonForm("Prisonner");
+		std::cout << ppf << std::endl;
+
+		Bureaucrat tooLow = Bureaucrat("TooLow", 150);
+		std::cout << tooLow << std::endl;
+		tooLow.signForm(ppf);
+		tooLow.executeForm(ppf);
 	}
 	catch(std::exception & e)
 	{

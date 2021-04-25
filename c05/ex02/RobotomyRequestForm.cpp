@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/26 00:00:43 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:23:43 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,14 @@ Form("RobotomyRequestForm", 72, 45, target)
 RobotomyRequestForm::~RobotomyRequestForm()
 {}
 
-bool	RobotomyRequestForm::execute(const Bureaucrat& executor) const
+void	RobotomyRequestForm::execute(const Bureaucrat& executor) const
 {
-	if (this->Form::execute(executor))
+	this->Form::execute(executor);
+	if(std::rand() % 2)
 	{
-		if(std::rand() % 2)
-		{
-			std::cout << "Crrrrrsh pshhhhhh cric-crac-croc pif-paf-pouf" << std::endl;
-			std::cout << this->getTarget() << " has been robotomized successfully !" << std::endl;
-		}
-		else
-			std::cout << this->getTarget() << " robotomy failed" << std::endl;
-		return true;
+		std::cout << "Crrrrrsh pshhhhhh cric-crac-croc pif-paf-pouf" << std::endl;
+		std::cout << this->getTarget() << " has been robotomized successfully !" << std::endl;
 	}
-	return false;
+	else
+		std::cout << this->getTarget() << " robotomy failed" << std::endl;
 }

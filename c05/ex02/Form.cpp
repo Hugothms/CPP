@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:47:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:29:38 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ int			Form::checkGrade(int grade)
 	else if (grade > LOWESTGRADE)
 	{
 		grade = 150;
-		std::cout << "@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
 		throw GradeTooLowException();
 	}
 	return (grade);
@@ -87,16 +86,14 @@ int			Form::checkGrade(int grade)
 void		Form::beSigned(Bureaucrat& bureaucrat)
 {
 	if (bureaucrat.getGrade() > this->getGradeSign())
-		{
-			std::cout << "&&&&&&&&&&&&&&&&&&&&&&&&&&" << std::endl;
-			throw GradeTooLowException();
-		}
+		throw GradeTooLowException();
 	this->status = true;
 }
 
-bool		Form::execute(const Bureaucrat& executor) const
+void		Form::execute(const Bureaucrat& executor) const
 {
-	return (executor.getGrade() <= this->getGradeExecute());
+	if (executor.getGrade() > this->getGradeExecute())
+		throw GradeTooLowException();
 }
 
 const char* Form::GradeTooHighException::what() const throw()
