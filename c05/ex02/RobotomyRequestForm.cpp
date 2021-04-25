@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:04:37 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:00:43 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 RobotomyRequestForm::RobotomyRequestForm():
 Form("RobotomyRequestForm", 72, 45)
-{}
+{
+	srand(time(NULL));
+}
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string& target):
 Form("RobotomyRequestForm", 72, 45, target)
-{}
+{
+	srand(time(NULL));
+}
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {}
@@ -27,7 +31,6 @@ bool	RobotomyRequestForm::execute(const Bureaucrat& executor) const
 {
 	if (this->Form::execute(executor))
 	{
-		srand(time(NULL));
 		if(std::rand() % 2)
 		{
 			std::cout << "Crrrrrsh pshhhhhh cric-crac-croc pif-paf-pouf" << std::endl;

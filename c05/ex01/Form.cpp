@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/22 09:03:49 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:38:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ const int	Form::HIGHESTGRADE = 1;
 const int	Form::LOWESTGRADE = 150;
 
 Form::Form():
-name(""), status(false), gradeSign(150), gradeExecute(150)
+name(""), status(false), gradeSign(1), gradeExecute(1)
 {}
 
 Form::Form(const std::string& name, const int gradeSign, const int gradeExe):
@@ -60,45 +60,37 @@ int 		Form::getGradeExecute() const
 
 int			Form::checkGrade(int grade)
 {
-	try
+	if (grade < HIGHESTGRADE)
 	{
-		if (grade < HIGHESTGRADE)
-		{
-			grade = 1;
-			throw GradeTooHighException();
-		}
-		else if (grade > LOWESTGRADE)
-		{
-			grade = 150;
-			throw GradeTooLowException();
-		}
+		grade = 1;
+		throw GradeTooHighException();
 	}
-	catch(std::exception & e)
+	else if (grade > LOWESTGRADE)
 	{
-	    std::cerr << e.what() << std::endl;
+		grade = 150;
+		throw GradeTooLowException();
 	}
 	return (grade);
 }
 
-bool		Form::beSigned(Bureaucrat& bureaucrat)
+void		Form::beSigned(Bureaucrat& bureaucrat)
 {
 	if (bureaucrat.getGrade() < this->getGradeSign())
-		return false;
+		throw GradeTooLowException();
 	this->status = true;
-	return true;
 }
 
 const char* Form::GradeTooHighException::what() const throw()
 {
-	return "Form: GradeTooHighExeption";
+	return "Form: GradeTooHighException";
 }
 
 const char* Form::GradeTooLowException::what() const throw()
 {
-	return "Form: GradeTooLowExeption";
+	return "Form: GradeTooLowException";
 }
 
-std::ostream	&operator<<(std::ostream& o, Form const& self)
+std::ostream	&operator<<(std::ostream& o, const Form& self)
 {
 	o << self.getName() << ", form status: " << self.getStatus() << ", needed grade to be signed: " << self.getGradeSign() << ", needed grade to be executed: " << self.getGradeExecute();
 	return o;

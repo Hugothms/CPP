@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/22 08:41:31 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:52:38 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,51 @@ int main()
 {
 	srand(time(NULL));
 
-	Bureaucrat charlie = Bureaucrat("Charlie", 1);
-	std::cout << charlie << std::endl;
+	Bureaucrat charly = Bureaucrat("Charly", 1);
+	std::cout << charly << std::endl;
 
-	ShrubberyCreationForm scf = ShrubberyCreationForm("Prisonner");
-	std::cout << scf << std::endl;
-	charlie.signForm(scf);
-	charlie.executeForm(scf);
+	std::cout << std::endl;
 
-	RobotomyRequestForm rrf = RobotomyRequestForm("Prisonner");
-	std::cout << rrf << std::endl;
-	charlie.signForm(rrf);
-	charlie.executeForm(rrf);
+	try
+	{
+		ShrubberyCreationForm scf = ShrubberyCreationForm("Prisonner");
+		std::cout << scf << std::endl;
+		charly.signForm(scf);
+		charly.executeForm(scf);
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	PresidentialPardonForm ppf = PresidentialPardonForm("Prisonner");
-	std::cout << ppf << std::endl;
-	charlie.signForm(ppf);
-	charlie.executeForm(ppf);
+	std::cout << std::endl;
+
+	try
+	{
+		RobotomyRequestForm rrf = RobotomyRequestForm("Prisonner");
+		std::cout << rrf << std::endl;
+		charly.signForm(rrf);
+		charly.executeForm(rrf);
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	try
+	{
+		PresidentialPardonForm ppf = PresidentialPardonForm("Prisonner");
+		std::cout << ppf << std::endl;
+		charly.signForm(ppf);
+		charly.executeForm(ppf);
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return 0;
 }
+
+

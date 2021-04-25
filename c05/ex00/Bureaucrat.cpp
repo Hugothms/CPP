@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:04:37 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:38:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,34 +59,27 @@ void		Bureaucrat::decrementGrade()
 
 int			Bureaucrat::checkGrade(int grade)
 {
-	try
+	if (grade < HIGHESTGRADE)
 	{
-		if (grade < HIGHESTGRADE)
-		{
-			grade = 1;
-			throw GradeTooHighException();
-		}
-		else if (grade > LOWESTGRADE)
-		{
-			grade = 150;
-			throw GradeTooLowException();
-		}
+		grade = 1;
+		throw GradeTooHighException();
 	}
-	catch(std::exception& e)
+	else if (grade > LOWESTGRADE)
 	{
-		std::cerr << e.what() << std::endl;
+		grade = 150;
+		throw GradeTooLowException();
 	}
 	return (grade);
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return "Bureaucrat: GradeTooHighExeption";
+	return "Bureaucrat: GradeTooHighException";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return "Bureaucrat: GradeTooLowExeption";
+	return "Bureaucrat: GradeTooLowException";
 }
 
 std::ostream	&operator<<(std::ostream& o, const Bureaucrat& self)

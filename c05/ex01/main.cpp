@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/10 19:28:30 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 22:55:01 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,47 @@ int main()
 	Bureaucrat alice = Bureaucrat("alice", 42);
 	std::cout << alice << std::endl;
 	Form formidable = Form("formidable", 42, 24);
-	std::cout << formidable << std::endl;
+	std::cout << formidable << std::endl << std::endl;
 
-	bob.signForm(formidable);
+	Bureaucrat test = Bureaucrat("test", 1);
+	try
+	{
+		test.incrementGrade();
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+
+	try
+	{
+		bob.signForm(formidable);
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << formidable << std::endl << std::endl;
+
+	try
+	{
+		alice.signForm(formidable);
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << formidable << std::endl << std::endl;
+
+	try
+	{
+		bob.signForm(formidable);
+	}
+	catch(std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	std::cout << formidable << std::endl;
-	alice.signForm(formidable);
-	std::cout << formidable << std::endl;
-	bob.signForm(formidable);
 	return 0;
 }

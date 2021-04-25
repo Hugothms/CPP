@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:04:54 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:07:42 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,52 +49,45 @@ int 		Bureaucrat::getGrade() const
 
 void		Bureaucrat::incrementGrade()
 {
-	// if (this->grade == HIGHESTGRADE)
-	// 	throw GradeTooHighException();
 	this->grade = checkGrade(grade - 1);
 }
 
 void		Bureaucrat::decrementGrade()
 {
-	// if (this->grade == LOWESTGRADE)
-	// 	throw GradeTooLowException();
 	this->grade = checkGrade(grade + 1);
 }
 
 int			Bureaucrat::checkGrade(int grade)
 {
-	try
+	if (grade < HIGHESTGRADE)
 	{
-		if (grade < HIGHESTGRADE)
-		{
-			grade = 1;
-			throw GradeTooHighException();
-		}
-		else if (grade > LOWESTGRADE)
-		{
-			grade = 150;
-			throw GradeTooLowException();
-		}
+		grade = 1;
+		throw GradeTooHighException();
 	}
-	catch(std::exception & e)
+	else if (grade > LOWESTGRADE)
 	{
-		std::cerr << e.what() << std::endl;
+		grade = 150;
+		throw GradeTooLowException();
 	}
 	return (grade);
 }
 
 void		Bureaucrat::signForm(Form& form)
 {
-	if (form.beSigned(*this))
+	form.beSigned(*this);
+	bool grade_high_enough = this->getGrade() < form.getGradeSign();
+	if (grade_high_enough)
+	{
 		std::cout << this->getName() << " signs " << form.getName() << std::endl;
+	}
 	else
 	{
 		std::cout << this->getName() << " cannot sign " << form.getName() << " because ";
 		if (form.getStatus())
 			std::cout << "form is already signed";
-		if (form.getStatus() && !form.beSigned(*this))
+		if (form.getStatus() && !grade_high_enough)
 			std::cout << " AND ";
-		if (!form.beSigned(*this))
+		if (!grade_high_enough)
 			std::cout << "grade is too low";
 		std::cout << std::endl;
 	}
@@ -102,6 +95,11 @@ void		Bureaucrat::signForm(Form& form)
 
 void		Bureaucrat::executeForm(const Form& form)
 {
+	if (&form == nullptr)
+	{
+		std::cout << "Form doesn't exist" << std::endl;
+		return ;
+	}
 	if (form.execute(*this))
 		std::cout << this->getName() << " executed " << form.getName() << std::endl;
 	else
@@ -119,12 +117,12 @@ void		Bureaucrat::executeForm(const Form& form)
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return "Bureaucrat: GradeTooHighExeption";
+	return "Bureaucrat: GradeTooHighException";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return "Bureaucrat: GradeTooLowExeption";
+	return "Bureaucrat: GradeTooLowException";
 }
 
 std::ostream	&operator<<(std::ostream& o, const Bureaucrat& self)

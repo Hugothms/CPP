@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:04:54 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:30:08 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,31 +23,32 @@ class Bureaucrat
 private:
 	const std::string	name;
 	int					grade;
-	public:
-	static const int HIGHESTGRADE;
-	static const int LOWESTGRADE;
+	int					checkGrade(int);
+public:
+	static const int	HIGHESTGRADE;
+	static const int	LOWESTGRADE;
 	Bureaucrat();
 	Bureaucrat(std::string name, int grade);
 	~Bureaucrat();
 	Bureaucrat(const Bureaucrat& other);
-	Bureaucrat& operator=(const Bureaucrat& other);
-	std::string	getName() const;
-	int 		getGrade() const;
-	void 		incrementGrade();
-	void 		decrementGrade();
-	int 		checkGrade(int);
-	void		signForm(Form& );
+	Bureaucrat&			operator=(const Bureaucrat& other);
+	std::string			getName() const;
+	int 				getGrade() const;
+	void 				incrementGrade();
+	void 				decrementGrade();
+	void				signForm(Form& form);
 	void		executeForm(const Form& form);
+
 	class GradeTooHighException: public std::exception
 	{
 	public:
-		virtual const char* what() const throw();
+		virtual const char*	what() const throw();
 	};
 
 	class GradeTooLowException: public std::exception
 	{
 	public:
-		virtual const char* what() const throw();
+		virtual const char*	what() const throw();
 	};
 };
 
