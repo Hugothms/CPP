@@ -43,13 +43,11 @@ NinjaTrap::~NinjaTrap()
 
 void	NinjaTrap::rangedAttack(const std::string& target)
 {
-	// this->ClapTrap::rangedAttack(target);
 	std::cout << "N1NJ4-TP " << this->Name << " attacks " << target << " at range, causing " << this->Ranged_attack_damage << " points of damage!" << std::endl;
 }
 
 void	NinjaTrap::meleeAttack(const std::string& target)
 {
-	// this->ClapTrap::meleeAttack(target);
 	std::cout << "N1NJ4-TP " << this->Name << " attacks " << target << " in melee, causing " << this->Melee_attack_damage << " points of damage!" << std::endl;
 }
 

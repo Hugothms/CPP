@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:08:02 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:01:26 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:33:18 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ Fixed& Fixed::operator=(const Fixed& other)
 
 int		Fixed::getRawBits(void) const
 {
-	// std::cout << "getRawBits member function called" << std::endl;
 	return (this->raw);
 }
 

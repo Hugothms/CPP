@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 12:49:13 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:34:37 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 TacticalMarine::TacticalMarine()
 {
-	// new TacticalMarine();
 	std::cout << "Tactical Marine ready for battle!" << std::endl;
 }
 
 TacticalMarine::TacticalMarine(const TacticalMarine& other)
 {
-	// new TacticalMarine();
 	(void) other;
 	std::cout << "Tactical Marine (copied) ready for battle!" << std::endl;
 }
@@ -34,7 +32,6 @@ TacticalMarine& TacticalMarine::operator=(const TacticalMarine& other)
 
 TacticalMarine::~TacticalMarine()
 {
-	// delete(this);
 	std::cout << "Aaargh..." << std::endl;
 }
 
