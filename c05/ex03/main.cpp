@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/26 00:08:22 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 00:17:36 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ int main()
 	std::cout << std::endl;
 
 	Form *err = sousFifre.makeForm("UnknownType", "azerty");
-	boss.executeForm(*err);
 	return 0;
 }
