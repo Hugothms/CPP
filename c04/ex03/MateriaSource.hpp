@@ -34,7 +34,7 @@ public:
 
 	// Functions
 	void		learnMateria(AMateria*);
-	AMateria*	createMateria(std::string const&  type);
+	AMateria*	createMateria(const std::string&  type);
 };
 
 #endif

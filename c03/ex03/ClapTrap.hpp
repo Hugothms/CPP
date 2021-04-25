@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:53 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:57:36 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ class ClapTrap
 		ClapTrap(std::string name);
 		~ClapTrap();
 		std::string		getName(void);
-		virtual void	rangedAttack(std::string const&  target);
-		virtual void	meleeAttack(std::string const&  target);
+		virtual void	rangedAttack(const std::string&  target);
+		virtual void	meleeAttack(const std::string&  target);
 		virtual void	takeDamage(unsigned int amount);
 		virtual void	beRepaired(unsigned int amount);
 };

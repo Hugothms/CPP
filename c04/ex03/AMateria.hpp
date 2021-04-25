@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:29 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/14 17:58:53 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AMateria
 	public:
 		// Constructors & Destructors
 		AMateria();
-		AMateria(std::string const& type);
+		AMateria(const std::string& type);
 		virtual ~AMateria();
 
 		// Operation overload =

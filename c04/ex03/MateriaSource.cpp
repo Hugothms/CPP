@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:43 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 16:46:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void		MateriaSource::learnMateria(AMateria *mat)
 
 }
 
-AMateria*	MateriaSource::createMateria(std::string const&  type)
+AMateria*	MateriaSource::createMateria(const std::string&  type)
 {
 	for (int i = 0; i < this->maxMemorySize; i++)
 	{

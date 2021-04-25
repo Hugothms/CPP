@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 12:15:49 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 11:56:39 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Enemy::Enemy():
 hp(0), type("")
 {}
 
-Enemy::Enemy(int hp, std::string const& type):
+Enemy::Enemy(int hp, const std::string& type):
 hp(hp), type(type)
 {}
 

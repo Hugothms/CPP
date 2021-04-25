@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/15 15:55:29 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:05:34 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ public:
 	{
 		this->elmts = new T[n]();
 	}
-	Array(Array<T> const& other): length(other.length), elmts(NULL)
+	Array(const Array<T>& other): length(other.length), elmts(NULL)
 	{
 		if (other.length > 0)
 			this->elmts = new T[other.length]();
 		for (size_t i = 0; i < other.length; i++)
 			this->elmts[i] = other.elmts[i];
 	};
-	Array<T>& operator=(Array<T> const& other)
+	Array<T>& operator=(const Array<T>& other)
 	{
 		if (this->length > 0)
 			delete[] this->elmts;
@@ -67,7 +67,7 @@ public:
 			throw Array::OutOfBoundsException();
 		return (this->elmts[index]);
 	}
-	T const& operator[](size_t index) const
+	const T& operator[](size_t index) const
 	{
 		return (operator[](index));
 	}

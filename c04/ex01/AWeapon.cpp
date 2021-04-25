@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 12:07:54 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 11:56:05 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ AWeapon::AWeapon(const AWeapon& other)
 	AWeapon::operator=(other);
 }
 
-AWeapon::AWeapon(std::string const& name, int apcost, int damage):
+AWeapon::AWeapon(const std::string& name, int apcost, int damage):
 name(name), damage(damage), apcost(apcost)
 {}
 

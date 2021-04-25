@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 17:10:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:04:37 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Form("PresidentialPardonForm", 25, 5, target)
 PresidentialPardonForm::~PresidentialPardonForm()
 {}
 
-bool	PresidentialPardonForm::execute(Bureaucrat const& executor) const
+bool	PresidentialPardonForm::execute(const Bureaucrat& executor) const
 {
 	if (this->Form::execute(executor))
 	{

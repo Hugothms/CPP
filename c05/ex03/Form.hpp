@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/22 09:05:14 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:04:54 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ public:
 	public:
 		virtual const char* what() const throw();
 	};
-	virtual bool execute(Bureaucrat const& executor) const;
+	virtual bool execute(const Bureaucrat& executor) const;
 };
 
-std::ostream	&operator<<(std::ostream& o, Form const& self);
+std::ostream	&operator<<(std::ostream& o, const Form& self);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:21:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 22:55:23 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ AMateria::AMateria()
 	this->type = "";
 }
 
-AMateria::AMateria(std::string const& type)
+AMateria::AMateria(const std::string& type)
 {
 	this->xp = 0;
 	this->type = type;

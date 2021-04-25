@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 17:10:03 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ Intern::~Intern()
 // 	return &form;
 // }
 
-Form*	new_shrub(std::string const& target) {
+Form*	new_shrub(const std::string& target) {
 	return new ShrubberyCreationForm(target);
 }
 
-Form*	new_pardon(std::string const& target) {
+Form*	new_pardon(const std::string& target) {
 	return new PresidentialPardonForm(target);
 }
 
-Form*	new_robo(std::string const& target) {
+Form*	new_robo(const std::string& target) {
 	return new RobotomyRequestForm(target);
 }
 

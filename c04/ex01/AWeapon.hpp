@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 12:02:22 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/16 11:24:53 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class AWeapon
 		AWeapon(const AWeapon&); // Constructeur de recopie
 		AWeapon& operator=(const AWeapon&); // Operator d'affectation
 	public:
-		AWeapon(std::string const&  name, int apcost, int damage);
+		AWeapon(const std::string&  name, int apcost, int damage);
 		virtual ~AWeapon(); // Destructeur éventuellement virtuel
 		std::string getName() const;
 		int getAPCost() const;

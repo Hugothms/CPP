@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:25:59 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/18 12:55:04 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:03:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ public:
 	Sorcerer& operator=(const Sorcerer& other);
 	std::string	getName(void) const;
 	std::string	getTitle(void) const;
-	void polymorph(Victim const& ) const;
+	void polymorph(const Victim& ) const;
 };
 
-std::ostream	&operator<<(std::ostream& o, Sorcerer const& i);
+std::ostream	&operator<<(std::ostream& o, const Sorcerer& i);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:49:12 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 11:53:59 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:04:21 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Character.hpp"
 
-Character::Character(std::string const&  name):
+Character::Character(const std::string&  name):
 name(name), ap(40), weapon(NULL)
 {}
 
@@ -77,7 +77,7 @@ AWeapon* Character::getWeapon() const
 	return (this->weapon);
 }
 
-std::ostream	&operator<<(std::ostream& o, Character const& c)
+std::ostream	&operator<<(std::ostream& o, const Character& c)
 {
 	o << c.getName() << " has "<< c.getAP() <<" AP";
 	if (c.getWeapon())

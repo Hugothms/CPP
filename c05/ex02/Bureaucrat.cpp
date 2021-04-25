@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 15:42:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:04:54 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int			Bureaucrat::checkGrade(int grade)
 	}
 	catch(std::exception & e)
 	{
-	    std::cerr << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	return (grade);
 }
@@ -100,7 +100,7 @@ void		Bureaucrat::signForm(Form& form)
 	}
 }
 
-void		Bureaucrat::executeForm(Form const& form)
+void		Bureaucrat::executeForm(const Form& form)
 {
 	if (form.execute(*this))
 		std::cout << this->getName() << " executed " << form.getName() << std::endl;
@@ -127,7 +127,7 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return "Bureaucrat: GradeTooLowExeption";
 }
 
-std::ostream	&operator<<(std::ostream& o, Bureaucrat const& self)
+std::ostream	&operator<<(std::ostream& o, const Bureaucrat& self)
 {
 	o << self.getName() << ", bureaucrat grade " << self.getGrade();
 	return o;

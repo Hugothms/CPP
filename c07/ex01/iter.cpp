@@ -6,14 +6,14 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/15 13:38:33 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:05:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream> //cout
 
 template <typename T>
-void	iter(T* array, int length, void (*f)(T const& ))
+void	iter(T* array, int length, void (*f)(const T& ))
 {
 	if (array)
 		for (int i = 0; i < length; i++)
@@ -21,7 +21,7 @@ void	iter(T* array, int length, void (*f)(T const& ))
 }
 
 template <typename T>
-void	printElement(T const& element)
+void	printElement(const T& element)
 {
     std::cout << element << " ";
 }

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:27:35 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/20 11:58:56 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 23:03:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ std::string Victim::getName(void) const
 	return (this->name);
 }
 
-std::ostream	&operator<<(std::ostream& o, Victim const& i)
+std::ostream	&operator<<(std::ostream& o, const Victim& i)
 {
 	o << "I am " << i.getName() << " and I like otters!" << std::endl;
 	return o;
