@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/23 13:48:43 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/25 15:53:19 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ bool	ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 	if (this->Form::execute(executor))
 	{
 		std::ofstream newFile;
-		newFile.open(this->getTarget()+"_shrubbery"); //!const
+		const std::string filename = this->getTarget()+"_shrubbery";
+		newFile.open(filename.c_str());
 		newFile << tree;
 		std::cout << this->getTarget() << "_shrubbery created" << std::endl;
 		return true;
