@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/26 00:29:57 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/26 11:23:35 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,10 @@ int			Bureaucrat::checkGrade(int grade)
 
 void		Bureaucrat::signForm(Form& form)
 {
-	form.beSigned(*this);
 	bool grade_high_enough = this->getGrade() < form.getGradeSign();
-	if (grade_high_enough)
+	if (grade_high_enough && !form.getStatus())
 	{
+		form.beSigned(*this);
 		std::cout << this->getName() << " signs " << form.getName() << std::endl;
 	}
 	else
@@ -93,20 +93,20 @@ void		Bureaucrat::signForm(Form& form)
 	}
 }
 
-void		Bureaucrat::executeForm(const Form& form)
+void		Bureaucrat::executeForm(const Form& form) //! appel a execute ?
 {
-	form.execute(*this);
 	bool grade_high_enough = this->getGrade() < form.getGradeExecute();
-	if (grade_high_enough)
+	if (grade_high_enough&& form.getStatus())
 	{
+		form.execute(*this);
 		std::cout << this->getName() << " executed " << form.getName() << std::endl;
 	}
 	else
 	{
 		std::cout << this->getName() << " cannot execute " << form.getName() << " because ";
-		if (form.getStatus())
-			std::cout << "form is already executed";
-		if (form.getStatus() && !grade_high_enough)
+		if (!form.getStatus())
+			std::cout << "form is not signed";
+		if (!form.getStatus() && !grade_high_enough)
 			std::cout << " AND ";
 		if (!grade_high_enough)
 			std::cout << "grade is too low";
