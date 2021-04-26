@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/23 17:44:00 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/26 19:47:47 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS =		main.cpp					\
 			PresidentialPardonForm.cpp	\
 			Intern.cpp
 
-OBJS =		$(SRCS:.cpp=.o)
+OBJS =		$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
 
@@ -36,6 +36,9 @@ fclean:			clean
 re:				fclean $(NAME)
 
 .PHONY:			all clean fclean re
+
+%.o: %.cpp | $(OBJS)
+	$(CXX) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(CXX) $(CFLAGS) $? -o $(NAME)
