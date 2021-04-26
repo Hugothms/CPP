@@ -5,3 +5,13 @@ all:
 	for dir in $(SUBDIRS); do \
 		make -C $$dir all; \
 	done
+
+re:
+	for dir in $(SUBDIRS); do \
+		make -C $$dir re; \
+	done
+
+fclean:
+	for dir in $(SUBDIRS); do \
+		make -C $$dir fclean; \
+	done
