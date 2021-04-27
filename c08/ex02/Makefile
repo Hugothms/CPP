@@ -24,6 +24,7 @@ $(DIRECTORY_OBJECTS)/%.o: $(DIRECTORY_SOURCES)/%.cpp | $(DIRECTORY_OBJECTS)
 	@printf "\e[33m"
 	@printf "Compile\t$< -> $@\n"
 	$(COMPILE) $(COMPILATION_FLAGS) -c $< -o $@
+	@printf "\e[39m"
 
 $(NAME): $(OBJECTS)
 	@printf "\e[32m"
@@ -38,6 +39,7 @@ clean:
 	@printf "\e[31m"
 	@printf "Remove\t$(DIRECTORY_OBJECTS)\n"
 	$(REMOVE) $(DIRECTORY_OBJECTS)
+	@printf "\e[39m"
 
 fclean: clean
 	@printf "Remove\t$(NAME)\n"
