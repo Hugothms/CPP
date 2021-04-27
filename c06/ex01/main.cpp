@@ -14,6 +14,7 @@
 # include <string>
 # include <cstdlib>
 # include <iostream>
+# pragma pack(1)
 
 struct Data
 {
@@ -26,8 +27,8 @@ void*	serialize(void)
 {
 	Data			*ret = new Data;
 	static char	set[] = "abcdefghijklmnopqrstuvwxyz"
-							"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-							"1234567890";
+						"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+						"1234567890";
 
 	for (int i = 0; i < 8; i += 1)
 	{
@@ -44,6 +45,7 @@ void*	serialize(void)
 Data*	deserialize(void *raw)
 {
 	Data			*ret = reinterpret_cast<Data*>(raw);
+	std::cout << sizeof(raw) << std::endl;
 	return (ret);
 }
 
@@ -51,6 +53,11 @@ int		main(void)
 {
 	srand(time(0));
 	void			*ser = serialize();
+
+	// std::cout << ((Data*)ser)->s1 << std::endl;
+	// std::cout << ((Data*)ser)->n << std::endl;
+	// std::cout << ((Data*)ser)->s2 << std::endl;
+
 	Data			*des = deserialize(ser);
 
 	std::cout << des->s1 << std::endl;
