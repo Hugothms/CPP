@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 12:25:47 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/27 15:39:11 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ struct Data
     std::string    s2;
 };
 
-void
-*serialize(void)
+void*	serialize(void)
 {
     Data           *ret = new Data;
     static char    set[] = "abcdefghijklmnopqrstuvwxyz"
@@ -42,15 +41,13 @@ void
     return (ret);
 }
 
-Data
-*deserialize(void *raw)
+Data*	deserialize(void *raw)
 {
     Data           *ret = reinterpret_cast<Data*>(raw);
     return (ret);
 }
 
-int
-main(void)
+int		main(void)
 {
     srand(time(0));
     void           *ser = serialize();
