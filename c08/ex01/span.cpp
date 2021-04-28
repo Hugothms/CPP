@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 18:56:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/28 15:15:44 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 15:27:27 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int		Span::shortestSpan(void)
 {
 	if (this->count < 2)
 		throw NoSpanPossibleException();
-	int min = INFINITY;
 	std::vector<int> sorted = this->vector;
 	std::sort(sorted.begin(), sorted.end());
-	for(size_t i = 0; i < this->vector.size() - 1; i++)
+	int min = sorted[1] - sorted[0];
+	for(size_t i = 1; i < this->vector.size() - 1; i++)
 	{
 		int span = sorted[i + 1] - sorted[i];
 		if (span >= 0 && span < min)
