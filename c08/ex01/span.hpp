@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 18:56:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/26 13:32:51 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 14:32:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include<iostream>
 #include<exception>
 #include<vector>
+#include<math.h>
 
 class Span
 {
@@ -26,7 +27,8 @@ private:
 public:
 	Span(unsigned int N);
 	~Span();
-	void	addNumber(int number);
+	void	addNumber(int number); //! add another one for big range
+	void	addNumber(int start, int end);
 	int		shortestSpan(void);
 	int		longestSpan(void);
 

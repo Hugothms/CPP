@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 18:56:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/21 20:53:39 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 14:53:00 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,34 +29,32 @@ void	Span::addNumber(int number)
 	this->vector.push_back(number);
 }
 
+void	Span::addNumber(int start, int end)
+{
+	for (int i = start; i < end; i++)
+		this->addNumber(i);
+}
+
+
 int		Span::shortestSpan(void)
 {
 	if (this->count < 2)
 		throw NoSpanPossibleException();
 	int min = INFINITY;
-	for(size_t i = 0; i < this->vector.size(); i++)
+	std::vector<int> sorted = this->vector;
+	std::sort(sorted.begin(), sorted.end());
+	for(size_t i = 0; i < this->vector.size() - 1; i++)
 	{
-		for(size_t j = i + 1; j < this->vector.size(); j++)
-		{
-			int span = this->vector[j] - this->vector[i];
-			if (span >= 0 && span < min)
-				min = span;
-		}
+		int span = sorted[i + 1] - sorted[i];
+		if (span >= 0 && span < min)
+			min = span;
 	}
 	return (min);
 }
 
 int		Span::longestSpan(void)
 {
-	int max = 0;
-	for(size_t i = 0; i < this->vector.size(); i++)
-	{
-		for(size_t j = i; j < this->vector.size(); j++)
-		{
-			int span = this->vector[j] - this->vector[i];
-			if (span > max)
-				max = span;
-		}
-	}
-	return (max);
+	std::vector<int> sorted = this->vector;
+	std::sort(sorted.begin(), sorted.end());
+	return (sorted.begin() - sorted.end());
 }

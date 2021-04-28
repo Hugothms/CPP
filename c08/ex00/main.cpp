@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 10:07:57 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/21 13:51:17 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 14:29:57 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main()
 		try
 		{
 			std::vector<int>::iterator found = easyfind(vect, value);
-			std::cout << *found << " found !" << std::endl;
+			std::cout << *found << " found at index: " << easyfindIndex(vect, value) << std::endl;
 		}
 		catch(std::exception &e)
 		{
@@ -61,7 +61,7 @@ int main()
 		try
 		{
 			std::list<int>::iterator found = easyfind(list, value);
-			std::cout << *found << " found !" << std::endl;
+			std::cout << *found << " found at index: " << easyfindIndex(list, value) << std::endl;
 		}
 		catch(std::exception &e)
 		{
