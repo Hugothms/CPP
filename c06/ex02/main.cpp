@@ -6,12 +6,12 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/15 11:25:02 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 12:13:31 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include<iostream> //cout
-# include<cstdlib>
+// # include<cstdlib>
 
 # include"A.hpp"
 # include"B.hpp"
@@ -52,33 +52,33 @@ void	identify_from_reference(Base& p)
 {
 	try
 	{
-		A	&cl_a = dynamic_cast<A&>(p);
+		A	&a = dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
-		static_cast<void>(cl_a);
+		(void)a;
 	}
-	catch (std::bad_cast &bc)
+	catch (std::exception &bc)
 	{
-		// std::cout << "Failed to cast A" << std::endl;
+		// std::cout << "Failed to cast A:" << bc.what() << std::endl;
 	}
 	try
 	{
-		B	&cl_b = dynamic_cast<B &>(p);
+		B	&b = dynamic_cast<B &>(p);
 		std::cout << "B" << std::endl;
-		static_cast<void>(cl_b);
+		(void)b;
 	}
-	catch (std::bad_cast &bc)
+	catch (std::exception &bc)
 	{
-		// std::cout << "Failed to cast B" << std::endl;
+		// std::cout << "Failed to cast B:" << bc.what() << std::endl;
 	}
 	try
 	{
-		C	&cl_c = dynamic_cast<C &>(p);
+		C	&c = dynamic_cast<C &>(p);
 		std::cout << "C" << std::endl;
-		static_cast<void>(cl_c);
+		(void)c;
 	}
-	catch (std::bad_cast &bc)
+	catch (std::exception &bc)
 	{
-		// std::cout << "Failed to cast C" << std::endl;
+		// std::cout << "Failed to cast C:" << bc.what() << std::endl;
 	}
 }
 

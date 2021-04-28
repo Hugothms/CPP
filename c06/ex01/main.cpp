@@ -39,13 +39,12 @@ void*	serialize(void)
 	{
 		ret->s2 += set[std::rand() % sizeof(set)];
 	}
-	return (ret);
+	return (reinterpret_cast<void*>(ret));
 }
 
 Data*	deserialize(void *raw)
 {
 	Data			*ret = reinterpret_cast<Data*>(raw);
-	std::cout << sizeof(raw) << std::endl;
 	return (ret);
 }
 
@@ -54,16 +53,17 @@ int		main(void)
 	srand(time(0));
 	void			*ser = serialize();
 
-	// std::cout << ((Data*)ser)->s1 << std::endl;
-	// std::cout << ((Data*)ser)->n << std::endl;
-	// std::cout << ((Data*)ser)->s2 << std::endl;
+	std::cout << ((Data*)ser)->s1 << std::endl;
+	std::cout << ((Data*)ser)->n << std::endl;
+	std::cout << ((Data*)ser)->s2 << std::endl << std::endl;
 
 	Data			*des = deserialize(ser);
 
 	std::cout << des->s1 << std::endl;
 	std::cout << des->n << std::endl;
-	std::cout << des->s2 << std::endl;
+	std::cout << des->s2 << std::endl << std::endl;
 
+	std::cout << "Size of data: "<< sizeof(*des) << std::endl;
 	delete des;
 	return (0);
 }
