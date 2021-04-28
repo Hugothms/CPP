@@ -63,7 +63,9 @@ int		main(void)
 	std::cout << des->n << std::endl;
 	std::cout << des->s2 << std::endl << std::endl;
 
-	std::cout << "Size of data: "<< sizeof(*des) << std::endl;
+	std::cout << "Size of string: " << sizeof(std::string) << std::endl;
+	std::cout << "Size of int: " << sizeof(int) << std::endl;
+	std::cout << "Size of data: " << sizeof(*des) << std::endl;
 	delete des;
 	return (0);
 }
