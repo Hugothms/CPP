@@ -6,12 +6,12 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/28 12:13:31 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 15:35:45 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include<iostream> //cout
-// # include<cstdlib>
+# include<cstdlib> //rand
 
 # include"A.hpp"
 # include"B.hpp"
