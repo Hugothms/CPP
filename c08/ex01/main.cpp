@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 19:00:56 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/28 14:48:31 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 15:16:28 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int main()
 	Span sp = Span(5);
 
 	sp.addNumber(1000);
-	sp.addNumber(3);
 	sp.addNumber(2);
 	sp.addNumber(-100);
+	sp.addNumber(3);
 	sp.addNumber(42);
 
 	std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;

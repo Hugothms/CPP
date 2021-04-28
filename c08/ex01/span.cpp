@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 18:56:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/28 14:53:00 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 15:15:44 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,5 @@ int		Span::longestSpan(void)
 {
 	std::vector<int> sorted = this->vector;
 	std::sort(sorted.begin(), sorted.end());
-	return (sorted.begin() - sorted.end());
+	return (sorted.back() - sorted.front());
 }
