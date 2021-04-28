@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/27 17:15:44 by hthomas          ###   ########.fr        #
+#    Updated: 2021/04/28 12:14:59 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME =		program
 CXX =		clang++
 CFLAGS =	-Wall -Werror -Wextra -std=c++98
 
-SRCS =		main.cpp	\
+SRCS =		main.cpp
 
 OBJS =		$(SRCS:%.cpp=%.o)
 
@@ -40,4 +40,3 @@ $(NAME): $(OBJS)
 test: $(NAME)
 	./$^
 
-.PHONY: $(NAME)
