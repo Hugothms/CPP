@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 18:56:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/28 15:34:25 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/29 13:21:54 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	Span(unsigned int N);
 	~Span();
 	void	addNumber(int number);
-	void	addNumber(int start, int end);
+	void	addNumbers(int start, int end);
 	int		shortestSpan(void);
 	int		longestSpan(void);
 

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 18:56:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/29 10:50:34 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/29 13:21:49 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	Span::addNumber(int number)
 	this->vector.push_back(number);
 }
 
-void	Span::addNumber(int start, int end)
+void	Span::addNumbers(int start, int end)
 {
 	for (int i = start; i <= end; i++)
 	{

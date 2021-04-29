@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 19:00:56 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/29 10:48:19 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/29 13:21:58 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main()
 	Span sp2 = Span(20);
 	try
 	{
-		sp2.addNumber(-200, -180);
+		sp2.addNumbers(-200, -180);
 	}
 	catch (std::exception& e)
 	{
