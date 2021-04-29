@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 10:01:48 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:05:34 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/29 11:32:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ARRAY_HPP
 
 # include <exception>
-# include <cctype>
 
 template <typename T>
 class Array

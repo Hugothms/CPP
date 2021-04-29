@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 19:42:52 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/26 20:47:18 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/29 11:10:39 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	main()
 	mstack.push(5);
 	mstack.push(17);
 
-	std::cout << mstack.top() << std::endl;
+	std::cout << "top: " << mstack.top() << std::endl;
 
 	mstack.pop();
 
-	std::cout << mstack.size() << std::endl;
+	std::cout << "size: " << mstack.size() << std::endl;
 
 	mstack.push(3);
 	mstack.push(5);
