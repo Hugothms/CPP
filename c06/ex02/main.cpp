@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 12:45:42 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/28 15:35:45 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/04/28 17:34:42 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ int		main()
 
 	std::cout << "Identified from reference: ";
 	identify_from_reference(*p);
+	delete p;
 	return 0;
 }
