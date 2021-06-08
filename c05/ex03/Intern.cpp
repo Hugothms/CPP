@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:44 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/26 00:03:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/08 16:42:56 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Form*	Intern::makeForm(const std::string& name, const std::string& formtarget) c
 	const std::string types[3] = {	"PresidentialPardon",
 									"RobotomyRequest",
 									"ShrubberyCreation"};
-	static t_make_funct makeFormFuncts[3] = { new_pardon, new_robo, new_shrub};
+	static t_make_funct makeFormFuncts[3] = {new_pardon, new_robo, new_shrub};
 
 	for (int i = 0; i < 3; i++) {
 		if (name == types[i]) {

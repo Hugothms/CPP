@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/21 23:07:27 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/08 16:36:07 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include"RobotomyRequestForm.hpp"
 # include"ShrubberyCreationForm.hpp"
 
-class Intern: public Form
+class Intern
 {
 public:
 	Intern();
