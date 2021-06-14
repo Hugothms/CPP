@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 16:36:31 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/02 09:20:52 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/09 12:29:42 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,7 @@ int main()
 				{
 					print_all(list, cpt);
 					std::cout << "What is the contact's index ?" << std::endl;
-					std::getline (std::cin, input);
+					std::getline(std::cin, input);
 					index = checkint(input);
 					if (index == -1)
 						std::cout << "Sorry this index is not valid" << std::endl;
