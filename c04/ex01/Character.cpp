@@ -6,13 +6,13 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:49:12 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:04:21 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/28 15:21:36 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Character.hpp"
 
-Character::Character(const std::string&  name):
+Character::Character(const std::string& name):
 name(name), ap(40), weapon(NULL)
 {}
 

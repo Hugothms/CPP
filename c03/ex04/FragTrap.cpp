@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/06/28 15:22:50 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	FragTrap::beRepaired(unsigned int amount)
 	this->Energy_points += amount;
 	std::cout << "FR4G-TP " << this->Name << " gain " << amount << " health points from reparation" << std::endl;
 }
-void	FragTrap::vaulthunter_dot_exe(const std::string&  target)
+void	FragTrap::vaulthunter_dot_exe(const std::string& target)
 {
 	if (this->Energy_points < 25)
 	{
