@@ -6,7 +6,7 @@
 #    By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/25 16:00:55 by hthomas           #+#    #+#              #
-#    Updated: 2021/04/28 12:13:50 by hthomas          ###   ########.fr        #
+#    Updated: 2021/07/01 15:16:32 by hthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,11 +36,12 @@ re:				fclean $(NAME)
 
 .PHONY:			all clean fclean re
 
-%.o: %.cpp
+%.o: %.cpp %.hpp
 	$(CXX) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CXX) $(CFLAGS) $? -o $(NAME)
+	echo hello
+	$(CXX) $(CFLAGS) $(OBJS) -o $(NAME)
 
 test: $(NAME)
 	./$^

@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/26 00:33:54 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/01 15:04:35 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ ClapTrap::ClapTrap(std::string name)
 	this->Hit_points = 100;
 	this->Max_hit_points = 100;
 	this->Level = 1;
+	std::cout << "Clap: " << this->Energy_points << std::endl;
 }
 
 ClapTrap::~ClapTrap()

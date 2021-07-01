@@ -6,25 +6,35 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/07/01 14:58:21 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/01 15:16:55 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap()
-{}
+SuperTrap::SuperTrap(): ClapTrap(), FragTrap(), NinjaTrap()
+{
+	std::cout << "Just created unamed SuperTrap" << std::endl;
+	Hit_points = ClapTrap::Hit_points;
+	Max_hit_points = NinjaTrap::Max_hit_points;
+	Energy_points = NinjaTrap::Energy_points;
+	Max_energy_points = NinjaTrap::Max_energy_points;
+	Melee_attack_damage = NinjaTrap::Melee_attack_damage;
+	Ranged_attack_damage = FragTrap::Ranged_attack_damage;
+	Armor_damage_reduction = FragTrap::Armor_damage_reduction;
+}
 
 SuperTrap::SuperTrap(std::string name): ClapTrap(name), FragTrap(name), NinjaTrap(name)
 {
 	std::cout << "Just created SuperTrap: " << name << std::endl;
-	this->NinjaTrap::Hit_points = ClapTrap::Hit_points;
-	this->NinjaTrap::Max_hit_points = NinjaTrap::Max_hit_points;
-	this->NinjaTrap::Energy_points = NinjaTrap::Energy_points;
-	this->NinjaTrap::Max_energy_points = NinjaTrap::Max_energy_points;
-	this->NinjaTrap::Melee_attack_damage = NinjaTrap::Melee_attack_damage;
-	this->NinjaTrap::Ranged_attack_damage = FragTrap::Ranged_attack_damage;
-	this->NinjaTrap::Armor_damage_reduction = FragTrap::Armor_damage_reduction;
+	Hit_points = ClapTrap::Hit_points;
+	Max_hit_points = NinjaTrap::Max_hit_points;
+	Energy_points = NinjaTrap::Energy_points;
+	Max_energy_points = NinjaTrap::Max_energy_points;
+	Melee_attack_damage = NinjaTrap::Melee_attack_damage;
+	Ranged_attack_damage = FragTrap::Ranged_attack_damage;
+	Armor_damage_reduction = FragTrap::Armor_damage_reduction;
+	std::cout << "Super: " << FragTrap::Energy_points << std::endl;
 }
 
 SuperTrap::~SuperTrap()
