@@ -32,7 +32,6 @@ NinjaTrap::NinjaTrap(std::string name): ClapTrap(name)
 	this->Melee_attack_damage = 60;
 	this->Ranged_attack_damage = 5;
 	this->Armor_damage_reduction = 0;
-	std::cout << "Ninja: " << this->Energy_points << std::endl;
 }
 
 NinjaTrap::~NinjaTrap()

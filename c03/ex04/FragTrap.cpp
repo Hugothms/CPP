@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/07/01 15:03:06 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/01 15:17:58 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
 	this->Melee_attack_damage = 30;
 	this->Ranged_attack_damage = 20;
 	this->Armor_damage_reduction = 5;
-	std::cout << "Frag: " << this->Energy_points << std::endl;
 }
 
 FragTrap::~FragTrap()

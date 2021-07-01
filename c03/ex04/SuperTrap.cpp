@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/07/01 15:16:55 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/01 15:17:47 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ SuperTrap::SuperTrap(std::string name): ClapTrap(name), FragTrap(name), NinjaTra
 	Melee_attack_damage = NinjaTrap::Melee_attack_damage;
 	Ranged_attack_damage = FragTrap::Ranged_attack_damage;
 	Armor_damage_reduction = FragTrap::Armor_damage_reduction;
-	std::cout << "Super: " << FragTrap::Energy_points << std::endl;
 }
 
 SuperTrap::~SuperTrap()
