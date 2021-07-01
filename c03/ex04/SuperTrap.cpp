@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:02:02 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/01 14:58:21 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@ SuperTrap::SuperTrap()
 SuperTrap::SuperTrap(std::string name): ClapTrap(name), FragTrap(name), NinjaTrap(name)
 {
 	std::cout << "Just created SuperTrap: " << name << std::endl;
-	this->NinjaTrap::Name = name;
-	this->NinjaTrap::Hit_points = 100;
-	this->NinjaTrap::Max_hit_points = 100;
-	this->NinjaTrap::Energy_points = 120;
-	this->NinjaTrap::Max_energy_points = 120;
-	this->NinjaTrap::Melee_attack_damage = 60;
-	this->NinjaTrap::Ranged_attack_damage = 20;
-	this->NinjaTrap::Armor_damage_reduction = 5;
+	this->NinjaTrap::Hit_points = ClapTrap::Hit_points;
+	this->NinjaTrap::Max_hit_points = NinjaTrap::Max_hit_points;
+	this->NinjaTrap::Energy_points = NinjaTrap::Energy_points;
+	this->NinjaTrap::Max_energy_points = NinjaTrap::Max_energy_points;
+	this->NinjaTrap::Melee_attack_damage = NinjaTrap::Melee_attack_damage;
+	this->NinjaTrap::Ranged_attack_damage = FragTrap::Ranged_attack_damage;
+	this->NinjaTrap::Armor_damage_reduction = FragTrap::Armor_damage_reduction;
 }
 
 SuperTrap::~SuperTrap()

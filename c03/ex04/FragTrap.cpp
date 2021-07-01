@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:57:46 by hthomas           #+#    #+#             */
-/*   Updated: 2021/06/28 15:22:50 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/01 14:34:52 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,22 @@
 
 FragTrap::FragTrap(): ClapTrap()
 {
-	// this = ClapTrap();
+	std::cout << "Just created an unamed FragTrap" << std::endl;
 	this->Energy_points = 100;
 	this->Max_energy_points = 100;
 	this->Melee_attack_damage = 30;
 	this->Ranged_attack_damage = 20;
 	this->Armor_damage_reduction = 5;
-	std::cout << "Just created an unamed FragTrap" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
+	std::cout << "Just created FragTrap: " << name << std::endl;
 	this->Energy_points = 100;
 	this->Max_energy_points = 100;
 	this->Melee_attack_damage = 30;
 	this->Ranged_attack_damage = 20;
 	this->Armor_damage_reduction = 5;
-	std::cout << "Just created FragTrap: " << name << std::endl;
 }
 
 FragTrap::~FragTrap()

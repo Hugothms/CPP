@@ -18,8 +18,6 @@ NinjaTrap::NinjaTrap(): ClapTrap()
 	this->Max_hit_points = 60;
 	this->Energy_points = 120;
 	this->Max_energy_points = 120;
-	this->Level = 1;
-	this->Name = "";
 	this->Melee_attack_damage = 60;
 	this->Ranged_attack_damage = 5;
 	this->Armor_damage_reduction = 0;
