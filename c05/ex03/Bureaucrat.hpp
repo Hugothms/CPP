@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 12:13:47 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/25 23:30:08 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/07 15:55:28 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ public:
 	void 				incrementGrade();
 	void 				decrementGrade();
 	void				signForm(Form& form);
-	void		executeForm(const Form& form);
+	void				executeForm(const Form& form);
 
 	class GradeTooHighException: public std::exception
 	{

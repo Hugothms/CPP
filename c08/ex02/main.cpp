@@ -6,7 +6,7 @@
 /*   By: hthomas <hthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 19:42:52 by hthomas           #+#    #+#             */
-/*   Updated: 2021/04/29 13:31:40 by hthomas          ###   ########.fr       */
+/*   Updated: 2021/07/07 15:57:51 by hthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int	main()
 	++it;
 	--it;
 	std::cout << "MutantStack:" << std::endl;
-	while (it != ite) {
+	while (it != ite)
+	{
 		std::cout << *it << std::endl;
 		++it;
 	}
